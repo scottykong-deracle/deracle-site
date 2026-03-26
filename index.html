@@ -1,304 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deracle | Display & Touch Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deracle</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #111;
+    }
 
-<style>
-body {
-  margin:0;
-  font-family:'Inter', sans-serif;
-  color:#111;
-}
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-/* HEADER */
-header {
-  position:absolute;
-  width:100%;
-  top:0;
-  left:0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  z-index:10;
-}
+    nav img {
+      height: 30px;
+    }
 
-header img {height:32px;}
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
 
-header a {
-  color:#fff;
-  margin-left:25px;
-  text-decoration:none;
-  font-size:14px;
-  opacity:0.85;
-}
-header a:hover {opacity:1;}
+    /* HERO */
+    .hero {
+      height: 400px;
+      background: url('hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
 
-/* HERO */
-.hero {
-  height:100vh;
-  background:url("hero.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-}
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-.hero::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(10,15,30,0.45), rgba(10,15,30,0.55));
-}
+    .hero p {
+      opacity: 0.9;
+    }
 
-.hero-content {
-  position:relative;
-  text-align:center;
-  color:#fff;
-}
+    .hero a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+    }
 
-.hero h1 {
-  font-size:64px;
-  margin:0;
-}
+    /* SECTION */
+    section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.hero .light {
-  color:#bbb;
-  font-weight:400;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #111;
+    }
 
-.hero p {
-  margin-top:18px;
-  font-size:17px;
-}
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
 
-.btn {
-  margin-top:30px;
-  display:inline-block;
-  padding:14px 30px;
-  background:linear-gradient(90deg,#2563eb,#1d4ed8);
-  color:#fff;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-}
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-.btn:hover {
-  transform:translateY(-3px);
-  box-shadow:0 12px 30px rgba(37,99,235,0.4);
-}
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
 
-/* SECTION */
-section {
-  padding:90px 40px;
-  max-width:1100px;
-  margin:auto;
-}
+    .card h3 {
+      margin-bottom: 10px;
+    }
 
-/* COMPANY */
-#company {
-  background:#f8f9fb;
-}
+    .card p {
+      color: #666;
+    }
 
-.company-wrap {
-  display:flex;
-  gap:50px;
-  align-items:center;
-  flex-wrap:wrap;
-}
+    /* COMPANY */
+    .company {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
 
-.company-text {
-  background:#fff;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
+    .company img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+    }
 
-.company-wrap img {
-  width:100%;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
+    /* CONTACT BUTTON */
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-/* SOLUTIONS */
-#solutions {
-  background:#f8fafc;
-}
+    .contact-btn:hover {
+      background: #1e40af;
+    }
 
-.solutions-title {
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.solutions-title p {
-  color:#666;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-}
-
-.card {
-  background:#fff;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 6px 25px rgba(0,0,0,0.06);
-  transition:all 0.3s ease;
-}
-
-.card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 20px 45px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-  margin-top:15px;
-  margin-bottom:10px;
-  font-size:20px;
-}
-
-.card p {
-  font-size:14px;
-  color:#555;
-  line-height:1.6;
-}
-
-.icon {
-  width:40px;
-  height:40px;
-  stroke:#2563eb;
-  stroke-width:2;
-  fill:none;
-}
-
-/* PRODUCTS */
-#products {
-  background:#f3f4f6;
-}
-
-/* FOOTER */
-footer {
-  background:#0b0f1a;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-}
-
-@media(max-width:768px){
-  .hero h1 {font-size:40px;}
-  .grid {grid-template-columns:1fr;}
-}
-</style>
+    /* FOOTER */
+    footer {
+      margin-top: 80px;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png">
+  <!-- NAV -->
   <nav>
-    <a href="#company">Company</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <h1><span class="light">Engineered</span><br>for PERFORMANCE</h1>
-    <p>Display & Touch. Optimized.</p>
-    <a href="#contact" class="btn">Request a Solution</a>
-  </div>
-</div>
-
-<!-- COMPANY -->
-<section id="company">
-  <h2>Company</h2>
-  <div class="company-wrap">
-    <div style="flex:1;">
-      <img src="company.jpg">
+    <img src="logo.png">
+    <div>
+      <a href="#">Company</a>
+      <a href="#">Solutions</a>
+      <a href="#">Products</a>
     </div>
-    <div style="flex:1;">
-      <div class="company-text">
-        <p style="font-size:18px; line-height:1.6;">
-          Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and delivers optimized display solutions tailored to customer needs.
-        </p>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Engineered for PERFORMANCE</h1>
+      <p>Display & Touch. Optimized.</p>
+      <a href="mailto:scotty@deracle.co.kr">Request a Solution</a>
+    </div>
+  </div>
+
+  <!-- SOLUTIONS -->
+  <section>
+    <h2>Solutions</h2>
+    <div class="subtitle">Built for Performance & Reliability</div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Custom Display Solutions</h3>
+        <p>End-to-end custom touch monitor solutions with optimized panel selection.</p>
+      </div>
+
+      <div class="card">
+        <h3>Touch Integration</h3>
+        <p>Integrated PCAP touch solutions with bonding options.</p>
+      </div>
+
+      <div class="card">
+        <h3>Industrial & Gaming Displays</h3>
+        <p>High-reliability display solutions for demanding environments.</p>
+      </div>
+
+      <div class="card">
+        <h3>Engineering Support</h3>
+        <p>Firmware optimization and color calibration support.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SOLUTIONS -->
-<section id="solutions">
+  <!-- PRODUCTS -->
+  <section>
+    <h2>Products</h2>
+    <div class="subtitle">Coming soon</div>
+  </section>
 
-  <div class="solutions-title">
-    <h2>Solutions</h2>
-    <p>Built for Performance & Reliability</p>
-  </div>
+  <!-- COMPANY -->
+  <section>
+    <h2>Company</h2>
 
-  <div class="grid">
+    <div class="company">
+      <img src="company.jpg">
 
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <rect x="3" y="4" width="18" height="12"/>
-        <line x1="8" y1="20" x2="16" y2="20"/>
-      </svg>
-      <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom touch monitor solutions with optimized panel selection, mechanical design, and LCD control board engineering based on your exact specifications</p>
+      <div>
+        <p>
+          Deracle, founded in 2013 with over 20 years of industry experience,
+          specializes in custom touch screen assembly and delivers optimized display solutions.
+        </p>
+
+        <p style="margin-top:15px; color:#555;">
+          Address: Seoul, South Korea<br>
+          Email: scotty@deracle.co.kr<br>
+          Tel: +82-2-6010-8401
+        </p>
+
+        <a href="mailto:scotty@deracle.co.kr" class="contact-btn">
+          Contact Us
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="2"/>
-        <line x1="12" y1="2" x2="12" y2="6"/>
-      </svg>
-      <h3>Touch Integration</h3>
-      <p>Integrated PCAP touch solutions with air bonding and optical bonding options to meet diverse application requirements</p>
-    </div>
-
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <rect x="4" y="10" width="16" height="8"/>
-        <line x1="2" y1="10" x2="22" y2="10"/>
-      </svg>
-      <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability display solutions including edge lighting, engineered for demanding and high-performance environments</p>
-    </div>
-
-    <div class="card">
-      <svg class="icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M19 12h2M3 12h2M12 3v2M12 19v2"/>
-      </svg>
-      <h3>Engineering Support</h3>
-      <p>Firmware optimization and color calibration support for display and touch systems</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <h2>Products</h2>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: scotty@deracle.co.kr</p>
-  <p>Phone: +82-2-6010-8401</p>
-</section>
-
-<footer>
-  <p>© 2026 Deracle Company</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Deracle Co., Ltd. All rights reserved.</p>
+    <p>Email: scotty@deracle.co.kr | Tel: +82-2-6010-8401</p>
+  </footer>
 
 </body>
 </html>
