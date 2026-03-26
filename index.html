@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deracle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deracle</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-      background: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
+header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    header img {
-      height: 40px;
-    }
+header img {
+  height: 40px;
+}
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
 
-    section {
-      padding: 80px 40px;
-      text-align: center;
-    }
+/* HERO */
+.hero {
+  height: 500px;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
 
-    h2 {
-      margin-bottom: 10px;
-    }
+.hero h1 {
+  font-size: 42px;
+  margin: 0;
+}
 
-    .subtitle {
-      color: #777;
-      margin-bottom: 40px;
-    }
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #3b5cff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: left;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
+/* SECTION */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #3b5cff;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+/* COMPANY */
+.company {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+}
 
-    .company-wrap {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: auto;
-      text-align: left;
-    }
+.company img {
+  width: 500px;
+  border-radius: 12px;
+}
 
-    .company-wrap img {
-      width: 500px;
-      border-radius: 12px;
-    }
-  </style>
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+</style>
 </head>
 
 <body>
@@ -100,14 +110,21 @@
   </nav>
 </header>
 
+<!-- HERO -->
+<div class="hero">
+  <h1>Engineered for PERFORMANCE</h1>
+  <p>Display & Touch Optimized</p>
+  <a href="mailto:scotty@deracle.co.kr" class="btn">Request a Solution</a>
+</div>
+
 <!-- COMPANY -->
-<section id="company">
+<div class="section" id="company">
   <h2>Company</h2>
 
-  <div class="company-wrap">
+  <div class="company">
     <img src="company.jpg">
 
-    <div>
+    <div style="text-align:left;">
       <p>
         Deracle, founded in 2013 with over 20 years of industry experience,
         specializes in custom touch screen assembly and optimized display solutions.
@@ -115,87 +132,63 @@
 
       <br>
 
-      <p>
-        <strong>Address:</strong><br>
-        #903, Woosung SB Tower II, 220, Gonghang-daero<br>
-        Gangseo-gu, Seoul 07806 Republic Korea
-      </p>
+      <p><strong>Address:</strong><br>
+      #903, Woosung SB Tower II, 220, Gonghang-daero<br>
+      Gangseo-gu, Seoul 07806 Republic Korea</p>
 
       <br>
 
-      <p>
-        <strong>Contact:</strong><br>
-        P +82 2 6010 8401<br>
-        F +82 2 6010 8402<br>
-        M +82 10 2005 3009
-      </p>
+      <p><strong>Contact:</strong><br>
+      P +82 2 6010 8401<br>
+      F +82 2 6010 8402<br>
+      M +82 10 2005 3009</p>
 
       <br>
 
-      <p>
-        <strong>Email:</strong><br>
-        <a href="mailto:scotty@deracle.co.kr">scotty@deracle.co.kr</a>
-      </p>
-
-      <a href="mailto:scotty@deracle.co.kr" class="btn">Contact Us</a>
+      <p><strong>Email:</strong><br>
+      scotty@deracle.co.kr</p>
     </div>
   </div>
-</section>
+</div>
 
 <!-- SOLUTIONS -->
-<section id="solutions">
+<div class="section" id="solutions">
   <h2>Solutions</h2>
-  <p class="subtitle">Built for Performance & Reliability</p>
 
   <div class="grid">
     <div class="card">
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom touch monitor solutions with optimized panel selection.</p>
+      <p>End-to-end custom touch monitor solutions.</p>
     </div>
 
     <div class="card">
       <h3>Touch Integration</h3>
-      <p>Integrated PCAP touch solutions with bonding options.</p>
+      <p>Integrated PCAP touch solutions.</p>
     </div>
 
     <div class="card">
       <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability display solutions for demanding environments.</p>
+      <p>High-reliability display solutions.</p>
     </div>
 
     <div class="card">
       <h3>Engineering Support</h3>
-      <p>Firmware optimization and color calibration support.</p>
+      <p>Firmware optimization support.</p>
     </div>
   </div>
-</section>
+</div>
 
 <!-- PRODUCTS -->
-<section id="products">
+<div class="section" id="products">
   <h2>Products</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>Industrial LCD Panels</h3>
-      <p>High brightness LCD panels for industrial applications.</p>
-    </div>
-
-    <div class="card">
-      <h3>Touch Screens</h3>
-      <p>PCAP and resistive touch solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Custom Monitors</h3>
-      <p>Fully customized display monitor solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Open Frame Displays</h3>
-      <p>Robust displays for kiosks and industrial use.</p>
-    </div>
+    <div class="card"><h3>Industrial LCD Panels</h3></div>
+    <div class="card"><h3>Touch Screens</h3></div>
+    <div class="card"><h3>Custom Monitors</h3></div>
+    <div class="card"><h3>Open Frame Displays</h3></div>
   </div>
-</section>
+</div>
 
 </body>
 </html>
