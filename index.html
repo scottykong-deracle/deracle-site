@@ -26,11 +26,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 40px;
-  min-height: 80px;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 24px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -56,10 +55,9 @@ nav a {
   margin-top: 10px;
 }
 
-/* CTA 버튼 */
 .hero button {
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin-top: 24px;
+  padding: 12px 28px;
   border: none;
   background: #007BFF;
   color: #fff;
@@ -81,8 +79,8 @@ nav a {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   gap: 40px;
+  align-items: center;
 }
 
 .company-text {
@@ -91,7 +89,7 @@ nav a {
 
 .company-text p {
   line-height: 1.7;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   max-width: 520px;
 }
 
@@ -112,26 +110,34 @@ nav a {
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 28px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .solution-card {
-  padding: 30px;
-  border-radius: 14px;
-  transition: all 0.3s ease;
   background: #f8f9fb;
+  padding: 32px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
 }
 
 .solution-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.solution-card h3 {
+  margin-top: 10px;
+}
+
+.solution-card p {
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .icon {
-  font-size: 28px;
-  margin-bottom: 12px;
+  font-size: 30px;
 }
 
 /* PRODUCTS */
@@ -145,16 +151,35 @@ nav a {
   background: #ffffff;
 }
 
+.contact h2 {
+  text-align: center;
+}
+
+.contact-line {
+  width: 60px;
+  height: 2px;
+  background: #ddd;
+  margin: 10px auto 40px;
+}
+
 .contact-container {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .contact-info {
   flex: 1;
-  line-height: 1.8;
+}
+
+.contact-block {
+  margin-bottom: 20px;
+}
+
+.contact-block strong {
+  display: block;
+  margin-bottom: 6px;
 }
 
 .contact-map {
@@ -165,7 +190,8 @@ nav a {
   width: 100%;
   height: 300px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* MOBILE */
@@ -191,7 +217,7 @@ nav a {
 <!-- HEADER -->
 <header>
   <div>
-    <img src="logo.png" alt="Logo" style="height:40px;">
+    <img src="logo.png" style="height:40px;">
   </div>
   <nav>
     <a href="#company">Company</a>
@@ -206,7 +232,9 @@ nav a {
   <div>
     <h1>Touch & Display Solutions</h1>
     <p>Reliable partner for custom display integration</p>
-    <button onclick="location.href='mailto:scotty@deracle.co.kr'">Request a Solution</button>
+    <button onclick="location.href='mailto:scotty@deracle.co.kr'">
+      Request a Solution
+    </button>
   </div>
 </section>
 
@@ -232,11 +260,10 @@ nav a {
       <p>
         We prioritize responsiveness and close collaboration, with a commitment to providing feedback within 24 hours to ensure smooth and reliable project execution.
       </p>
-
     </div>
 
     <div class="company-image">
-      <img src="company.jpg" alt="Company Image">
+      <img src="company.jpg">
     </div>
 
   </div>
@@ -251,25 +278,40 @@ nav a {
     <div class="solution-card">
       <div class="icon">🖥️</div>
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions from panel selection to final integration.</p>
+      <p>
+        End-to-end custom display solutions from panel selection to final integration. 
+        We support optimized design, mechanical structure, and controller development 
+        to ensure reliable performance across various applications.
+      </p>
     </div>
 
     <div class="solution-card">
       <div class="icon">✋</div>
       <h3>Touch Integration</h3>
-      <p>Various touch solutions including PCAP and resistive technologies.</p>
+      <p>
+        Integrated various touch solutions including PCAP and resistive technologies, 
+        with both air bonding and optical bonding options. Designed for durability, 
+        accuracy, and seamless user interaction in demanding environments.
+      </p>
     </div>
 
     <div class="solution-card">
       <div class="icon">🎮</div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability displays for industrial and gaming environments.</p>
+      <p>
+        High-reliability display solutions tailored for industrial and gaming applications. 
+        Optimized for performance, durability, and long-term operation in harsh environments.
+      </p>
     </div>
 
     <div class="solution-card">
       <div class="icon">🛠️</div>
       <h3>Engineering Support</h3>
-      <p>Includes firmware tuning, panel sorting, and calibration support.</p>
+      <p>
+        Comprehensive engineering support including firmware optimization, signal tuning, 
+        panel sorting, and color calibration to enhance overall display performance 
+        and ensure stable system integration.
+      </p>
     </div>
 
   </div>
@@ -278,30 +320,38 @@ nav a {
 <!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
-  <p>Our production capabilities include touch integration, bonding, and customized display assembly solutions.</p>
+  <p>
+    Our production capabilities include touch integration, bonding, and customized display assembly solutions.
+  </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-  <h2 style="text-align:center;">Contact</h2>
+  <h2>Contact</h2>
+  <div class="contact-line"></div>
 
   <div class="contact-container">
 
     <div class="contact-info">
-      <p>
+
+      <div class="contact-block">
+        <strong>Address</strong>
         #903, Woosung SB Tower II, 220, Gonghang-daero<br>
         Gangseo-gu, Seoul, Republic Korea
-      </p>
+      </div>
 
-      <p>
+      <div class="contact-block">
+        <strong>Contact</strong>
         P +82 2 6010 8401<br>
         F +82 2 6010 8402<br>
         M +82 10 2005 3009
-      </p>
+      </div>
 
-      <p>
+      <div class="contact-block">
+        <strong>Email</strong>
         scotty@deracle.co.kr
-      </p>
+      </div>
+
     </div>
 
     <div class="contact-map">
