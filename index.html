@@ -51,23 +51,14 @@ nav a {
   font-size: 40px;
 }
 
-.hero p {
-  margin-top: 10px;
-}
-
 .hero button {
   margin-top: 24px;
   padding: 12px 28px;
   border: none;
   background: #007BFF;
   color: #fff;
-  font-size: 14px;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.hero button:hover {
-  background: #0056b3;
 }
 
 /* COMPANY */
@@ -76,7 +67,7 @@ nav a {
 }
 
 .company-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 40px;
@@ -90,7 +81,7 @@ nav a {
 .company-text p {
   line-height: 1.7;
   margin-bottom: 14px;
-  max-width: 520px;
+  max-width: 540px;
 }
 
 .company-image {
@@ -111,13 +102,13 @@ nav a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 1000px;
+  max-width: 1200px; /* 🔥 핵심 수정 */
   margin: 0 auto;
 }
 
 .solution-card {
   background: #f8f9fb;
-  padding: 32px;
+  padding: 28px; /* 🔥 줄임 */
   border-radius: 16px;
   transition: all 0.3s ease;
 }
@@ -127,17 +118,9 @@ nav a {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-.solution-card h3 {
-  margin-top: 10px;
-}
-
-.solution-card p {
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
 .icon {
-  font-size: 30px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 /* PRODUCTS */
@@ -163,7 +146,7 @@ nav a {
 }
 
 .contact-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 50px;
@@ -189,8 +172,8 @@ nav a {
 .contact-map iframe {
   width: 100%;
   height: 300px;
-  border: 0;
   border-radius: 12px;
+  border: 0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
@@ -241,31 +224,16 @@ nav a {
 <!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
-
     <div class="company-text">
       <h2>Company</h2>
-
-      <p>
-        Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.
-      </p>
-
-      <p>
-        While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.
-      </p>
-
-      <p>
-        We are structured to support high-mix, low-volume production with flexible MOQ, enabling us to efficiently handle both prototyping and volume programs.
-      </p>
-
-      <p>
-        We prioritize responsiveness and close collaboration, with a commitment to providing feedback within 24 hours to ensure smooth and reliable project execution.
-      </p>
+      <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
+      <p>While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.</p>
+      <p>We are structured to support high-mix, low-volume production with flexible MOQ, enabling us to efficiently handle both prototyping and volume programs.</p>
+      <p>We prioritize responsiveness and close collaboration, with a commitment to providing feedback within 24 hours.</p>
     </div>
-
     <div class="company-image">
       <img src="company.jpg">
     </div>
-
   </div>
 </section>
 
@@ -278,40 +246,25 @@ nav a {
     <div class="solution-card">
       <div class="icon">🖥️</div>
       <h3>Custom Display Solutions</h3>
-      <p>
-        End-to-end custom display solutions from panel selection to final integration. 
-        We support optimized design, mechanical structure, and controller development 
-        to ensure reliable performance across various applications.
-      </p>
+      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design, mechanical structure, and controller development.</p>
     </div>
 
     <div class="solution-card">
       <div class="icon">✋</div>
       <h3>Touch Integration</h3>
-      <p>
-        Integrated various touch solutions including PCAP and resistive technologies, 
-        with both air bonding and optical bonding options. Designed for durability, 
-        accuracy, and seamless user interaction in demanding environments.
-      </p>
+      <p>Integrated various touch solutions including PCAP and resistive technologies, with air and optical bonding options for durability and accuracy.</p>
     </div>
 
     <div class="solution-card">
       <div class="icon">🎮</div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>
-        High-reliability display solutions tailored for industrial and gaming applications. 
-        Optimized for performance, durability, and long-term operation in harsh environments.
-      </p>
+      <p>High-reliability display solutions tailored for industrial and gaming applications, optimized for durability and long-term performance.</p>
     </div>
 
     <div class="solution-card">
       <div class="icon">🛠️</div>
       <h3>Engineering Support</h3>
-      <p>
-        Comprehensive engineering support including firmware optimization, signal tuning, 
-        panel sorting, and color calibration to enhance overall display performance 
-        and ensure stable system integration.
-      </p>
+      <p>Comprehensive support including firmware optimization, signal tuning, panel sorting, and color calibration for stable system integration.</p>
     </div>
 
   </div>
@@ -320,9 +273,7 @@ nav a {
 <!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
-  <p>
-    Our production capabilities include touch integration, bonding, and customized display assembly solutions.
-  </p>
+  <p>Our production capabilities include touch integration, bonding, and customized display assembly solutions.</p>
 </section>
 
 <!-- CONTACT -->
@@ -335,21 +286,15 @@ nav a {
     <div class="contact-info">
 
       <div class="contact-block">
-        <strong>Address</strong>
+        <strong>📍 Address</strong>
         #903, Woosung SB Tower II, 220, Gonghang-daero<br>
         Gangseo-gu, Seoul, Republic Korea
       </div>
 
       <div class="contact-block">
-        <strong>Contact</strong>
-        P +82 2 6010 8401<br>
-        F +82 2 6010 8402<br>
-        M +82 10 2005 3009
-      </div>
-
-      <div class="contact-block">
-        <strong>Email</strong>
-        scotty@deracle.co.kr
+        <strong>📞 Contact</strong>
+        P +82 2 6010 8401 &nbsp;&nbsp; F +82 2 6010 8402<br>
+        M +82 10 2005 3009 &nbsp;&nbsp; E scotty@deracle.co.kr
       </div>
 
     </div>
