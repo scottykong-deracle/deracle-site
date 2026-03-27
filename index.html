@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Deracle | LCD Panel Module & Touch Display Solutions</title>
-<meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP and resistive touch.">
 
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
@@ -13,70 +12,52 @@
 body { margin:0; font-family:'Pretendard', Arial; color:#222;}
 section { padding:80px 20px;}
 
-/* HEADER */
 header {
-  position: sticky; top:0; background:#fff; z-index:1000;
+  position: sticky; top:0; background:#fff;
   display:flex; justify-content:space-between; align-items:center;
   padding:12px 40px;
 }
 nav a { margin-left:24px; text-decoration:none; color:#333;}
 
-/* HERO */
 .hero {
   height:60vh; min-height:420px;
   display:flex; align-items:center; justify-content:center;
-  text-align:center;
   background:url('hero.jpg') center/cover no-repeat;
   color:#fff;
+  text-align:center;
 }
-.hero h1 { font-size:42px; }
 
-/* COMPANY */
 .company { background:#f8f9fb; }
 .company-inner {
   max-width:1200px; margin:0 auto;
   display:flex; gap:40px; align-items:center;
 }
-.company-text { flex:1.1; }
-.company-text p {
-  line-height:1.7;
-  margin-bottom:14px;
-  max-width:520px;
-}
-.company-image { flex:0.9; }
-.company-image img {
-  width:100%;
-  border-radius:12px;
-}
+.company-text { flex:1; }
+.company-image { flex:1; }
+.company-image img { width:100%; border-radius:12px; }
 
-/* SOLUTIONS */
 .solutions-grid {
   max-width:1200px;
   margin:0 auto;
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:28px;
+  gap:32px;
 }
 
 .solution-card {
   background:#f8f9fb;
-  padding:24px;
+  padding:30px;
   border-radius:16px;
 }
 
 .solution-icon {
-  margin-bottom:16px;
-}
-.solution-icon svg {
-  width:32px;
-  height:32px;
-  stroke:#333;
+  margin-bottom:18px;
 }
 
 /* PRODUCTS */
 .products {
-  background:#f5f7fa;
   text-align:center;
+  background:#f5f7fa;
 }
 
 /* CONTACT */
@@ -86,9 +67,6 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   display:flex;
   gap:60px;
 }
-.contact-left { flex:1; }
-.contact-map { flex:1; }
-
 .contact-map iframe {
   width:100%;
   height:260px;
@@ -99,11 +77,9 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 .contact-grid {
   display:grid;
   grid-template-columns:20px 1fr;
-  row-gap:6px;
-  column-gap:12px;
+  gap:6px 12px;
 }
 
-/* MOBILE */
 @media (max-width:768px){
   .company-inner,
   .contact-container {
@@ -128,7 +104,6 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Touch & Display Solutions</h1>
@@ -136,24 +111,14 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </div>
 </section>
 
-<!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
 
     <div class="company-text">
       <h2>Company</h2>
-
-      <p>
-        Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.
-      </p>
-
-      <p>
-        While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.
-      </p>
-
-      <p>
-        We offer flexible production capabilities, from small-volume customized projects to larger-scale supply, with fast and responsive support to meet diverse customer needs.
-      </p>
+      <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
+      <p>While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.</p>
+      <p>We offer flexible production capabilities with fast and responsive support to meet diverse customer needs.</p>
     </div>
 
     <div class="company-image">
@@ -163,99 +128,74 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </div>
 </section>
 
-<!-- SOLUTIONS -->
 <section id="solutions">
   <h2 style="text-align:center;">Solutions</h2>
 
   <div class="solutions-grid">
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="monitor"></div>
+      <div class="solution-icon">
+        🖥️
+      </div>
       <h3>Custom Display Solutions</h3>
-      <p>
-        End-to-end custom display solutions from panel selection to final integration. 
-        We support optimized design, mechanical structure, and controller development to ensure reliable performance across various applications.
-      </p>
+      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design and engineering.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="hand"></div>
+      <div class="solution-icon">
+        ✋
+      </div>
       <h3>Touch Integration</h3>
-      <p>
-        Integrated various touch solutions including PCAP and resistive technologies, with both air bonding and optical bonding options. 
-        Designed for durability, accuracy, and seamless user interaction in demanding environments.
-      </p>
+      <p>Various touch solutions including PCAP and resistive with bonding options for durability and accuracy.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="cpu"></div>
+      <div class="solution-icon">
+        🎮
+      </div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>
-        High-reliability display solutions tailored for industrial and gaming applications. 
-        Optimized for performance, durability, and long-term operation in harsh environments.
-      </p>
+      <p>High-reliability displays optimized for industrial and gaming environments.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="tool"></div>
+      <div class="solution-icon">
+        🔧
+      </div>
       <h3>Engineering Support</h3>
-      <p>
-        Comprehensive engineering support including firmware optimization, signal tuning, panel sorting, and color calibration 
-        to enhance overall display performance and ensure stable system integration.
-      </p>
+      <p>Firmware optimization, panel sorting, and calibration support for stable integration.</p>
     </div>
 
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
   <p>Coming soon</p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2 style="text-align:center;">Contact</h2>
 
   <div class="contact-container">
 
-    <div class="contact-left">
+    <div>
+      <p><strong>📍 Address</strong><br>
+      Seoul, Republic Korea</p>
 
-      <div style="margin-bottom:20px;">
-        <strong>📍 Address</strong><br>
-        #903, Woosung SB Tower II, 220, Gonghang-daero<br>
-        Gangseo-gu, Seoul, Republic Korea
+      <div class="contact-grid">
+        <div>P</div><div>+82 2 6010 8401</div>
+        <div>F</div><div>+82 2 6010 8402</div>
+        <div>M</div><div>+82 10 2005 3009</div>
+        <div>E</div><div>scotty@deracle.co.kr</div>
       </div>
-
-      <div>
-        <strong>📞 Contact</strong>
-
-        <div class="contact-grid">
-          <div>P</div><div>+82 2 6010 8401</div>
-          <div>F</div><div>+82 2 6010 8402</div>
-          <div>M</div><div>+82 10 2005 3009</div>
-          <div>E</div><div>scotty@deracle.co.kr</div>
-        </div>
-
-      </div>
-
     </div>
 
     <div class="contact-map">
-      <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      <iframe src="https://maps.google.com/maps?q=Seoul&output=embed"></iframe>
     </div>
 
   </div>
 </section>
-
-<!-- ICON FIX (🔥 핵심) -->
-<script src="https://unpkg.com/feather-icons"></script>
-<script>
-window.onload = function() {
-  feather.replace();
-};
-</script>
 
 </body>
 </html>
