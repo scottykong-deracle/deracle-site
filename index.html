@@ -5,11 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deracle</title>
 
+<!-- 폰트 -->
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Pretendard', Arial, sans-serif;
   overflow-x: hidden;
+  color: #222;
 }
 
 section {
@@ -48,7 +52,7 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 .hero button {
@@ -102,14 +106,18 @@ nav a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 1200px; /* 🔥 핵심 수정 */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .solution-card {
   background: #f8f9fb;
-  padding: 28px; /* 🔥 줄임 */
+  padding: 26px;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
   transition: all 0.3s ease;
 }
 
@@ -118,9 +126,14 @@ nav a {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-.icon {
-  font-size: 28px;
-  margin-bottom: 10px;
+.solution-icon {
+  margin-bottom: 12px;
+}
+
+.solution-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #333;
 }
 
 /* PRODUCTS */
@@ -157,11 +170,13 @@ nav a {
 }
 
 .contact-block {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .contact-block strong {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 6px;
 }
 
@@ -171,7 +186,7 @@ nav a {
 
 .contact-map iframe {
   width: 100%;
-  height: 300px;
+  height: 280px;
   border-radius: 12px;
   border: 0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -199,9 +214,7 @@ nav a {
 
 <!-- HEADER -->
 <header>
-  <div>
-    <img src="logo.png" style="height:40px;">
-  </div>
+  <img src="logo.png" style="height:40px;">
   <nav>
     <a href="#company">Company</a>
     <a href="#solutions">Solutions</a>
@@ -227,9 +240,9 @@ nav a {
     <div class="company-text">
       <h2>Company</h2>
       <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
-      <p>While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.</p>
-      <p>We are structured to support high-mix, low-volume production with flexible MOQ, enabling us to efficiently handle both prototyping and volume programs.</p>
-      <p>We prioritize responsiveness and close collaboration, with a commitment to providing feedback within 24 hours.</p>
+      <p>While we support mass production, our strength lies in flexible and customized solutions tailored to each project.</p>
+      <p>We support high-mix, low-volume production with flexible MOQ.</p>
+      <p>Fast response within 24 hours ensures smooth execution.</p>
     </div>
     <div class="company-image">
       <img src="company.jpg">
@@ -244,27 +257,27 @@ nav a {
   <div class="solutions-grid">
 
     <div class="solution-card">
-      <div class="icon">🖥️</div>
+      <div class="solution-icon" data-feather="monitor"></div>
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design, mechanical structure, and controller development.</p>
+      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design and controller development.</p>
     </div>
 
     <div class="solution-card">
-      <div class="icon">✋</div>
+      <div class="solution-icon" data-feather="hand"></div>
       <h3>Touch Integration</h3>
-      <p>Integrated various touch solutions including PCAP and resistive technologies, with air and optical bonding options for durability and accuracy.</p>
+      <p>Integrated various touch solutions including PCAP and resistive technologies with bonding options for durability and accuracy.</p>
     </div>
 
     <div class="solution-card">
-      <div class="icon">🎮</div>
+      <div class="solution-icon" data-feather="cpu"></div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability display solutions tailored for industrial and gaming applications, optimized for durability and long-term performance.</p>
+      <p>High-reliability display solutions optimized for industrial and gaming environments.</p>
     </div>
 
     <div class="solution-card">
-      <div class="icon">🛠️</div>
+      <div class="solution-icon" data-feather="tool"></div>
       <h3>Engineering Support</h3>
-      <p>Comprehensive support including firmware optimization, signal tuning, panel sorting, and color calibration for stable system integration.</p>
+      <p>Includes firmware tuning, panel sorting, and calibration for stable system integration.</p>
     </div>
 
   </div>
@@ -305,6 +318,12 @@ nav a {
 
   </div>
 </section>
+
+<!-- Feather Icons -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+feather.replace();
+</script>
 
 </body>
 </html>
