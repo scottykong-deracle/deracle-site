@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Deracle | LCD Panel Module & Touch Display Solutions</title>
+<title>Deracle</title>
 
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
@@ -12,6 +12,7 @@
 body { margin:0; font-family:'Pretendard', Arial; color:#222;}
 section { padding:80px 20px;}
 
+/* HEADER */
 header {
   position: sticky; top:0; background:#fff;
   display:flex; justify-content:space-between; align-items:center;
@@ -19,14 +20,26 @@ header {
 }
 nav a { margin-left:24px; text-decoration:none; color:#333;}
 
+/* HERO (원래 버전 복구) */
 .hero {
-  height:60vh; min-height:420px;
+  height:70vh;
   display:flex; align-items:center; justify-content:center;
+  text-align:center;
   background:url('hero.jpg') center/cover no-repeat;
   color:#fff;
-  text-align:center;
+}
+.hero h1 { font-size:42px; }
+.hero button {
+  margin-top:20px;
+  padding:12px 28px;
+  border:none;
+  border-radius:8px;
+  background:#4a6cf7;
+  color:#fff;
+  cursor:pointer;
 }
 
+/* COMPANY 유지 */
 .company { background:#f8f9fb; }
 .company-inner {
   max-width:1200px; margin:0 auto;
@@ -36,22 +49,27 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 .company-image { flex:1; }
 .company-image img { width:100%; border-radius:12px; }
 
+/* SOLUTIONS (아이콘 제거 + 여백 안정화) */
 .solutions-grid {
   max-width:1200px;
   margin:0 auto;
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:32px;
+  gap:30px;
 }
 
 .solution-card {
   background:#f8f9fb;
-  padding:30px;
+  padding:28px;
   border-radius:16px;
 }
 
-.solution-icon {
-  margin-bottom:18px;
+.solution-card h3 {
+  margin-bottom:10px;
+}
+
+.solution-card p {
+  line-height:1.6;
 }
 
 /* PRODUCTS */
@@ -60,13 +78,17 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   background:#f5f7fa;
 }
 
-/* CONTACT */
+/* CONTACT (좌 텍스트 / 우 지도 복구) */
 .contact-container {
   max-width:1200px;
   margin:0 auto;
   display:flex;
   gap:60px;
 }
+
+.contact-left { flex:1; }
+.contact-map { flex:1; }
+
 .contact-map iframe {
   width:100%;
   height:260px;
@@ -104,21 +126,32 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Touch & Display Solutions</h1>
     <p>Reliable partner for custom display integration</p>
+    <button onclick="location.href='mailto:scotty@deracle.co.kr'">
+      Request a Solution
+    </button>
   </div>
 </section>
 
+<!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
 
     <div class="company-text">
       <h2>Company</h2>
-      <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
-      <p>While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.</p>
-      <p>We offer flexible production capabilities with fast and responsive support to meet diverse customer needs.</p>
+      <p>
+        Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.
+      </p>
+      <p>
+        While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.
+      </p>
+      <p>
+        We offer flexible production capabilities, from small-volume customized projects to larger-scale supply, with fast and responsive support to meet diverse customer needs.
+      </p>
     </div>
 
     <div class="company-image">
@@ -128,59 +161,64 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </div>
 </section>
 
+<!-- SOLUTIONS -->
 <section id="solutions">
   <h2 style="text-align:center;">Solutions</h2>
 
   <div class="solutions-grid">
 
     <div class="solution-card">
-      <div class="solution-icon">
-        🖥️
-      </div>
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design and engineering.</p>
+      <p>
+        End-to-end custom display solutions from panel selection to final integration. 
+        We support optimized design, mechanical structure, and controller development to ensure reliable performance across various applications.
+      </p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon">
-        ✋
-      </div>
       <h3>Touch Integration</h3>
-      <p>Various touch solutions including PCAP and resistive with bonding options for durability and accuracy.</p>
+      <p>
+        Integrated various touch solutions including PCAP and resistive technologies, with both air bonding and optical bonding options. 
+        Designed for durability, accuracy, and seamless user interaction in demanding environments.
+      </p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon">
-        🎮
-      </div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability displays optimized for industrial and gaming environments.</p>
+      <p>
+        High-reliability display solutions tailored for industrial and gaming applications. 
+        Optimized for performance, durability, and long-term operation in harsh environments.
+      </p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon">
-        🔧
-      </div>
       <h3>Engineering Support</h3>
-      <p>Firmware optimization, panel sorting, and calibration support for stable integration.</p>
+      <p>
+        Comprehensive engineering support including firmware optimization, signal tuning, panel sorting, and color calibration 
+        to enhance overall display performance and ensure stable system integration.
+      </p>
     </div>
 
   </div>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
   <p>Coming soon</p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2 style="text-align:center;">Contact</h2>
 
   <div class="contact-container">
 
-    <div>
-      <p><strong>📍 Address</strong><br>
-      Seoul, Republic Korea</p>
+    <div class="contact-left">
+
+      <p><strong>Address</strong><br>
+      #903, Woosung SB Tower II, 220, Gonghang-daero<br>
+      Gangseo-gu, Seoul, Republic Korea</p>
 
       <div class="contact-grid">
         <div>P</div><div>+82 2 6010 8401</div>
@@ -188,6 +226,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
         <div>M</div><div>+82 10 2005 3009</div>
         <div>E</div><div>scotty@deracle.co.kr</div>
       </div>
+
     </div>
 
     <div class="contact-map">
