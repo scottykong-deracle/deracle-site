@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO (🔥 키워드 포함 최적화) -->
+<!-- SEO -->
 <title>Deracle | LCD Panel Module & Touch Display Solutions</title>
 <meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP, resistive touch and bonding.">
 
-<!-- 폰트 -->
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
 <style>
@@ -18,7 +17,6 @@ body {
   color: #222;
 }
 
-/* 공통 */
 section {
   padding: 80px 20px;
 }
@@ -41,7 +39,7 @@ nav a {
   color: #333;
 }
 
-/* HERO (기존 유지) */
+/* HERO (절대 유지) */
 .hero {
   height: 60vh;
   min-height: 420px;
@@ -73,7 +71,7 @@ nav a {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* COMPANY (🔥 이전 안정 버전 복구) */
+/* COMPANY (이전 정상 버전 유지) */
 .company {
   background: #f8f9fb;
 }
@@ -116,9 +114,9 @@ nav a {
 
 .solution-card {
   background: #f8f9fb;
-  padding: 26px;
+  padding: 28px;
   border-radius: 16px;
-  min-height: 220px;
+  min-height: 240px;
   transition: 0.3s;
 }
 
@@ -127,7 +125,17 @@ nav a {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-/* CONTACT (🔥 완전 정렬 복구) */
+.solution-icon {
+  margin-bottom: 12px;
+}
+
+.solution-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #333;
+}
+
+/* CONTACT */
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -151,7 +159,7 @@ nav a {
   border: 0;
 }
 
-/* P/F/M/E 정렬 */
+/* 정렬 핵심 */
 .contact-grid {
   display: grid;
   grid-template-columns: 20px 1fr;
@@ -198,7 +206,6 @@ nav a {
 <!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
-
     <div class="company-text">
       <h2>Company</h2>
 
@@ -218,7 +225,6 @@ nav a {
     <div class="company-image">
       <img src="company.jpg">
     </div>
-
   </div>
 </section>
 
@@ -229,35 +235,50 @@ nav a {
   <div class="solutions-grid">
 
     <div class="solution-card">
+      <div class="solution-icon" data-feather="monitor"></div>
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions from panel selection to final integration.</p>
+      <p>
+        End-to-end custom display solutions from panel selection to final integration. 
+        We support optimized design, mechanical structure, and controller development to ensure reliable performance across various applications.
+      </p>
     </div>
 
     <div class="solution-card">
+      <div class="solution-icon" data-feather="hand"></div>
       <h3>Touch Integration</h3>
-      <p>PCAP and resistive touch solutions with bonding options for durability and accuracy.</p>
+      <p>
+        Integrated various touch solutions including PCAP and resistive technologies, with both air bonding and optical bonding options. 
+        Designed for durability, accuracy, and seamless user interaction in demanding environments.
+      </p>
     </div>
 
     <div class="solution-card">
+      <div class="solution-icon" data-feather="cpu"></div>
       <h3>Industrial & Gaming Displays</h3>
-      <p>High-reliability display solutions optimized for industrial and gaming environments.</p>
+      <p>
+        High-reliability display solutions tailored for industrial and gaming applications. 
+        Optimized for performance, durability, and long-term operation in harsh environments.
+      </p>
     </div>
 
     <div class="solution-card">
+      <div class="solution-icon" data-feather="tool"></div>
       <h3>Engineering Support</h3>
-      <p>Includes firmware tuning, panel sorting, and calibration.</p>
+      <p>
+        Comprehensive engineering support including firmware optimization, signal tuning, panel sorting, and color calibration 
+        to enhance overall display performance and ensure stable system integration.
+      </p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact">
   <h2 style="text-align:center;">Contact</h2>
 
   <div class="contact-container">
 
-    <!-- LEFT -->
     <div class="contact-left">
 
       <div style="margin-bottom:20px;">
@@ -280,13 +301,18 @@ nav a {
 
     </div>
 
-    <!-- RIGHT -->
     <div class="contact-map">
       <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 
   </div>
 </section>
+
+<!-- ICON SCRIPT (🔥 이거 있어야 아이콘 나옴) -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+feather.replace();
+</script>
 
 </body>
 </html>
