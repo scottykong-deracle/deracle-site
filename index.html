@@ -44,7 +44,6 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
-
   background: url('hero.jpg') center/cover no-repeat;
   color: #fff;
 }
@@ -55,6 +54,22 @@ nav a {
 
 .hero p {
   margin-top: 10px;
+}
+
+/* CTA 버튼 */
+.hero button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background: #007BFF;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #0056b3;
 }
 
 /* COMPANY */
@@ -90,6 +105,10 @@ nav a {
 }
 
 /* SOLUTIONS */
+#solutions {
+  background: #ffffff;
+}
+
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -102,7 +121,7 @@ nav a {
   padding: 30px;
   border-radius: 14px;
   transition: all 0.3s ease;
-  background: #fff;
+  background: #f8f9fb;
 }
 
 .solution-card:hover {
@@ -117,17 +136,36 @@ nav a {
 
 /* PRODUCTS */
 .products {
+  background: #f5f7fa;
   text-align: center;
 }
 
 /* CONTACT */
 .contact {
-  text-align: center;
+  background: #ffffff;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
 }
 
 .contact-info {
-  margin-top: 30px;
+  flex: 1;
   line-height: 1.8;
+}
+
+.contact-map {
+  flex: 1;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
 }
 
 /* MOBILE */
@@ -139,6 +177,10 @@ nav a {
 
   .solutions-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    flex-direction: column;
   }
 }
 </style>
@@ -164,6 +206,7 @@ nav a {
   <div>
     <h1>Touch & Display Solutions</h1>
     <p>Reliable partner for custom display integration</p>
+    <button onclick="location.href='mailto:scotty@deracle.co.kr'">Request a Solution</button>
   </div>
 </section>
 
@@ -207,26 +250,26 @@ nav a {
 
     <div class="solution-card">
       <div class="icon">🖥️</div>
+      <h3>Custom Display Solutions</h3>
+      <p>End-to-end custom display solutions from panel selection to final integration.</p>
+    </div>
+
+    <div class="solution-card">
+      <div class="icon">✋</div>
       <h3>Touch Integration</h3>
-      <p>PCAP and resistive touch solutions</p>
+      <p>Various touch solutions including PCAP and resistive technologies.</p>
     </div>
 
     <div class="solution-card">
-      <div class="icon">🔍</div>
-      <h3>Optical Bonding</h3>
-      <p>Enhanced visibility and durability</p>
+      <div class="icon">🎮</div>
+      <h3>Industrial & Gaming Displays</h3>
+      <p>High-reliability displays for industrial and gaming environments.</p>
     </div>
 
     <div class="solution-card">
-      <div class="icon">⚙️</div>
-      <h3>Customization</h3>
-      <p>Tailored solutions for various applications</p>
-    </div>
-
-    <div class="solution-card">
-      <div class="icon">📦</div>
-      <h3>Assembly</h3>
-      <p>Complete display module integration</p>
+      <div class="icon">🛠️</div>
+      <h3>Engineering Support</h3>
+      <p>Includes firmware tuning, panel sorting, and calibration support.</p>
     </div>
 
   </div>
@@ -240,24 +283,31 @@ nav a {
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Get in touch with us for your project.</p>
+  <h2 style="text-align:center;">Contact</h2>
 
-  <div class="contact-info">
-    <p>
-      #903, Woosung SB Tower II, 220, Gonghang-daero<br>
-      Gangseo-gu, Seoul, Republic Korea
-    </p>
+  <div class="contact-container">
 
-    <p>
-      P +82 2 6010 8401<br>
-      F +82 2 6010 8402<br>
-      M +82 10 2005 3009
-    </p>
+    <div class="contact-info">
+      <p>
+        #903, Woosung SB Tower II, 220, Gonghang-daero<br>
+        Gangseo-gu, Seoul, Republic Korea
+      </p>
 
-    <p>
-      scotty@deracle.co.kr
-    </p>
+      <p>
+        P +82 2 6010 8401<br>
+        F +82 2 6010 8402<br>
+        M +82 10 2005 3009
+      </p>
+
+      <p>
+        scotty@deracle.co.kr
+      </p>
+    </div>
+
+    <div class="contact-map">
+      <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
   </div>
 </section>
 
