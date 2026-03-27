@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Deracle | Touch & Display Solutions</title>
-<meta name="description" content="Custom touch and display solutions including PCAP, resistive touch, bonding, and industrial displays. Reliable partner for display integration.">
+<!-- SEO (🔥 키워드 포함 최적화) -->
+<title>Deracle | LCD Panel Module & Touch Display Solutions</title>
+<meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP, resistive touch and bonding.">
 
 <!-- 폰트 -->
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
@@ -41,7 +41,7 @@ nav a {
   color: #333;
 }
 
-/* HERO */
+/* HERO (기존 유지) */
 .hero {
   height: 60vh;
   min-height: 420px;
@@ -64,7 +64,6 @@ nav a {
   border-radius: 8px;
   background: linear-gradient(135deg, #007BFF, #0056b3);
   color: #fff;
-  font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -74,7 +73,7 @@ nav a {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* COMPANY */
+/* COMPANY (🔥 이전 안정 버전 복구) */
 .company {
   background: #f8f9fb;
 }
@@ -91,16 +90,22 @@ nav a {
   flex: 1.1;
 }
 
+.company-text p {
+  line-height: 1.7;
+  margin-bottom: 14px;
+  max-width: 520px;
+}
+
+.company-image {
+  flex: 0.9;
+}
+
 .company-image img {
   width: 100%;
   border-radius: 12px;
 }
 
 /* SOLUTIONS */
-#solutions {
-  background: #ffffff;
-}
-
 .solutions-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -122,46 +127,21 @@ nav a {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-.solution-icon svg {
-  width: 26px;
-  height: 26px;
-}
-
-/* PRODUCTS */
-.products {
-  background: #f5f7fa;
-  text-align: center;
-}
-
-/* CONTACT */
-.contact {
-  background: #ffffff;
-}
-
-.contact-line {
-  width: 60px;
-  height: 2px;
-  background: #ddd;
-  margin: 10px auto 40px;
-}
-
+/* CONTACT (🔥 완전 정렬 복구) */
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  gap: 50px;
+  gap: 60px;
+  align-items: flex-start;
 }
 
-.contact-block {
-  margin-bottom: 24px;
+.contact-left {
+  flex: 1;
 }
 
-/* 🔥 정렬 핵심 */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  row-gap: 6px;
-  column-gap: 10px;
+.contact-map {
+  flex: 1;
 }
 
 .contact-map iframe {
@@ -169,7 +149,14 @@ nav a {
   height: 260px;
   border-radius: 12px;
   border: 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* P/F/M/E 정렬 */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  row-gap: 6px;
+  column-gap: 12px;
 }
 
 /* MOBILE */
@@ -193,11 +180,11 @@ nav a {
   <nav>
     <a href="#company">Company</a>
     <a href="#solutions">Solutions</a>
-    <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Touch & Display Solutions</h1>
@@ -208,44 +195,55 @@ nav a {
   </div>
 </section>
 
+<!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
+
     <div class="company-text">
       <h2>Company</h2>
-      <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
-      <p>Flexible high-mix, low-volume production with fast 24h response.</p>
+
+      <p>
+        Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.
+      </p>
+
+      <p>
+        While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.
+      </p>
+
+      <p>
+        We support high-mix, low-volume production with flexible MOQ and fast 24-hour response.
+      </p>
     </div>
+
     <div class="company-image">
       <img src="company.jpg">
     </div>
+
   </div>
 </section>
 
+<!-- SOLUTIONS -->
 <section id="solutions">
   <h2 style="text-align:center;">Solutions</h2>
 
   <div class="solutions-grid">
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="monitor"></div>
       <h3>Custom Display Solutions</h3>
       <p>End-to-end custom display solutions from panel selection to final integration.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="hand"></div>
       <h3>Touch Integration</h3>
       <p>PCAP and resistive touch solutions with bonding options for durability and accuracy.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="cpu"></div>
       <h3>Industrial & Gaming Displays</h3>
       <p>High-reliability display solutions optimized for industrial and gaming environments.</p>
     </div>
 
     <div class="solution-card">
-      <div class="solution-icon" data-feather="tool"></div>
       <h3>Engineering Support</h3>
       <p>Includes firmware tuning, panel sorting, and calibration.</p>
     </div>
@@ -253,26 +251,22 @@ nav a {
   </div>
 </section>
 
-<section id="products" class="products">
-  <h2>Products</h2>
-  <p>Coming soon</p>
-</section>
-
+<!-- CONTACT -->
 <section id="contact" class="contact">
   <h2 style="text-align:center;">Contact</h2>
-  <div class="contact-line"></div>
 
   <div class="contact-container">
 
-    <div>
+    <!-- LEFT -->
+    <div class="contact-left">
 
-      <div class="contact-block">
-        <strong>📍 Address</strong>
+      <div style="margin-bottom:20px;">
+        <strong>📍 Address</strong><br>
         #903, Woosung SB Tower II, 220, Gonghang-daero<br>
         Gangseo-gu, Seoul, Republic Korea
       </div>
 
-      <div class="contact-block">
+      <div>
         <strong>📞 Contact</strong>
 
         <div class="contact-grid">
@@ -286,15 +280,13 @@ nav a {
 
     </div>
 
+    <!-- RIGHT -->
     <div class="contact-map">
       <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 
   </div>
 </section>
-
-<script src="https://unpkg.com/feather-icons"></script>
-<script>feather.replace();</script>
 
 </body>
 </html>
