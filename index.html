@@ -4,179 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
 <title>Deracle | LCD Panel Module & Touch Display Solutions</title>
 <meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP, resistive touch and bonding.">
 
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Pretendard', Arial, sans-serif;
-  color: #222;
-}
-
-section {
-  padding: 80px 20px;
-}
+body { margin:0; font-family:'Pretendard', Arial; color:#222;}
+section { padding:80px 20px;}
 
 /* HEADER */
 header {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 40px;
+  position: sticky; top:0; background:#fff; z-index:1000;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px 40px;
 }
+nav a { margin-left:24px; text-decoration:none; color:#333;}
 
-nav a {
-  margin-left: 24px;
-  text-decoration: none;
-  color: #333;
-}
-
-/* HERO (절대 유지) */
+/* HERO (유지) */
 .hero {
-  height: 60vh;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url('hero.jpg') center/cover no-repeat;
-  color: #fff;
+  height:60vh; min-height:420px;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  background:url('hero.jpg') center/cover no-repeat;
+  color:#fff;
 }
-
-.hero h1 {
-  font-size: 42px;
-}
-
+.hero h1 { font-size:42px; }
 .hero button {
-  margin-top: 24px;
-  padding: 14px 32px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #007BFF, #0056b3);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-top:24px; padding:14px 32px;
+  border:none; border-radius:8px;
+  background:linear-gradient(135deg,#007BFF,#0056b3);
+  color:#fff; cursor:pointer; transition:0.3s;
 }
-
 .hero button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* COMPANY (이전 정상 버전 유지) */
-.company {
-  background: #f8f9fb;
-}
-
+/* COMPANY (문장만 수정) */
+.company { background:#f8f9fb; }
 .company-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 40px;
-  align-items: center;
+  max-width:1200px; margin:0 auto;
+  display:flex; gap:40px; align-items:center;
 }
-
-.company-text {
-  flex: 1.1;
-}
-
+.company-text { flex:1.1; }
 .company-text p {
-  line-height: 1.7;
-  margin-bottom: 14px;
-  max-width: 520px;
+  line-height:1.7; margin-bottom:14px; max-width:520px;
 }
+.company-image { flex:0.9; }
+.company-image img { width:100%; border-radius:12px; }
 
-.company-image {
-  flex: 0.9;
-}
-
-.company-image img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* SOLUTIONS */
+/* SOLUTIONS (여백만 미세 조정) */
 .solutions-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:28px;
 }
-
 .solution-card {
-  background: #f8f9fb;
-  padding: 28px;
-  border-radius: 16px;
-  min-height: 240px;
-  transition: 0.3s;
+  background:#f8f9fb;
+  padding:24px; /* 기존보다 살짝 줄임 */
+  border-radius:16px;
+  min-height:220px;
+  transition:0.3s;
 }
-
 .solution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.08);
 }
-
-.solution-icon {
-  margin-bottom: 12px;
-}
-
+.solution-icon { margin-bottom:10px; }
 .solution-icon svg {
-  width: 28px;
-  height: 28px;
-  stroke: #333;
+  width:26px; height:26px;
 }
 
-/* CONTACT */
+/* CONTACT 유지 */
 .contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
+  max-width:1200px; margin:0 auto;
+  display:flex; gap:60px; align-items:flex-start;
 }
-
-.contact-left {
-  flex: 1;
-}
-
-.contact-map {
-  flex: 1;
-}
-
+.contact-left { flex:1; }
+.contact-map { flex:1; }
 .contact-map iframe {
-  width: 100%;
-  height: 260px;
-  border-radius: 12px;
-  border: 0;
+  width:100%; height:260px;
+  border-radius:12px; border:0;
 }
-
-/* 정렬 핵심 */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  row-gap: 6px;
-  column-gap: 12px;
+  display:grid;
+  grid-template-columns:20px 1fr;
+  row-gap:6px; column-gap:12px;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .company-inner,
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .solutions-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width:768px){
+  .company-inner, .contact-container { flex-direction:column; }
+  .solutions-grid { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -218,8 +138,9 @@ nav a {
       </p>
 
       <p>
-        We support high-mix, low-volume production with flexible MOQ and fast 24-hour response.
+        We offer flexible production capabilities, from small-volume customized projects to larger-scale supply, with fast and responsive support to meet diverse customer needs.
       </p>
+
     </div>
 
     <div class="company-image">
@@ -308,11 +229,8 @@ nav a {
   </div>
 </section>
 
-<!-- ICON SCRIPT (🔥 이거 있어야 아이콘 나옴) -->
 <script src="https://unpkg.com/feather-icons"></script>
-<script>
-feather.replace();
-</script>
+<script>feather.replace();</script>
 
 </body>
 </html>
