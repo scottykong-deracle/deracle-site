@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Deracle | LCD Panel Module & Touch Display Solutions</title>
-<meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP, resistive touch and bonding.">
+<meta name="description" content="LCD panel module supplier, dealer, distributor and reseller offering A1 grade, A grade and B grade panels. Custom touch display solutions including PCAP and resistive touch.">
 
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
@@ -21,7 +21,7 @@ header {
 }
 nav a { margin-left:24px; text-decoration:none; color:#333;}
 
-/* HERO (유지) */
+/* HERO */
 .hero {
   height:60vh; min-height:420px;
   display:flex; align-items:center; justify-content:center;
@@ -31,7 +31,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 }
 .hero h1 { font-size:42px; }
 
-/* COMPANY (유지) */
+/* COMPANY */
 .company { background:#f8f9fb; }
 .company-inner {
   max-width:1200px; margin:0 auto;
@@ -39,15 +39,22 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 }
 .company-text { flex:1.1; }
 .company-text p {
-  line-height:1.7; margin-bottom:14px; max-width:520px;
+  line-height:1.7;
+  margin-bottom:14px;
+  max-width:520px;
 }
 .company-image { flex:0.9; }
-.company-image img { width:100%; border-radius:12px; }
+.company-image img {
+  width:100%;
+  border-radius:12px;
+}
 
-/* SOLUTIONS (🔥 핵심 수정) */
+/* SOLUTIONS */
 .solutions-grid {
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:repeat(2,1fr);
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:28px;
 }
 
@@ -55,10 +62,8 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   background:#f8f9fb;
   padding:24px;
   border-radius:16px;
-  transition:0.3s;
 }
 
-/* ❗ 아이콘 크게 + 여백 확보 */
 .solution-icon {
   margin-bottom:16px;
 }
@@ -74,27 +79,39 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   text-align:center;
 }
 
-/* CONTACT 유지 */
+/* CONTACT */
 .contact-container {
-  max-width:1200px; margin:0 auto;
-  display:flex; gap:60px;
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  gap:60px;
 }
 .contact-left { flex:1; }
 .contact-map { flex:1; }
+
 .contact-map iframe {
-  width:100%; height:260px;
-  border-radius:12px; border:0;
+  width:100%;
+  height:260px;
+  border-radius:12px;
+  border:0;
 }
+
 .contact-grid {
   display:grid;
   grid-template-columns:20px 1fr;
-  row-gap:6px; column-gap:12px;
+  row-gap:6px;
+  column-gap:12px;
 }
 
 /* MOBILE */
 @media (max-width:768px){
-  .company-inner, .contact-container { flex-direction:column; }
-  .solutions-grid { grid-template-columns:1fr; }
+  .company-inner,
+  .contact-container {
+    flex-direction:column;
+  }
+  .solutions-grid {
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -106,7 +123,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   <nav>
     <a href="#company">Company</a>
     <a href="#solutions">Solutions</a>
-    <a href="#products">Products</a> <!-- 🔥 복구 -->
+    <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -122,6 +139,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 <!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
+
     <div class="company-text">
       <h2>Company</h2>
 
@@ -141,6 +159,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
     <div class="company-image">
       <img src="company.jpg">
     </div>
+
   </div>
 </section>
 
@@ -189,7 +208,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </div>
 </section>
 
-<!-- PRODUCTS (🔥 복구) -->
+<!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
   <p>Coming soon</p>
@@ -202,6 +221,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   <div class="contact-container">
 
     <div class="contact-left">
+
       <div style="margin-bottom:20px;">
         <strong>📍 Address</strong><br>
         #903, Woosung SB Tower II, 220, Gonghang-daero<br>
@@ -210,13 +230,16 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 
       <div>
         <strong>📞 Contact</strong>
+
         <div class="contact-grid">
           <div>P</div><div>+82 2 6010 8401</div>
           <div>F</div><div>+82 2 6010 8402</div>
           <div>M</div><div>+82 10 2005 3009</div>
           <div>E</div><div>scotty@deracle.co.kr</div>
         </div>
+
       </div>
+
     </div>
 
     <div class="contact-map">
@@ -226,8 +249,13 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   </div>
 </section>
 
+<!-- ICON FIX (🔥 핵심) -->
 <script src="https://unpkg.com/feather-icons"></script>
-<script>feather.replace();</script>
+<script>
+window.onload = function() {
+  feather.replace();
+};
+</script>
 
 </body>
 </html>
