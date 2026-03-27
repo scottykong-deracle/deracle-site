@@ -6,10 +6,9 @@
 <title>Deracle</title>
 
 <style>
-/* 기본 */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -17,7 +16,7 @@ section {
   padding: 80px 20px;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
@@ -37,7 +36,7 @@ nav a {
   font-weight: 500;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   height: 60vh;
   min-height: 420px;
@@ -45,9 +44,20 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  background: url('hero.jpg') center/cover no-repeat;
+  color: #fff;
 }
 
-/* ================= COMPANY ================= */
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+/* COMPANY */
 .company {
   background: #f8f9fb;
 }
@@ -79,7 +89,7 @@ nav a {
   border-radius: 12px;
 }
 
-/* ================= SOLUTIONS ================= */
+/* SOLUTIONS */
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -105,12 +115,12 @@ nav a {
   margin-bottom: 12px;
 }
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 .products {
   text-align: center;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact {
   text-align: center;
 }
@@ -120,7 +130,7 @@ nav a {
   line-height: 1.8;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
   .company-inner {
     flex-direction: column;
@@ -138,7 +148,9 @@ nav a {
 
 <!-- HEADER -->
 <header>
-  <div><strong>DERACLE</strong></div>
+  <div>
+    <img src="logo.png" alt="Logo" style="height:40px;">
+  </div>
   <nav>
     <a href="#company">Company</a>
     <a href="#solutions">Solutions</a>
@@ -181,7 +193,7 @@ nav a {
     </div>
 
     <div class="company-image">
-      <img src="your-image.jpg" alt="Company Image">
+      <img src="company.jpg" alt="Company Image">
     </div>
 
   </div>
@@ -220,7 +232,7 @@ nav a {
   </div>
 </section>
 
-<!-- PRODUCTS (현재는 capability 느낌 유지) -->
+<!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
   <p>Our production capabilities include touch integration, bonding, and customized display assembly solutions.</p>
