@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deracle</title>
+
+<!-- SEO -->
+<title>Deracle | Touch & Display Solutions</title>
+<meta name="description" content="Custom touch and display solutions including PCAP, resistive touch, bonding, and industrial displays. Reliable partner for display integration.">
 
 <!-- 폰트 -->
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
@@ -12,10 +15,10 @@
 body {
   margin: 0;
   font-family: 'Pretendard', Arial, sans-serif;
-  overflow-x: hidden;
   color: #222;
 }
 
+/* 공통 */
 section {
   padding: 80px 20px;
 }
@@ -24,8 +27,8 @@ section {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
   background: #fff;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +39,6 @@ nav a {
   margin-left: 24px;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
 }
 
 /* HERO */
@@ -57,12 +59,19 @@ nav a {
 
 .hero button {
   margin-top: 24px;
-  padding: 12px 28px;
+  padding: 14px 32px;
   border: none;
-  background: #007BFF;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007BFF, #0056b3);
   color: #fff;
-  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* COMPANY */
@@ -82,16 +91,6 @@ nav a {
   flex: 1.1;
 }
 
-.company-text p {
-  line-height: 1.7;
-  margin-bottom: 14px;
-  max-width: 540px;
-}
-
-.company-image {
-  flex: 0.9;
-}
-
 .company-image img {
   width: 100%;
   border-radius: 12px;
@@ -103,22 +102,19 @@ nav a {
 }
 
 .solutions-grid {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .solution-card {
   background: #f8f9fb;
   padding: 26px;
   border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 220px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .solution-card:hover {
@@ -126,14 +122,9 @@ nav a {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-.solution-icon {
-  margin-bottom: 12px;
-}
-
 .solution-icon svg {
   width: 26px;
   height: 26px;
-  stroke: #333;
 }
 
 /* PRODUCTS */
@@ -145,10 +136,6 @@ nav a {
 /* CONTACT */
 .contact {
   background: #ffffff;
-}
-
-.contact h2 {
-  text-align: center;
 }
 
 .contact-line {
@@ -165,28 +152,21 @@ nav a {
   gap: 50px;
 }
 
-.contact-info {
-  flex: 1;
-}
-
 .contact-block {
   margin-bottom: 24px;
 }
 
-.contact-block strong {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.contact-map {
-  flex: 1;
+/* 🔥 정렬 핵심 */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  row-gap: 6px;
+  column-gap: 10px;
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 280px;
+  height: 260px;
   border-radius: 12px;
   border: 0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -194,17 +174,13 @@ nav a {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .company-inner {
+  .company-inner,
+  .contact-container {
     flex-direction: column;
-    text-align: center;
   }
 
   .solutions-grid {
     grid-template-columns: 1fr;
-  }
-
-  .contact-container {
-    flex-direction: column;
   }
 }
 </style>
@@ -212,7 +188,6 @@ nav a {
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" style="height:40px;">
   <nav>
@@ -223,7 +198,6 @@ nav a {
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Touch & Display Solutions</h1>
@@ -234,15 +208,12 @@ nav a {
   </div>
 </section>
 
-<!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
     <div class="company-text">
       <h2>Company</h2>
       <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
-      <p>While we support mass production, our strength lies in flexible and customized solutions tailored to each project.</p>
-      <p>We support high-mix, low-volume production with flexible MOQ.</p>
-      <p>Fast response within 24 hours ensures smooth execution.</p>
+      <p>Flexible high-mix, low-volume production with fast 24h response.</p>
     </div>
     <div class="company-image">
       <img src="company.jpg">
@@ -250,7 +221,6 @@ nav a {
   </div>
 </section>
 
-<!-- SOLUTIONS -->
 <section id="solutions">
   <h2 style="text-align:center;">Solutions</h2>
 
@@ -259,13 +229,13 @@ nav a {
     <div class="solution-card">
       <div class="solution-icon" data-feather="monitor"></div>
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions from panel selection to final integration. We support optimized design and controller development.</p>
+      <p>End-to-end custom display solutions from panel selection to final integration.</p>
     </div>
 
     <div class="solution-card">
       <div class="solution-icon" data-feather="hand"></div>
       <h3>Touch Integration</h3>
-      <p>Integrated various touch solutions including PCAP and resistive technologies with bonding options for durability and accuracy.</p>
+      <p>PCAP and resistive touch solutions with bonding options for durability and accuracy.</p>
     </div>
 
     <div class="solution-card">
@@ -277,26 +247,24 @@ nav a {
     <div class="solution-card">
       <div class="solution-icon" data-feather="tool"></div>
       <h3>Engineering Support</h3>
-      <p>Includes firmware tuning, panel sorting, and calibration for stable system integration.</p>
+      <p>Includes firmware tuning, panel sorting, and calibration.</p>
     </div>
 
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
-  <p>Our production capabilities include touch integration, bonding, and customized display assembly solutions.</p>
+  <p>Coming soon</p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
-  <h2>Contact</h2>
+  <h2 style="text-align:center;">Contact</h2>
   <div class="contact-line"></div>
 
   <div class="contact-container">
 
-    <div class="contact-info">
+    <div>
 
       <div class="contact-block">
         <strong>📍 Address</strong>
@@ -306,8 +274,14 @@ nav a {
 
       <div class="contact-block">
         <strong>📞 Contact</strong>
-        P +82 2 6010 8401 &nbsp;&nbsp; F +82 2 6010 8402<br>
-        M +82 10 2005 3009 &nbsp;&nbsp; E scotty@deracle.co.kr
+
+        <div class="contact-grid">
+          <div>P</div><div>+82 2 6010 8401</div>
+          <div>F</div><div>+82 2 6010 8402</div>
+          <div>M</div><div>+82 10 2005 3009</div>
+          <div>E</div><div>scotty@deracle.co.kr</div>
+        </div>
+
       </div>
 
     </div>
@@ -319,11 +293,8 @@ nav a {
   </div>
 </section>
 
-<!-- Feather Icons -->
 <script src="https://unpkg.com/feather-icons"></script>
-<script>
-feather.replace();
-</script>
+<script>feather.replace();</script>
 
 </body>
 </html>
