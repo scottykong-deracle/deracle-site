@@ -21,7 +21,7 @@ header {
 }
 nav a { margin-left:24px; text-decoration:none; color:#333;}
 
-/* HERO (원래 문구 복구) */
+/* HERO */
 .hero {
   height:70vh;
   display:flex; align-items:center; justify-content:center;
@@ -50,7 +50,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 .company-image { flex:1; }
 .company-image img { width:100%; border-radius:12px; }
 
-/* SOLUTIONS (아이콘 제거 + 안정 여백) */
+/* SOLUTIONS */
 .solutions-grid {
   max-width:1200px;
   margin:0 auto;
@@ -77,6 +77,15 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 .products {
   text-align:center;
   background:#f5f7fa;
+}
+
+/* 🔥 추가 (이미지 카드용) */
+.product-card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 
 /* CONTACT */
@@ -213,7 +222,54 @@ We provide touch screen (Pcap G+G), LCD modules, AD boards, data cables, connect
 <!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
-  <p>Coming soon</p>
+
+  <div class="solutions-grid">
+
+    <div class="solution-card product-card">
+      <img src="images/lcd.jpg">
+      <h3>Display Modules</h3>
+      <p>
+        LCD Panel Module & Cells<br>
+        BOE / LG / AUO / Innolux<br>
+        A / A1 / B Grade Options<br>
+        Wide Size Range (7” ~ 55”)
+      </p>
+    </div>
+
+    <div class="solution-card product-card">
+      <img src="images/touch.jpg">
+      <h3>Touch Solutions</h3>
+      <p>
+        Custom Touch Development<br>
+        PCAP & Resistive Touch<br>
+        G+G / G+F Structures<br>
+        OCA / Air Bonding
+      </p>
+    </div>
+
+    <div class="solution-card product-card">
+      <img src="images/board.jpg">
+      <h3>Electronics & Control</h3>
+      <p>
+        LCD Control Board (AD Board)<br>
+        LVDS / eDP Interface<br>
+        Signal Control & Conversion<br>
+        Custom AD Board Development is Available
+      </p>
+    </div>
+
+    <div class="solution-card product-card">
+      <img src="images/mechanical.jpg">
+      <h3>Mechanical & Integration</h3>
+      <p>
+        Metal Frame & Housing<br>
+        Accessory Kit (Wire Harness)<br>
+        Cable & Connector Solutions<br>
+        Power Adapter
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -243,8 +299,10 @@ We provide touch screen (Pcap G+G), LCD modules, AD boards, data cables, connect
 
   </div>
 </section>
+
 <footer style="text-align:center; padding:30px; font-size:13px; color:#999;">
   © 2026 Deracle. All rights reserved.
 </footer>
+
 </body>
 </html>
