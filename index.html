@@ -57,12 +57,19 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:30px;
-}
 
+}
 .solution-card {
   background:#f8f9fb;
   padding:28px;
   border-radius:16px;
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 }
 
 .solution-card h3 {
