@@ -57,6 +57,7 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:30px;
+
 }
 .solution-card {
   background:#f8f9fb;
@@ -64,18 +65,32 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   border-radius:16px;
   transition: all 0.3s ease;
 }
+
 .solution-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-.solution-card h3 { margin-bottom:10px; }
-.solution-card p { line-height:1.6; }
+}
+
+.solution-card h3 {
+  margin-bottom:10px;
+}
+
+.solution-card p {
+  line-height:1.6;
+}
 
 /* PRODUCTS */
-.products { text-align:center; background:#f5f7fa; }
+.products {
+  text-align:center;
+  background:#f5f7fa;
+}
 
-/* PRODUCT IMAGE */
-.product-card { overflow: hidden; }
+/* 🔥 추가 (이미지 카드용) */
+.product-card {
+  overflow: hidden;
+}
+
 .product-card img {
   width:100%;
   height:180px;
@@ -84,7 +99,11 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   margin-bottom:15px;
   transition: 0.3s;
 }
-.product-card:hover img { transform: scale(1.05); }
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
 
 /* CONTACT */
 .contact-container {
@@ -93,27 +112,22 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
   display:flex;
   gap:60px;
 }
+
 .contact-left { flex:1; }
 .contact-map { flex:1; }
+
 .contact-map iframe {
   width:100%;
   height:260px;
   border-radius:12px;
   border:0;
 }
+
 .contact-grid {
   display:grid;
   grid-template-columns:20px 1fr;
   gap:6px 12px;
 }
-
-/* 🔥 NEW STOCK SECTION */
-.stock {
-  background:linear-gradient(180deg,#0b0f1a,#111827);
-  color:#fff;
-  text-align:center;
-}
-.stock p { color:#aaa; }
 
 @media (max-width:768px){
   .company-inner,
@@ -135,7 +149,6 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
     <a href="#company">Company</a>
     <a href="#solutions">Solutions</a>
     <a href="#products">Products</a>
-    <a href="#stock">In Stock</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -154,122 +167,158 @@ nav a { margin-left:24px; text-decoration:none; color:#333;}
 <!-- COMPANY -->
 <section id="company" class="company">
   <div class="company-inner">
+
     <div class="company-text">
       <h2>Company</h2>
-      <p>Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.</p>
-      <p>We offer flexible production capabilities from small-volume projects to large-scale supply.</p>
+      <p>
+        Deracle, founded in 2013 with over 20 years of industry experience, specializes in custom touch screen assembly and optimized display solutions.
+      </p>
+      <p>
+        While we are fully capable of supporting mass production, our core strength lies in delivering flexible and customized solutions tailored to each customer’s specific requirements.
+      </p>
+      <p>
+        We offer flexible production capabilities, from small-volume customized projects to larger-scale supply, with fast and responsive support to meet diverse customer needs.
+      </p>
+      <p>
+Deracle is a Korea-based LCD panel distributor and touch screen supplier specializing in industrial display solutions. We supply LCD panels from BOE, LG, AUO, and Innolux, offering A, A1, and B grade panels.
+</p>
+
+<p>
+We provide touch screen (Pcap G+G), LCD modules, AD boards, data cables, connectors, harnesses, metalwork, frames, and power adaptors for industrial and gaming applications.
+</p>
     </div>
+
     <div class="company-image">
       <img src="company.jpg">
     </div>
+
   </div>
 </section>
 
 <!-- SOLUTIONS -->
 <section id="solutions">
   <h2 style="text-align:center;">Solutions</h2>
+
   <div class="solutions-grid">
+
     <div class="solution-card">
       <h3>Custom Display Solutions</h3>
-      <p>End-to-end custom display solutions.</p>
+      <p>
+        End-to-end custom display solutions from panel selection to final integration. 
+        We support optimized design, mechanical structure, and controller development to ensure reliable performance across various applications.
+      </p>
     </div>
+
     <div class="solution-card">
       <h3>Touch Integration</h3>
-      <p>PCAP and resistive technologies.</p>
+      <p>
+        Integrated various touch solutions including PCAP and resistive technologies, with both air bonding and optical bonding options. 
+        Designed for durability, accuracy, and seamless user interaction in demanding environments.
+      </p>
     </div>
+
+    <div class="solution-card">
+      <h3>Industrial & Gaming Displays</h3>
+      <p>
+        High-reliability display solutions tailored for industrial and gaming applications. 
+        Optimized for performance, durability, and long-term operation in harsh environments.
+      </p>
+    </div>
+
+    <div class="solution-card">
+      <h3>Engineering Support</h3>
+      <p>
+        Comprehensive engineering support including firmware optimization, signal tuning, panel sorting, and color calibration 
+        to enhance overall display performance and ensure stable system integration.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products" class="products">
   <h2>Products</h2>
+
   <div class="solutions-grid">
+
     <div class="solution-card product-card">
       <img src="images/lcd.jpg">
       <h3>Display Modules</h3>
+      <p>
+        LCD Panel Module & Cells<br>
+        BOE / LG / AUO / Innolux<br>
+        A / A1 / B Grade Options<br>
+        Wide Size Range (7” ~ 55”)
+      </p>
     </div>
+
     <div class="solution-card product-card">
       <img src="images/touch.jpg">
       <h3>Touch Solutions</h3>
-    </div>
-  </div>
-
-  <!-- 🔥 연결 문구 -->
-  <p style="margin-top:40px;">
-    Explore our currently available panels below.
-  </p>
-</section>
-
-<!-- 🔥 IN STOCK SECTION -->
-<section id="stock" class="stock">
-  <h2>Available Panels</h2>
-  <p>Selected high-demand panels, ready for immediate or short lead-time supply.</p>
-
-  <div style="margin-top:50px; display:grid; gap:40px;">
-
-    <div>
-      <h3>23.8" FHD</h3>
-      <p>M238HVN01.0</p>
-      <p style="color:#4a6cf7;">In Stock</p>
+      <p>
+        Custom Touch Development<br>
+        PCAP & Resistive Touch<br>
+        G+G / G+F Structures<br>
+        OCA / Air Bonding
+      </p>
     </div>
 
-    <div>
-      <h3>27" UHD</h3>
-      <p>LM270WR3-SSC2</p>
-      <p>Available</p>
+    <div class="solution-card product-card">
+      <img src="images/board.jpg">
+      <h3>Electronics & Control</h3>
+      <p>
+        LCD Control Board (AD Board)<br>
+        LVDS / eDP Interface<br>
+        Signal Control & Conversion<br>
+        Custom AD Board Development is Available
+      </p>
     </div>
 
-    <div>
-      <h3>27" FHD</h3>
-      <p>M270HVN02.0</p>
-      <p style="color:#4a6cf7;">In Stock</p>
+    <div class="solution-card product-card">
+      <img src="images/mechanical.jpg">
+      <h3>Mechanical & Integration</h3>
+      <p>
+        Metal Frame & Housing<br>
+        Accessory Kit (Wire Harness)<br>
+        Cable & Connector Solutions<br>
+        Power Adapter
+      </p>
     </div>
 
-    <div>
-      <h3>32" FHD</h3>
-      <p>DV320FHM-N00</p>
-      <p style="color:#f59e0b;">Limited</p>
-    </div>
-
-    <div>
-      <h3>15" FHD</h3>
-      <p>G150XNE-L01</p>
-      <p>Available</p>
-    </div>
-
-  </div>
-
-  <div style="margin-top:60px;">
-    <p>Looking for other models or specifications?</p>
-    <a href="mailto:scotty@deracle.co.kr"
-       style="padding:12px 28px; background:#4a6cf7; color:#fff; border-radius:8px; text-decoration:none;">
-       Request a Quotation
-    </a>
-    <p style="margin-top:20px; font-size:13px;">
-      Additional models available upon request.
-    </p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2 style="text-align:center;">Contact</h2>
+
   <div class="contact-container">
+
     <div class="contact-left">
-      <p><strong>Address</strong><br>Seoul, Korea</p>
+
+      <p><strong>Address</strong><br>
+      #903, Woosung SB Tower II, 220, Gonghang-daero<br>
+      Gangseo-gu, Seoul, Republic Korea</p>
+
       <div class="contact-grid">
         <div>P</div><div>+82 2 6010 8401</div>
+        <div>F</div><div>+82 2 6010 8402</div>
+        <div>M</div><div>+82 10 2005 3009</div>
         <div>E</div><div>scotty@deracle.co.kr</div>
       </div>
+
     </div>
+
     <div class="contact-map">
       <iframe src="https://maps.google.com/maps?q=Seoul&output=embed"></iframe>
     </div>
+
   </div>
 </section>
 
 <footer style="text-align:center; padding:30px; font-size:13px; color:#999;">
-  © 2026 Deracle
+  © 2026 Deracle. All rights reserved.
 </footer>
 
 </body>
