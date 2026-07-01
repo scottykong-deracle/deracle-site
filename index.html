@@ -211,22 +211,20 @@ Supporting Medical, Gaming, POS, Kiosk, Industrial Automation, HMI and AI applic
 </p>
     </div>
 
-    <!-- 회사 소개 우측 비주얼 영역 (좌측: 메모리 상하 배치 / 우측: 디스플레이 단독 배치) -->
-    <div class="company-image" style="display:flex; gap:15px; align-items:stretch;">
+   <!-- 회사 소개 우측 비주얼 영역 (원본 비율 유지 및 해상도 최적화 버전) -->
+    <div class="company-image" style="display:flex; gap:20px; align-items:center; justify-content:center; width:100%;">
       
-      <!-- [좌측 블록] 코인 로고 + 임베디드 칩셋 상하 배치 -->
-      <div style="width:50%; display:flex; flex-direction:column; gap:15px;">
-        <div style="flex:1; background:#fff; border-radius:12px; display:flex; align-items:center; justify-content:center; padding:20px; border:1px solid #eef1f6;">
-          <img src="images/kowin-logo.webp" alt="KOWIN Logo" style="max-width:80%; height:auto; object-fit:contain;">
-        </div>
-        <div style="flex:2;">
-          <img src="images/kowin-embedded.webp" alt="KOWIN Embedded Memory" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
-        </div>
+      <!-- [좌측 블록] KOWIN 로고와 임베디드 제품 (원본 비율대로 선명하게) -->
+      <div style="flex:1.1; display:flex; flex-direction:column; gap:12px; align-items:center;">
+        <!-- 히어로처럼 깔끔하게 투명 배경으로 들어가는 로고 -->
+        <img src="images/kowin-logo.webp" alt="KOWIN Logo" style="max-width:140px; height:auto; object-fit:contain;">
+        <!-- 찌그러짐 없이 원본 해상도 그대로 보여주는 칩셋 이미지 -->
+        <img src="images/kowin-embedded.webp" alt="KOWIN Embedded Memory" style="width:100%; height:auto; object-fit:contain; border-radius:12px;">
       </div>
 
-      <!-- [우측 블록] 기존 디스플레이 이미지 단독 배치 -->
-      <div style="width:50%;">
-        <img src="company.jpg" alt="Display Solutions" style="width:100%; height:100%; min-height:320px; object-fit:cover; border-radius:12px;">
+      <!-- [우측 블록] 기존 디스플레이 이미지 (비율 유지하며 자연스럽게 축소) -->
+      <div style="flex:0.9;">
+        <img src="company.jpg" alt="Display Solutions" style="width:100%; height:auto; object-fit:contain; border-radius:12px; display:block;">
       </div>
 
     </div>
