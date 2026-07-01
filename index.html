@@ -211,28 +211,34 @@ Supporting Medical, Gaming, POS, Kiosk, Industrial Automation, HMI and AI applic
 </p>
     </div>
 
-<!-- 회사 소개 우측 비주얼 영역 (KOWIN 로고 탑 + 제품 3종 가로 배치 프리미엄 버전) -->
-    <div class="company-image" style="width:100%; display:flex; flex-direction:column; align-items:center; gap:25px; padding:20px 0;">
+<!-- 회사 소개 우측 비주얼 영역 (CSS 간섭 차단 및 독립 액자 격리 버전) -->
+    <div class="company-image" style="flex: 1; width: 100%; display: block; box-sizing: border-box; padding: 15px 0;">
       
-      <!-- 상단: KOWIN 공식 로고 (독립 배치로 잘림 현상 완전 해결) -->
-      <div style="width:100%; text-align:center;">
-        <img src="images/kowin-logo.webp" alt="KOWIN Logo" style="max-width:160px; height:auto; object-fit:contain; display:inline-block;">
-      </div>
+      <!-- 내부 격리 캔버스 (로고 잘림을 원천 차단하는 도화지 구역) -->
+      <div style="background: #ffffff; border-radius: 12px; padding: 25px 20px; box-sizing: border-box; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 25px;">
+        
+        <!-- [상단] KOWIN 공식 로고 (독립 행 배치 + 상하 여백 안전 확보) -->
+        <div style="width: 100%; text-align: center; display: block; margin: 0 0 5px 0;">
+          <img src="images/kowin-logo.webp" alt="KOWIN Logo" style="max-width: 160px; width: 100%; height: auto; object-fit: contain; display: inline-block; vertical-align: middle;">
+        </div>
 
-      <!-- 하단: 제품군 3종 가로 정렬 (DRAM / SSD / EMBEDDED) -->
-      <div style="width:100%; display:flex; gap:12px; justify-content:center; align-items:center;">
-        <div style="flex:1;">
-          <img src="images/kowin-dram.webp" alt="KOWIN DRAM" style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
+        <!-- [하단] 제품 3종 가로 정렬 (DRAM / SSD / EMBEDDED) -->
+        <div style="width: 100%; display: flex; gap: 12px; justify-content: center; align-items: center; box-sizing: border-box;">
+          <div style="flex: 1; min-width: 0;">
+            <img src="images/kowin-dram.webp" alt="KOWIN DRAM" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <img src="images/kowin-ssd.webp" alt="KOWIN SSD" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <img src="images/kowin-embedded.webp" alt="KOWIN Embedded" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+          </div>
         </div>
-        <div style="flex:1;">
-          <img src="images/kowin-ssd.webp" alt="KOWIN SSD" style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-        </div>
-        <div style="flex:1;">
-          <img src="images/kowin-embedded.webp" alt="KOWIN Embedded" style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-        </div>
-      </div> <!-- 제품 3종 가로정렬 박스 종료 -->
 
-    </div> <!-- company-image 전체 비주얼 박스 종료 -->
+   </div> <!-- 제품 3종 가로 정렬 종료 (235번 줄) -->
+      </div> <!-- 내부 격리 캔버스 종료 (236번 줄) -->
+    </div> <!-- company-image 전체 비주얼 박스 종료 (여기를 새로 깔끔하게 닫아줍니다) -->
+</section> <!-- 기존에 밑에 있던 컴퍼니 섹션 종료 태그 -->
 </section>
 <section id="memory" style="padding:80px 20px; text-align:center;">
 
