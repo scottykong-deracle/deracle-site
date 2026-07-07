@@ -168,7 +168,65 @@ font-size:14px;
 }
 
 }
+/* DDR Evolution */
 
+.evolution{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.timeline{
+flex:1;
+min-width:260px;
+}
+
+.step{
+display:flex;
+align-items:center;
+margin:18px 0;
+font-size:22px;
+font-weight:700;
+color:#333;
+}
+
+.arrow{
+font-size:26px;
+color:#4a6cf7;
+margin:0 12px;
+}
+
+.improvements{
+flex:1;
+min-width:260px;
+background:#ffffff;
+border-radius:12px;
+padding:20px;
+border:1px solid #ececec;
+}
+
+.improvements h3{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.improvements ul{
+list-style:none;
+padding:0;
+}
+
+.improvements li{
+padding:10px 0;
+border-bottom:1px solid #eeeeee;
+font-size:17px;
+}
+
+.improvements li:last-child{
+border-bottom:none;
+}
 </style>
 
 </head>
@@ -220,7 +278,11 @@ This guide compares the key differences between DDR3, DDR4 and DDR5 to help engi
 
 <div class="card">
 
-<h2>Quick Comparison</h2>
+<h2>DDR Comparison</h2>
+
+<p>
+The following comparison summarizes the key technical differences between DDR3, DDR4 and DDR5 memory technologies used in industrial, commercial and embedded computing systems.
+</p>
 
 <table>
 
@@ -229,6 +291,12 @@ This guide compares the key differences between DDR3, DDR4 and DDR5 to help engi
 <th>DDR3</th>
 <th>DDR4</th>
 <th>DDR5</th>
+</tr>
+
+<tr>
+<td colspan="4" style="background:#f5f5f5;font-weight:700;text-align:left;">
+Basic Specifications
+</td>
 </tr>
 
 <tr>
@@ -260,6 +328,74 @@ This guide compares the key differences between DDR3, DDR4 and DDR5 to help engi
 </tr>
 
 <tr>
+<td colspan="4" style="background:#f5f5f5;font-weight:700;text-align:left;">
+Architecture
+</td>
+</tr>
+
+<tr>
+<td>JEDEC Standard</td>
+<td>JESD79-3</td>
+<td>JESD79-4</td>
+<td>JESD79-5</td>
+</tr>
+
+<tr>
+<td>Prefetch</td>
+<td>8n</td>
+<td>8n</td>
+<td>16n</td>
+</tr>
+
+<tr>
+<td>UDIMM Pins</td>
+<td>240</td>
+<td>288</td>
+<td>288</td>
+</tr>
+
+<tr>
+<td>SO-DIMM Pins</td>
+<td>204</td>
+<td>260</td>
+<td>262</td>
+</tr>
+
+<tr>
+<td>Peak Bandwidth</td>
+<td>17 GB/s</td>
+<td>25.6 GB/s</td>
+<td>51.2 GB/s</td>
+</tr>
+
+<tr>
+<td>Bank Groups</td>
+<td>No</td>
+<td>Yes</td>
+<td>Enhanced</td>
+</tr>
+
+<tr>
+<td colspan="4" style="background:#f5f5f5;font-weight:700;text-align:left;">
+Advanced Features
+</td>
+</tr>
+
+<tr>
+<td>Power Management</td>
+<td>Motherboard</td>
+<td>Motherboard</td>
+<td>On-module PMIC</td>
+</tr>
+
+<tr>
+<td>On-die ECC</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
 <td>Power Efficiency</td>
 <td>Good</td>
 <td>Better</td>
@@ -269,14 +405,70 @@ This guide compares the key differences between DDR3, DDR4 and DDR5 to help engi
 <tr>
 <td>Primary Applications</td>
 <td>Legacy Systems</td>
-<td>Mainstream Industrial</td>
-<td>AI & High Performance</td>
+<td>Industrial PC</td>
+<td>AI / Server</td>
 </tr>
 
 </table>
 
+<p style="margin-top:25px;">
+DDR memory technology continues to evolve with each generation, delivering higher bandwidth, lower operating voltage and improved efficiency for modern computing platforms.
+</p>
+
+<p>
+DDR4 remains the mainstream choice for industrial and embedded applications, while DDR5 is rapidly expanding into AI, edge computing, data centers and next-generation server platforms.
+</p>
+
+</div>
+<div class="card">
+
+<h2>DDR Evolution</h2>
+
+<p>
+Each DDR generation improves memory performance by increasing bandwidth while reducing operating voltage and enhancing overall efficiency.
+</p>
+
+<div class="evolution">
+
+<div class="timeline">
+
+<div class="step">
+DDR3
+<span class="arrow">→</span>
+DDR4
 </div>
 
+<div class="step">
+DDR4
+<span class="arrow">→</span>
+DDR5
+</div>
+
+</div>
+
+<div class="improvements">
+
+<h3>Generation Improvements</h3>
+
+<ul>
+
+<li>⬇ Lower Operating Voltage</li>
+
+<li>⬆ Higher Bandwidth</li>
+
+<li>⬆ Larger Memory Capacity</li>
+
+<li>⬆ Better Power Efficiency</li>
+
+<li>⬆ AI & Server Readiness</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
 <div class="cta">
 
 <p style="color:#666;margin-bottom:10px;">
