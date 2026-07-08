@@ -227,6 +227,54 @@ font-size:17px;
 .improvements li:last-child{
 border-bottom:none;
 }
+/* Applications */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
+margin-top:30px;
+}
+
+.app-card{
+background:#ffffff;
+border:1px solid #ececec;
+border-radius:14px;
+padding:25px;
+text-align:center;
+transition:.3s;
+box-shadow:0 2px 8px rgba(0,0,0,.03);
+}
+
+.app-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.app-icon{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.app-card h3{
+font-size:22px;
+margin-bottom:12px;
+color:#222;
+}
+
+.app-card p{
+font-size:16px;
+color:#666;
+margin:0;
+}
+
+@media(max-width:900px){
+
+.app-grid{
+grid-template-columns:1fr;
+}
+
+}
 </style>
 
 </head>
@@ -464,6 +512,67 @@ DDR5
 
 </ul>
 
+</div>
+
+</div>
+
+</div>
+<div class="card">
+
+<h2>Applications</h2>
+
+<p>
+Typical applications for DDR3, DDR4 and DDR5 memory technologies across industrial, commercial and embedded computing platforms.
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+<div class="app-icon">🖥️</div>
+<h3>Industrial PC</h3>
+<p>Stable industrial computing systems.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🏥</div>
+<h3>Medical Equipment</h3>
+<p>Medical imaging and diagnostic devices.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🤖</div>
+<h3>Factory Automation</h3>
+<p>PLC, HMI and industrial controllers.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">💳</div>
+<h3>POS Systems</h3>
+<p>Retail and payment terminals.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🖥️</div>
+<h3>Kiosk</h3>
+<p>Self-service kiosk applications.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">📡</div>
+<h3>Embedded Systems</h3>
+<p>Embedded computing platforms.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🧠</div>
+<h3>AI Edge Computing</h3>
+<p>AI inference and edge devices.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🗄️</div>
+<h3>Servers</h3>
+<p>Enterprise and data center servers.</p>
 </div>
 
 </div>
