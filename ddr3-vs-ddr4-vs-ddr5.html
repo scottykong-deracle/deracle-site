@@ -275,6 +275,56 @@ grid-template-columns:1fr;
 }
 
 }
+/* FAQ */
+
+.faq{
+margin-top:30px;
+}
+
+.faq details{
+background:#ffffff;
+border:1px solid #e5e5e5;
+border-radius:12px;
+padding:18px 22px;
+margin-bottom:15px;
+transition:.3s;
+}
+
+.faq details:hover{
+border-color:#4a6cf7;
+}
+
+.faq summary{
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+color:#222;
+list-style:none;
+}
+
+.faq summary::-webkit-details-marker{
+display:none;
+}
+
+.faq summary::before{
+content:"+";
+color:#4a6cf7;
+font-size:22px;
+font-weight:700;
+margin-right:12px;
+}
+
+.faq details[open] summary::before{
+content:"−";
+}
+
+.faq p{
+margin-top:15px;
+padding-left:34px;
+font-size:16px;
+color:#666;
+line-height:1.8;
+}
 </style>
 
 </head>
@@ -578,8 +628,63 @@ Typical applications for DDR3, DDR4 and DDR5 memory technologies across industri
 </div>
 
 </div>
-<div class="cta">
 
+<div class="cta">
+<div class="card">
+
+<h2>Frequently Asked Questions</h2>
+
+<p>
+Common questions about DDR3, DDR4 and DDR5 memory technologies.
+</p>
+
+<div class="faq">
+
+<details>
+<summary>What are the main differences between DDR3, DDR4 and DDR5?</summary>
+<p>
+Each generation improves memory speed, bandwidth, power efficiency and capacity. DDR5 delivers the highest overall performance, while DDR4 remains the mainstream choice for most industrial and embedded systems.
+</p>
+</details>
+
+<details>
+<summary>Can DDR4 replace DDR3?</summary>
+<p>
+No. DDR3 and DDR4 are not pin-compatible and require different motherboards and processor support.
+</p>
+</details>
+
+<details>
+<summary>Is DDR5 backward compatible with DDR4?</summary>
+<p>
+No. DDR5 uses a different architecture, operating voltage and pin configuration, making it incompatible with DDR4 platforms.
+</p>
+</details>
+
+<details>
+<summary>Which DDR generation is recommended for industrial applications?</summary>
+<p>
+DDR4 is currently the preferred choice for industrial PCs, embedded systems, medical equipment and factory automation because of its proven reliability and long-term availability.
+</p>
+</details>
+
+<details>
+<summary>Why is DDR5 important for AI and edge computing?</summary>
+<p>
+DDR5 offers significantly higher bandwidth and larger memory capacity, making it ideal for AI inference, edge computing and data-intensive workloads.
+</p>
+</details>
+
+<details>
+<summary>How do I choose the right DRAM module?</summary>
+<p>
+Select the appropriate module based on system compatibility, memory capacity, operating speed, form factor, operating temperature and long-term product availability.
+</p>
+</details>
+
+</div>
+
+</div>
 <p style="color:#666;margin-bottom:10px;">
 Looking for the right DDR memory solution?
 </p>
