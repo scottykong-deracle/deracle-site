@@ -563,74 +563,76 @@ gap:30px;
   </div>
 
 </section>
-<!-- CONTACT & INQUIRY INTEGRATED SECTION -->
+<!-- CONTACT & INQUIRY INTEGRATED SECTION (BALANCED LAYOUT) -->
 <section id="contact" style="padding:80px 20px; background:#fff;">
-  <h2 style="text-align:center; margin-bottom: 40px; font-size:32px; color:#111;">Contact</h2>
+  <h2 style="text-align:center; margin-bottom: 50px; font-size:32px; color:#111;">Contact</h2>
 
-  <!-- 가로 배치를 위한 완전 고정 컨테이너 -->
-  <div style="max-width:1200px; margin:0 auto; display:flex; gap:50px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;">
+  <!-- 좌우 50:50 완벽 대칭을 위한 컨테이너 -->
+  <div style="max-width:1200px; margin:0 auto; display:flex; gap:40px; align-items:stretch; justify-content:space-between; flex-wrap:wrap;">
 
-    <!-- 좌측 구역: 연락처 정보 + 세련된 문의 양식 (너비 고정) -->
-    <div style="flex:1; min-width:320px; max-width:650px;">
+    <!-- [좌측 블록] 글로벌 바이어 전용 문의 양식 (너비 50% 확보) -->
+    <div style="flex:1; min-width:320px; background: #f8f9fb; padding: 35px; border-radius: 16px; border:1px solid #eef0f4; display:flex; flex-direction:column; justify-content:center;">
+      <h3 style="margin-top:0; margin-bottom: 25px; font-size: 22px; color:#111; font-weight:bold;">Request a Quotation</h3>
       
-      <!-- 기존 연락처 정보 -->
-      <p style="font-size:16px; line-height:1.6; margin-bottom:25px;">
-        <strong style="font-size:18px; color:#111;">Address</strong><br>
-        #903, Woosung SB Tower II, 220, Gonghang-daero<br>
-        Gangseo-gu, Seoul, Republic Korea
-      </p>
+      <form action="https://formsubmit.co/scotty@deracle.co.kr" method="POST" style="margin:0;">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.deracle.co.kr/index.html">
 
-      <div style="display:grid; grid-template-columns:30px 1fr; gap:8px 12px; font-size:15px; margin-bottom:40px; border-bottom:1px solid #eee; padding-bottom:30px;">
-        <div style="font-weight:bold; color:#4a6cf7;">P</div><div>+82 2 6010 8401</div>
-        <div style="font-weight:bold; color:#4a6cf7;">F</div><div>+82 2 6010 8402</div>
-        <div style="font-weight:bold; color:#4a6cf7;">M</div><div>+82 10 2005 3009</div>
-        <div style="font-weight:bold; color:#4a6cf7;">E</div><div>scotty@deracle.co.kr</div>
-      </div>
+        <!-- Row 1: Company / Name -->
+        <div style="margin-bottom: 14px; display: flex; gap: 12px;">
+          <input type="text" name="Company Name" placeholder="Company Name" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+          <input type="text" name="Contact Name" placeholder="Your Name" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+        </div>
 
-      <!-- 글로벌 바이어 전용 문의 양식 -->
-      <div style="background: #f8f9fb; padding: 35px; border-radius: 16px; border:1px solid #eef0f4;">
-        <h3 style="margin-top:0; margin-bottom: 25px; font-size: 22px; color:#111; font-weight:bold;">Request a Quotation</h3>
-        
-        <form action="https://formsubmit.co/scotty@deracle.co.kr" method="POST">
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://www.deracle.co.kr/index.html">
+        <!-- Row 2: Email / Phone -->
+        <div style="margin-bottom: 14px; display: flex; gap: 12px;">
+          <input type="email" name="Email" placeholder="Email Address" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+          <input type="text" name="Phone" placeholder="Phone Number" style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+        </div>
 
-          <!-- Row 1: Company / Name -->
-          <div style="margin-bottom: 14px; display: flex; gap: 12px;">
-            <input type="text" name="Company Name" placeholder="Company Name" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-            <input type="text" name="Contact Name" placeholder="Your Name" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-          </div>
+        <!-- Row 3: Model / Qty -->
+        <div style="margin-bottom: 14px; display: flex; gap: 12px;">
+          <input type="text" name="Model Number" placeholder="Model Number / Specification" required style="width: 70%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+          <input type="text" name="Quantity" placeholder="Qty" required style="width: 30%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
+        </div>
 
-          <!-- Row 2: Email / Phone -->
-          <div style="margin-bottom: 14px; display: flex; gap: 12px;">
-            <input type="email" name="Email" placeholder="Email Address" required style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-            <input type="text" name="Phone" placeholder="Phone Number" style="width: 50%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-          </div>
+        <!-- Message -->
+        <div style="margin-bottom: 22px;">
+          <textarea name="Message" rows="6" placeholder="Please describe your application or specific requirements..." required style="width: 100%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; resize: vertical; font-family: inherit; background:#fff; line-height:1.5;"></textarea>
+        </div>
 
-          <!-- Row 3: Model / Qty -->
-          <div style="margin-bottom: 14px; display: flex; gap: 12px;">
-            <input type="text" name="Model Number" placeholder="Model Number / Specification" required style="width: 70%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-            <input type="text" name="Quantity" placeholder="Qty" required style="width: 30%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; background:#fff;">
-          </div>
-
-          <!-- Message -->
-          <div style="margin-bottom: 22px;">
-            <textarea name="Message" rows="5" placeholder="Please describe your application or specific requirements..." required style="width: 100%; padding: 13px; border: 1px solid #dcdfe6; border-radius: 8px; font-size: 14px; box-sizing: border-box; resize: vertical; font-family: inherit; background:#fff; line-height:1.5;"></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" style="background-color: #4a6cf7; color: white; border: none; padding: 15px; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s;" onmouseover="this.style.background='#3b5cd9'" onmouseout="this.style.background='#4a6cf7'">
-            Submit Inquiry
-          </button>
-        </form>
-      </div>
-
+        <!-- Submit Button -->
+        <button type="submit" style="background-color: #4a6cf7; color: white; border: none; padding: 15px; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s;" onmouseover="this.style.background='#3b5cd9'" onmouseout="this.style.background='#4a6cf7'">
+          Submit Inquiry
+        </button>
+      </form>
     </div>
 
-    <!-- 우측 구역: 구글 지도 고정 배치 -->
-    <div style="flex:1; min-width:320px; max-width:480px; width:100%; margin-top:25px;">
-      <iframe src="https://maps.google.com/maps?q=Woosung%20SB%20Tower%20II,%20220%20Gonghang-daero,%20Gangseo-gu,%20Seoul&output=embed" style="width:100%; height:520px; border-radius:16px; border:0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></iframe>
+    <!-- [우측 블록] 상단 연락처 + 하단 지도 유기적 결합 (너비 50% 확보) -->
+    <div style="flex:1; min-width:320px; display:flex; flex-direction:column; justify-content:space-between;">
+      
+      <!-- 주소 및 연락처 정보 -->
+      <div style="margin-bottom: 20px;">
+        <p style="font-size:16px; line-height:1.6; margin-top:0; margin-bottom:15px;">
+          <strong style="font-size:18px; color:#111;">Address</strong><br>
+          #903, Woosung SB Tower II, 220, Gonghang-daero<br>
+          Gangseo-gu, Seoul, Republic Korea
+        </p>
+
+        <div style="display:grid; grid-template-columns:30px 1fr; gap:6px 12px; font-size:15px;">
+          <div style="font-weight:bold; color:#4a6cf7;">P</div><div>+82 2 6010 8401</div>
+          <div style="font-weight:bold; color:#4a6cf7;">F</div><div>+82 2 6010 8402</div>
+          <div style="font-weight:bold; color:#4a6cf7;">M</div><div>+82 10 2005 3009</div>
+          <div style="font-weight:bold; color:#4a6cf7;">E</div><div>scotty@deracle.co.kr</div>
+        </div>
+      </div>
+
+      <!-- 구글 지도 (좌측 양식 높이에 맞춰 유연하게 꽉 채우도록 설정) -->
+      <div style="flex:1; min-height:300px; width:100%;">
+        <iframe src="https://maps.google.com/maps?q=Woosung%20SB%20Tower%20II,%20220%20Gonghang-daero,%20Gangseo-gu,%20Seoul&output=embed" style="width:100%; height:100%; min-height:330px; border-radius:16px; border:0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></iframe>
+      </div>
+
     </div>
 
   </div>
