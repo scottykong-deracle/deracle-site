@@ -138,9 +138,27 @@ margin-top:15px;
 }
 .resource-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr 1fr;
 gap:18px 60px;
 margin-top:15px;
+}
+
+.resource-grid .feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.resource-grid .feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+.resource-grid a{
+text-decoration:none;
+color:#333;
 }
 
 @media(max-width:900px){
@@ -150,7 +168,6 @@ grid-template-columns:1fr;
 }
 
 }
-
 .feature{
 display:flex;
 align-items:center;
@@ -488,7 +505,7 @@ mSATA <span style="color:#888;">(Coming Soon)</span>
 
 <h2>Key Features</h2>
 
-<div class="resource-grid">
+<div class="features">
 
 <div class="feature">SATA & PCIe NVMe Solutions</div>
 
@@ -743,6 +760,8 @@ Yes. In most applications, SSDs can directly replace HDDs while providing faster
 Explore additional storage technology guides to better understand SSD interfaces, form factors and embedded storage solutions.
 
 </p>
+
+<div class="resource-grid">
 
 <div class="feature">
 
