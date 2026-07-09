@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RDIMM vs UDIMM vs SODIMM | DERACLE</title>
+
+<meta name="description" content="Compare RDIMM, UDIMM and SODIMM memory modules including architecture, buffering, ECC support, capacity, applications and industrial computing recommendations.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+z-index:1000;
+}
+
+.logo img{
+height:48px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4a6cf7;
+}
+
+.hero{
+padding:40px 20px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#666;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.card{
+background:#f8f9fb;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+
+.card h2{
+font-size:34px;
+margin-bottom:22px;
+}
+
+.card p{
+font-size:18px;
+color:#555;
+}
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+}
+
+.list{
+font-size:20px;
+line-height:2.2;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+th{
+background:#4a6cf7;
+color:#fff;
+padding:18px;
+}
+
+td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #e5e5e5;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+font-size:18px;
+margin-top:15px;
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+/* Applications */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:30px;
+}
+
+.app-card{
+background:#fff;
+border:1px solid #ececec;
+border-radius:16px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.3s;
+}
+
+.app-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.app-icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.app-card h3{
+font-size:20px;
+margin-bottom:12px;
+}
+
+.app-card p{
+font-size:16px;
+color:#666;
+}
+
+/* FAQ */
+
+.faq-item{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:14px;
+margin-top:18px;
+overflow:hidden;
+}
+
+.faq-question{
+padding:22px 28px;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.faq-icon{
+color:#4a6cf7;
+font-size:28px;
+font-weight:bold;
+margin-right:16px;
+width:28px;
+text-align:center;
+}
+
+.faq-answer{
+display:none;
+padding:0 40px 28px 72px;
+font-size:18px;
+color:#555;
+}
+
+.faq-item.active .faq-answer{
+display:block;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin:70px 0;
+}
+
+.cta a{
+background:#4a6cf7;
+padding:16px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+border-top:1px solid #eee;
+margin-top:50px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+padding:18px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.grid2{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.app-grid{
+grid-template-columns:1fr;
+}
+
+table{
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="DERACLE Logo">
+
+</div>
+
+<nav>
+
+<a href="index.html#company">Company</a>
+
+<a href="index.html#memory">Memory</a>
+
+<a href="index.html#solutions">Display</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>RDIMM vs UDIMM vs SODIMM</h1>
+
+<p>Understanding Memory Module Form Factors for Industrial and Enterprise Systems</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Overview</h2>
+
+<p>
+RDIMM (Registered DIMM), UDIMM (Unbuffered DIMM) and SODIMM (Small Outline DIMM) are the three most common DRAM module form factors used in servers, desktop computers and compact embedded systems.
+</p>
+
+<br>
+
+<p>
+Each memory type is designed for different computing platforms. RDIMM provides maximum capacity and stability for enterprise servers, UDIMM is widely used in desktop and industrial computers, while SODIMM is optimized for space-constrained systems such as embedded devices and laptops.
+</p>
+
+<br>
+
+<p>
+This guide compares RDIMM, UDIMM and SODIMM to help engineers and system integrators choose the right memory solution for industrial PCs, embedded platforms, networking equipment, medical devices and enterprise servers.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>RDIMM vs UDIMM vs SODIMM Comparison</h2>
+
+<p>
+The following table summarizes the key differences between the three most widely used DRAM module form factors.
+</p>
+
+<table>
+
+<tr>
+
+<th>Feature</th>
+
+<th>RDIMM</th>
+
+<th>UDIMM</th>
+
+<th>SODIMM</th>
+
+</tr>
+
+<tr>
+
+<td>Full Name</td>
+
+<td>Registered DIMM</td>
+
+<td>Unbuffered DIMM</td>
+
+<td>Small Outline DIMM</td>
+
+</tr>
+
+<tr>
+
+<td>Buffered</td>
+
+<td>Yes</td>
+
+<td>No</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>ECC Support</td>
+
+<td>Yes</td>
+
+<td>Optional</td>
+
+<td>Optional</td>
+
+</tr>
+
+<tr>
+
+<td>Typical Capacity</td>
+
+<td>High</td>
+
+<td>Medium</td>
+
+<td>Medium</td>
+
+</tr>
+
+<tr>
+
+<td>Signal Integrity</td>
+
+<td>Excellent</td>
+
+<td>Standard</td>
+
+<td>Standard</td>
+
+</tr>
+
+<tr>
+
+<td>Power Consumption</td>
+
+<td>Slightly Higher</td>
+
+<td>Lower</td>
+
+<td>Lower</td>
+
+</tr>
+
+<tr>
+
+<td>Primary Platform</td>
+
+<td>Servers</td>
+
+<td>Desktop / Industrial PC</td>
+
+<td>Embedded / Laptop</td>
+
+</tr>
+
+<tr>
+
+<td>Typical Applications</td>
+
+<td>Enterprise Servers</td>
+
+<td>Industrial PCs</td>
+
+<td>Embedded Systems</td>
+
+</tr>
+
+<tr>
+
+<td>Recommended For</td>
+
+<td>Mission-Critical Computing</td>
+
+<td>General Computing</td>
+
+<td>Compact Computing</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Advantages & Characteristics</h2>
+
+<p>
+Each memory module type is optimized for different computing environments. Understanding their characteristics helps engineers select the most suitable solution for performance, reliability and system compatibility.
+</p>
+
+<div class="features">
+
+<div class="feature">Higher Memory Capacity for Enterprise Servers</div>
+
+<div class="feature">Excellent Signal Integrity with RDIMM</div>
+
+<div class="feature">Wide Compatibility with UDIMM Platforms</div>
+
+<div class="feature">Compact Design for Embedded Systems</div>
+
+<div class="feature">Support for ECC Memory Options</div>
+
+<div class="feature">Commercial & Industrial Applications</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Typical Applications</h2>
+
+<p>
+Different memory form factors are designed to meet the requirements of various computing platforms, from enterprise servers to embedded and industrial systems.
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+
+<div class="app-icon">🖥️</div>
+
+<h3>Enterprise Servers</h3>
+
+<p>
+RDIMM provides high capacity and stability for server platforms.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">💼</div>
+
+<h3>Workstations</h3>
+
+<p>
+Professional workstations benefit from large memory capacity and reliable performance.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🖥️</div>
+
+<h3>Desktop PCs</h3>
+
+<p>
+UDIMM is the standard memory module for desktop computing systems.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🏭</div>
+
+<h3>Industrial PCs</h3>
+
+<p>
+Reliable operation for industrial automation and machine control.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📟</div>
+
+<h3>Embedded Systems</h3>
+
+<p>
+SODIMM is ideal for compact embedded platforms and edge devices.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🏥</div>
+
+<h3>Medical Equipment</h3>
+
+<p>
+Provides dependable performance for healthcare and diagnostic systems.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🌐</div>
+
+<h3>Networking Equipment</h3>
+
+<p>
+Supports routers, firewalls and communication infrastructure.
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📡</div>
+
+<h3>Edge Computing</h3>
+
+<p>
+Compact memory solutions for AI, IoT and distributed computing.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is RDIMM?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+RDIMM (Registered DIMM) includes a register between the memory controller and DRAM chips, improving signal integrity and allowing higher memory capacities. It is primarily used in enterprise servers and data centers.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is the difference between RDIMM and UDIMM?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+RDIMM uses a register to improve stability and supports larger memory configurations, while UDIMM connects directly to the memory controller, making it suitable for desktop PCs and most industrial computers.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+Can I mix RDIMM and UDIMM in the same system?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+No. RDIMM and UDIMM are not compatible with each other and cannot be installed together. Always follow your motherboard or server manufacturer's memory compatibility guidelines.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+When should I choose SODIMM?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+SODIMM is the preferred choice for compact systems such as embedded computers, industrial controllers, laptops and edge computing devices where space is limited.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Technical Resources</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+Explore additional memory technology guides to better understand DRAM solutions and select the appropriate memory module for your application.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<a href="dram-modules.html" style="text-decoration:none;color:#333;">
+
+DRAM Modules
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="ddr3-vs-ddr4-vs-ddr5.html" style="text-decoration:none;color:#333;">
+
+DDR3 vs DDR4 vs DDR5
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="ecc-vs-non-ecc.html" style="text-decoration:none;color:#333;">
+
+ECC vs Non-ECC Memory
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<span style="color:#333;">
+
+SATA vs NVMe SSD <span style="color:#888;">(Coming Soon)</span>
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cta">
+
+<p style="color:#666;margin-bottom:10px;">
+
+Need help selecting the right memory module for your application?
+
+</p>
+
+<p style="color:#888;margin-bottom:25px;">
+
+Request the latest datasheet or contact our engineering team for memory recommendations.
+
+</p>
+
+<a href="mailto:scotty@deracle.co.kr?subject=Request Memory Module Information">
+
+Request Datasheet
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 DERACLE. All rights reserved.
+
+</footer>
+
+<script>
+
+document.querySelectorAll('.faq-question').forEach(function(question){
+
+question.addEventListener('click',function(){
+
+const item=this.parentElement;
+const isActive=item.classList.contains('active');
+
+document.querySelectorAll('.faq-item').forEach(function(faq){
+
+faq.classList.remove('active');
+faq.querySelector('.faq-icon').textContent='+';
+
+});
+
+if(!isActive){
+
+item.classList.add('active');
+item.querySelector('.faq-icon').textContent='−';
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
