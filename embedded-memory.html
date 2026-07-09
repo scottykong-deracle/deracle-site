@@ -9,7 +9,7 @@
 
 <title>Embedded Memory Solutions | DERACLE</title>
 
-<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including eMMC, UFS, SPI NAND, LPDDR and DRAM IC products supplied by DERACLE.">
+<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including eMMC, UFS, SPI NAND Flash and LPDDR supplied by DERACLE.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -137,6 +137,39 @@ font-size:18px;
 margin-top:15px;
 }
 
+.resource-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px 60px;
+margin-top:15px;
+}
+
+.resource-grid .feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.resource-grid .feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+.resource-grid a{
+text-decoration:none;
+color:#333;
+}
+
+@media(max-width:900px){
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+}
+
 .feature{
 display:flex;
 align-items:center;
@@ -150,268 +183,85 @@ font-weight:bold;
 font-size:20px;
 }
 
-/* Product Guide Buttons */
+/* Applications */
 
-.guide-list{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:15px;
-margin-bottom:20px;
+.app-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:30px;
 }
 
-.guide-btn{
-display:block;
-padding:14px 18px;
-background:#ffffff;
-border:1px solid #e5e5e5;
-border-radius:12px;
-text-decoration:none;
-color:#333;
-font-weight:600;
-box-shadow:0 2px 8px rgba(0,0,0,.04);
-transition:.25s;
-}
-
-.guide-btn:hover{
-background:#4a6cf7;
-color:#fff;
-transform:translateX(4px);
-}
-
-.cta{
-text-align:center;
-margin:70px 0;
-}
-
-.cta a{
-background:#4a6cf7;
-padding:16px 45px;
-color:#fff;
-text-decoration:none;
-border-radius:10px;
-font-size:18px;
-font-weight:600;
-display:inline-block;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#999;
-font-size:14px;
-border-top:1px solid #eee;
-margin-top:50px;
-}
-
-@media(max-width:900px){
-
-header{
-padding:18px 20px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.grid2{
-grid-template-columns:1fr;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-table{
-font-size:14px;
-}
-
-}
-
-</style>
-
-</head>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Embedded Memory Solutions | DERACLE</title>
-
-<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including eMMC, UFS, SPI NAND, LPDDR and DRAM IC products supplied by DERACLE.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:#ffffff;
-color:#222;
-line-height:1.7;
-}
-
-header{
-position:sticky;
-top:0;
+.app-card{
 background:#fff;
-border-bottom:1px solid #ececec;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 50px;
-z-index:1000;
-}
-
-.logo img{
-height:48px;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-margin-left:35px;
-font-weight:500;
+border:1px solid #ececec;
+border-radius:16px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
 transition:.3s;
 }
 
-nav a:hover{
-color:#4a6cf7;
+.app-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
-.hero{
-padding:40px 20px 20px;
-text-align:center;
+.app-icon{
+font-size:42px;
+margin-bottom:18px;
 }
 
-.hero h1{
-font-size:48px;
-font-weight:700;
-margin-bottom:10px;
+.app-card h3{
+font-size:20px;
+margin-bottom:12px;
 }
 
-.hero p{
-font-size:22px;
+.app-card p{
+font-size:16px;
 color:#666;
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+/* FAQ */
+
+.faq-item{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:14px;
+margin-top:18px;
+overflow:hidden;
 }
 
-.card{
-background:#f8f9fb;
-border-radius:18px;
-padding:30px;
-margin-bottom:30px;
-box-shadow:0 2px 10px rgba(0,0,0,.04);
+.faq-question{
+padding:22px 28px;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+align-items:center;
 }
 
-.card h2{
-font-size:34px;
-margin-bottom:22px;
+.faq-icon{
+color:#4a6cf7;
+font-size:28px;
+font-weight:bold;
+margin-right:16px;
+width:28px;
+text-align:center;
 }
 
-.card p{
+.faq-answer{
+display:none;
+padding:0 40px 28px 72px;
 font-size:18px;
 color:#555;
 }
 
-.grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-}
-
-.list{
-font-size:20px;
-line-height:2.2;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:25px;
-}
-
-th{
-background:#4a6cf7;
-color:#fff;
-padding:18px;
-}
-
-td{
-padding:18px;
-text-align:center;
-border-bottom:1px solid #e5e5e5;
-}
-
-.features{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-font-size:18px;
-margin-top:15px;
-}
-
-.feature{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.feature::before{
-content:"✓";
-color:#4a6cf7;
-font-weight:bold;
-font-size:20px;
-}
-
-/* Product Guide Buttons */
-
-.guide-list{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:15px;
-margin-bottom:20px;
-}
-
-.guide-btn{
+.faq-item.active .faq-answer{
 display:block;
-padding:14px 18px;
-background:#ffffff;
-border:1px solid #e5e5e5;
-border-radius:12px;
-text-decoration:none;
-color:#333;
-font-weight:600;
-box-shadow:0 2px 8px rgba(0,0,0,.04);
-transition:.25s;
 }
 
-.guide-btn:hover{
-background:#4a6cf7;
-color:#fff;
-transform:translateX(4px);
-}
+/* CTA */
 
 .cta{
 text-align:center;
@@ -429,6 +279,8 @@ font-weight:600;
 display:inline-block;
 }
 
+/* Footer */
+
 footer{
 text-align:center;
 padding:40px;
@@ -437,6 +289,8 @@ font-size:14px;
 border-top:1px solid #eee;
 margin-top:50px;
 }
+
+/* Responsive */
 
 @media(max-width:900px){
 
@@ -456,6 +310,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.app-grid{
+grid-template-columns:1fr;
+}
+
 table{
 font-size:14px;
 }
@@ -465,6 +323,112 @@ font-size:14px;
 </style>
 
 </head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="DERACLE Logo">
+
+</div>
+
+<nav>
+
+<a href="index.html#company">Company</a>
+
+<a href="index.html#memory">Memory</a>
+
+<a href="index.html#solutions">Display</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Embedded Memory Solutions</h1>
+
+<p>Commercial & Industrial Embedded Memory Products</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Introduction</h2>
+
+<p>
+
+DERACLE supplies commercial and industrial embedded memory solutions through its partnership with KOWIN, delivering reliable storage and memory products for embedded, industrial and AI computing applications.
+
+</p>
+
+<br>
+
+<p>
+
+Our embedded memory portfolio includes eMMC, UFS, SPI NAND Flash and LPDDR solutions designed for Industrial PCs, Medical Equipment, POS Systems, IoT Devices, Factory Automation, Embedded Computing and AI platforms with reliable long-term supply support.
+
+</p>
+
+<br>
+
+<p>
+
+This page introduces our embedded memory product portfolio and helps engineers and system integrators select the appropriate memory solution based on interface, performance, package type and application requirements.
+
+</p>
+
+</div>
+
+<div class="grid2">
+
+<div class="card">
+
+<h2>Product Family</h2>
+
+<div class="list">
+
+LPDDR Guide<br>
+
+eMMC Guide<br>
+
+UFS Guide<br>
+
+SPI NAND Guide
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Package Type</h2>
+
+<div class="list">
+
+96-ball FBGA<br>
+
+153-ball FBGA<br>
+
+200-ball FBGA<br>
+
+JEDEC Standard<br>
+
+Commercial Grade<br>
+
+Industrial Grade
+
+</div>
+
+</div>
+
+</div>
 
 <div class="card">
 
@@ -474,13 +438,13 @@ font-size:14px;
 
 <tr>
 
-<th>Product</th>
+<th>Technology</th>
 
 <th>Category</th>
 
-<th>Density / Capacity</th>
+<th>Interface</th>
 
-<th>Speed</th>
+<th>Density / Capacity</th>
 
 <th>Package</th>
 
@@ -494,9 +458,9 @@ font-size:14px;
 
 <td>Low Power DRAM</td>
 
-<td>8Gb / 16Gb</td>
+<td>Memory Bus</td>
 
-<td>3733 / 4266 Mbps</td>
+<td>8Gb / 16Gb</td>
 
 <td>200-ball FBGA</td>
 
@@ -508,11 +472,11 @@ font-size:14px;
 
 <td>eMMC 5.1</td>
 
-<td>Embedded Flash</td>
-
-<td>4GB / 8GB / 16GB</td>
+<td>Embedded Storage</td>
 
 <td>HS400</td>
+
+<td>4GB / 8GB / 16GB / 32GB / 64GB</td>
 
 <td>153-ball FBGA</td>
 
@@ -524,11 +488,11 @@ font-size:14px;
 
 <td>UFS 2.2 / 3.1</td>
 
-<td>Embedded Flash</td>
+<td>Embedded Storage</td>
 
-<td>128GB / 256GB</td>
+<td>MIPI UniPro</td>
 
-<td>High-Speed Serial</td>
+<td>128GB / 256GB / 512GB</td>
 
 <td>FBGA</td>
 
@@ -542,9 +506,9 @@ font-size:14px;
 
 <td>Embedded Flash</td>
 
-<td>1Gb ~ 8Gb</td>
+<td>SPI</td>
 
-<td>SPI Interface</td>
+<td>1Gb / 2Gb / 4Gb / 8Gb</td>
 
 <td>FBGA</td>
 
@@ -559,25 +523,154 @@ font-size:14px;
 
 <div class="card">
 
-<h2>Features</h2>
+<h2>Key Features</h2>
 
 <div class="features">
 
-<div class="feature">JEDEC Standard Compliant</div>
+<div class="feature">eMMC / UFS / SPI NAND / LPDDR Solutions</div>
 
 <div class="feature">Commercial & Industrial Grade</div>
 
-<div class="feature">eMMC / UFS / SPI NAND / LPDDR Solutions</div>
-
-<div class="feature">High Reliability Embedded Memory</div>
+<div class="feature">JEDEC Standard Compliant</div>
 
 <div class="feature">Long-term Supply Support</div>
 
-<div class="feature">Engineering Support Available</div>
+<div class="feature">High Reliability Embedded Memory</div>
 
-<div class="feature">Samsung / SK hynix / Micron Die Options</div>
+<div class="feature">Low Power Consumption</div>
 
-<div class="feature">RoHS Compliant</div>
+<div class="feature">Engineering Support</div>
+
+<div class="feature">Samsung / SK hynix / Micron Options</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Typical Applications</h2>
+
+<p>
+
+Our embedded memory solutions are widely used in industrial and embedded systems requiring reliable performance, compact package design and long-term product availability.
+
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+
+<div class="app-icon">🏭</div>
+
+<h3>Industrial PC</h3>
+
+<p>
+
+Reliable memory for industrial computing platforms.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🏥</div>
+
+<h3>Medical Equipment</h3>
+
+<p>
+
+Stable embedded memory for medical devices.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">💳</div>
+
+<h3>POS Systems</h3>
+
+<p>
+
+Reliable storage for retail and payment terminals.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📟</div>
+
+<h3>Embedded Systems</h3>
+
+<p>
+
+Compact memory solutions for embedded computers.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">⚙️</div>
+
+<h3>Factory Automation</h3>
+
+<p>
+
+Industrial memory for automation equipment.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📡</div>
+
+<h3>IoT Devices</h3>
+
+<p>
+
+Low-power memory for connected embedded devices.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🖥️</div>
+
+<h3>Edge Computing</h3>
+
+<p>
+
+Reliable storage for distributed edge platforms.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🤖</div>
+
+<h3>AI Computing</h3>
+
+<p>
+
+High-performance embedded memory for AI applications.
+
+</p>
+
+</div>
 
 </div>
 
@@ -585,19 +678,114 @@ font-size:14px;
 
 <div class="card">
 
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is eMMC?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+eMMC integrates NAND Flash memory and a flash controller into a single JEDEC-standard package, providing a compact, cost-effective and reliable embedded storage solution for industrial and embedded systems.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is the difference between eMMC and UFS?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+eMMC is widely used for cost-effective embedded storage, while UFS utilizes a full-duplex serial interface to deliver significantly higher performance, lower latency and improved multitasking capability.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+When should SPI NAND Flash be used?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+SPI NAND Flash is commonly selected for embedded Linux systems, IoT devices and industrial controllers requiring compact boot storage, simple interfaces and low power consumption.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is LPDDR memory?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+LPDDR is a low-power DRAM technology optimized for embedded computing, AI edge devices and battery-powered systems where high bandwidth and low energy consumption are essential.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
 <h2>Technical Resources</h2>
 
 <p style="margin-bottom:25px;color:#666;">
 
-Explore our technology guides to better understand embedded memory architectures, storage technologies and industrial applications.
+Explore additional embedded memory technology guides to better understand storage architectures, interfaces and industrial applications.
 
 </p>
 
-<div class="features">
+<div class="resource-grid">
 
 <div class="feature">
 
-<a href="emmc-guide.html" style="text-decoration:none;color:#333;">
+<a href="emmc-guide.html">
 
 eMMC Guide
 
@@ -607,7 +795,7 @@ eMMC Guide
 
 <div class="feature">
 
-<a href="ufs-guide.html" style="text-decoration:none;color:#333;">
+<a href="ufs-guide.html">
 
 UFS Guide
 
@@ -617,7 +805,7 @@ UFS Guide
 
 <div class="feature">
 
-<a href="spi-nand-guide.html" style="text-decoration:none;color:#333;">
+<a href="spi-nand-guide.html">
 
 SPI NAND Guide
 
@@ -627,7 +815,7 @@ SPI NAND Guide
 
 <div class="feature">
 
-<a href="lpddr-guide.html" style="text-decoration:none;color:#333;">
+<a href="lpddr-guide.html">
 
 LPDDR Guide
 
@@ -637,7 +825,7 @@ LPDDR Guide
 
 <div class="feature">
 
-<a href="dram-modules.html" style="text-decoration:none;color:#333;">
+<a href="dram-modules.html">
 
 DRAM Modules
 
@@ -647,7 +835,7 @@ DRAM Modules
 
 <div class="feature">
 
-<a href="ssd-solutions.html" style="text-decoration:none;color:#333;">
+<a href="ssd-solutions.html">
 
 SSD Solutions
 
@@ -669,11 +857,11 @@ Need a Datasheet or Product Information?
 
 <p style="color:#888;margin-bottom:25px;">
 
-Contact our engineering team for embedded memory recommendations or request the latest product datasheets.
+Request the latest datasheet or contact our engineering team for embedded memory recommendations.
 
 </p>
 
-<a href="mailto:scotty@deracle.co.kr?subject=Request Embedded Memory Information">
+<a href="mailto:scotty@deracle.co.kr?subject=Request Embedded Memory Datasheet">
 
 Request Datasheet
 
@@ -689,7 +877,35 @@ Request Datasheet
 
 </footer>
 
+<script>
+
+document.querySelectorAll('.faq-question').forEach(function(question){
+
+question.addEventListener('click',function(){
+
+const item=this.parentElement;
+const isActive=item.classList.contains('active');
+
+document.querySelectorAll('.faq-item').forEach(function(faq){
+
+faq.classList.remove('active');
+faq.querySelector('.faq-icon').textContent='+';
+
+});
+
+if(!isActive){
+
+item.classList.add('active');
+item.querySelector('.faq-icon').textContent='−';
+
+}
+
+});
+
+});
+
+</script>
+
 </body>
 
 </html>
-
