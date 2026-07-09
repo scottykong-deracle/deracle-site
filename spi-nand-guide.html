@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SPI NAND Guide | DERACLE</title>
+
+<meta name="description" content="Learn about SPI NAND Flash technology, boot architecture, memory organization and industrial embedded storage applications.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+z-index:1000;
+}
+
+.logo img{
+height:48px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4a6cf7;
+}
+
+.hero{
+padding:40px 20px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#666;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.card{
+background:#f8f9fb;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+
+.card h2{
+font-size:34px;
+margin-bottom:22px;
+}
+
+.card p{
+font-size:18px;
+color:#555;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+th{
+background:#4a6cf7;
+color:#fff;
+padding:18px;
+}
+
+td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #e5e5e5;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+font-size:18px;
+margin-top:15px;
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+/* Boot Flow Diagram */
+
+.flow{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:35px;
+gap:12px;
+}
+
+.flow-box{
+background:#fff;
+border:2px solid #4a6cf7;
+border-radius:12px;
+padding:14px 26px;
+font-weight:600;
+min-width:280px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.flow-arrow{
+font-size:26px;
+color:#4a6cf7;
+font-weight:bold;
+line-height:1;
+}
+
+/* Memory Layout */
+
+.memory-layout{
+max-width:420px;
+margin:35px auto 0;
+background:#fff;
+border:2px solid #4a6cf7;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.memory-block{
+padding:18px;
+text-align:center;
+font-weight:600;
+border-bottom:1px solid #e5e5e5;
+}
+
+.memory-block:last-child{
+border-bottom:none;
+}
+
+/* Application Cards */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:25px;
+}
+
+.app-card{
+background:#fff;
+border:1px solid #ececec;
+border-radius:14px;
+padding:22px;
+text-align:center;
+font-weight:600;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.3s;
+}
+
+.app-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.cta{
+text-align:center;
+margin:70px 0;
+}
+
+.cta a{
+background:#4a6cf7;
+padding:16px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+border-top:1px solid #eee;
+margin-top:50px;
+}
+
+@media(max-width:900px){
+
+header{
+padding:18px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.app-grid{
+grid-template-columns:1fr;
+}
+
+.flow-box{
+min-width:100%;
+}
+
+.memory-layout{
+max-width:100%;
+}
+
+table{
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="DERACLE Logo">
+
+</div>
+
+<nav>
+
+<a href="index.html#company">Company</a>
+
+<a href="index.html#memory">Memory</a>
+
+<a href="index.html#solutions">Display</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>SPI NAND Guide</h1>
+
+<p>Understanding SPI NAND Flash Technology</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Overview</h2>
+
+<p>
+
+SPI NAND Flash is a compact and cost-effective non-volatile memory solution widely used in embedded systems requiring reliable boot storage and firmware memory. By combining high storage density with a simple Serial Peripheral Interface (SPI), SPI NAND enables efficient system design while reducing PCB complexity and overall cost.
+
+</p>
+
+<br>
+
+<p>
+
+Compared with traditional parallel NAND Flash, SPI NAND requires fewer signal lines and offers simpler hardware implementation. It is commonly used for boot code, operating system images, firmware storage and embedded Linux platforms in industrial and IoT devices.
+
+</p>
+
+<br>
+
+<p>
+
+This guide introduces SPI NAND architecture, boot sequence, memory organization and the advantages that make it a popular embedded storage solution.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Typical Boot Flow</h2>
+
+<p>
+
+The following diagram illustrates a simplified SPI NAND boot sequence used in embedded Linux and industrial control systems.
+
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+
+Power ON
+
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-box">
+
+CPU Initialization
+
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-box">
+
+SPI Controller
+
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-box">
+
+SPI NAND Flash
+
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-box">
+
+Boot Loader (U-Boot)
+
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-box">
+
+Linux / Android OS
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>SPI NAND Memory Layout</h2>
+
+<p>
+
+SPI NAND organizes data into dedicated storage regions, allowing embedded systems to separate boot code, operating system images and user data for improved reliability and easier firmware management.
+
+</p>
+
+<div class="memory-layout">
+
+<div class="memory-block">
+
+Boot Loader
+
+</div>
+
+<div class="memory-block">
+
+Linux Kernel
+
+</div>
+
+<div class="memory-block">
+
+Root File System
+
+</div>
+
+<div class="memory-block">
+
+Application Data
+
+</div>
+
+<div class="memory-block">
+
+User Data
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>SPI NAND vs NOR Flash</h2>
+
+<p>
+
+Both SPI NAND and NOR Flash are widely used in embedded systems. The following table summarizes their primary differences.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Item</th>
+
+<th>NOR Flash</th>
+
+<th>SPI NAND Flash</th>
+
+</tr>
+
+<tr>
+
+<td>Interface</td>
+
+<td>SPI</td>
+
+<td>SPI</td>
+
+</tr>
+
+<tr>
+
+<td>Capacity</td>
+
+<td>Low</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Read Speed</td>
+
+<td>Fast Random Read</td>
+
+<td>High Sequential Read</td>
+
+</tr>
+
+<tr>
+
+<td>Storage Cost</td>
+
+<td>Higher</td>
+
+<td>Lower</td>
+
+</tr>
+
+<tr>
+
+<td>Typical Usage</td>
+
+<td>Firmware Storage</td>
+
+<td>Boot + Operating System</td>
+
+</tr>
+
+<tr>
+
+<td>Best For</td>
+
+<td>Small Boot Code</td>
+
+<td>Embedded Linux Systems</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Typical Applications</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+SPI NAND Flash is widely used in embedded systems requiring reliable boot storage, firmware management and cost-effective high-density flash memory.
+
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+
+Industrial PLC
+
+</div>
+
+<div class="app-card">
+
+Industrial Gateway
+
+</div>
+
+<div class="app-card">
+
+Network Router
+
+</div>
+
+<div class="app-card">
+
+Smart Meter
+
+</div>
+
+<div class="app-card">
+
+IoT Device
+
+</div>
+
+<div class="app-card">
+
+Embedded Controller
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Key Advantages</h2>
+
+<div class="features">
+
+<div class="feature">High-Density Embedded Flash Storage</div>
+
+<div class="feature">Simple SPI Interface</div>
+
+<div class="feature">Lower PCB Complexity</div>
+
+<div class="feature">Cost-effective Storage Solution</div>
+
+<div class="feature">Excellent Boot Performance</div>
+
+<div class="feature">Reliable Firmware Storage</div>
+
+<div class="feature">JEDEC Standard Compliant</div>
+
+<div class="feature">Ideal for Embedded Linux Systems</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Technical Resources</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+Explore additional embedded memory technologies and storage solutions.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<a href="embedded-memory.html" style="text-decoration:none;color:#333;">
+
+Embedded Memory Solutions
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="emmc-guide.html" style="text-decoration:none;color:#333;">
+
+eMMC Guide
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="ufs-guide.html" style="text-decoration:none;color:#333;">
+
+UFS Guide
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="lpddr-guide.html" style="text-decoration:none;color:#333;">
+
+LPDDR Guide
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cta">
+
+<p style="color:#666;margin-bottom:10px;">
+
+Need help selecting the right SPI NAND Flash solution?
+
+</p>
+
+<p style="color:#888;margin-bottom:25px;">
+
+Request the latest datasheet or contact our engineering team for SPI NAND Flash recommendations.
+
+</p>
+
+<a href="mailto:scotty@deracle.co.kr?subject=Request SPI NAND Guide Information">
+
+Request Datasheet
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 DERACLE. All rights reserved.
+
+</footer>
+
+</body>
+
+</html>
