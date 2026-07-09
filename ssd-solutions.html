@@ -9,7 +9,7 @@
 
 <title>SSD Solutions | DERACLE</title>
 
-<meta name="description" content="Commercial & Industrial SATA and PCIe NVMe SSD Solutions supplied by DERACLE.">
+<meta name="description" content="Commercial & Industrial SATA and PCIe NVMe SSD Solutions supplied by DERACLE for industrial, embedded, gaming and enterprise applications.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -61,12 +61,12 @@ color:#4a6cf7;
 }
 
 .hero{
-padding:70px 20px 40px;
+padding:40px 20px 20px;
 text-align:center;
 }
 
 .hero h1{
-font-size:54px;
+font-size:48px;
 font-weight:700;
 margin-bottom:10px;
 }
@@ -85,7 +85,7 @@ padding:0 20px;
 .card{
 background:#f8f9fb;
 border-radius:18px;
-padding:40px;
+padding:30px;
 margin-bottom:30px;
 box-shadow:0 2px 10px rgba(0,0,0,.04);
 }
@@ -150,6 +150,86 @@ font-weight:bold;
 font-size:20px;
 }
 
+/* Applications */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:30px;
+}
+
+.app-card{
+background:#fff;
+border:1px solid #ececec;
+border-radius:16px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.3s;
+}
+
+.app-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.app-icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.app-card h3{
+font-size:20px;
+margin-bottom:12px;
+}
+
+.app-card p{
+font-size:16px;
+color:#666;
+}
+
+/* FAQ */
+
+.faq-item{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:14px;
+margin-top:18px;
+overflow:hidden;
+}
+
+.faq-question{
+padding:22px 28px;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.faq-icon{
+color:#4a6cf7;
+font-size:28px;
+font-weight:bold;
+margin-right:16px;
+width:28px;
+text-align:center;
+}
+
+.faq-answer{
+display:none;
+padding:0 40px 28px 72px;
+font-size:18px;
+color:#555;
+}
+
+.faq-item.active .faq-answer{
+display:block;
+}
+
+/* CTA */
+
 .cta{
 text-align:center;
 margin:70px 0;
@@ -166,6 +246,8 @@ font-weight:600;
 display:inline-block;
 }
 
+/* Footer */
+
 footer{
 text-align:center;
 padding:40px;
@@ -174,6 +256,8 @@ font-size:14px;
 border-top:1px solid #eee;
 margin-top:50px;
 }
+
+/* Responsive */
 
 @media(max-width:900px){
 
@@ -193,6 +277,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.app-grid{
+grid-template-columns:1fr;
+}
+
 table{
 font-size:14px;
 }
@@ -209,7 +297,7 @@ font-size:14px;
 
 <div class="logo">
 
-<img src="logo.png">
+<img src="logo.png" alt="DERACLE Logo">
 
 </div>
 
@@ -242,17 +330,19 @@ font-size:14px;
 <h2>Introduction</h2>
 
 <p>
-
-DERACLE supplies commercial and industrial SSD solutions through its partnership with KOWIN, delivering reliable storage products for a wide range of embedded and industrial applications.
-
+DERACLE supplies commercial and industrial SSD solutions through its partnership with KOWIN, delivering reliable storage products for embedded, industrial and enterprise applications.
 </p>
 
 <br>
 
 <p>
+Our SSD portfolio includes SATA SSD and PCIe NVMe SSD solutions designed for Industrial PCs, Medical Equipment, Gaming Systems, POS, Kiosks, Factory Automation, Embedded Computing and AI platforms with reliable long-term supply support.
+</p>
 
-Our SSD portfolio includes SATA SSD and PCIe NVMe SSD solutions designed for Industrial PCs, Medical Equipment, Gaming Systems, POS, Kiosks, Automation and Embedded Computing with reliable long-term supply.
+<br>
 
+<p>
+This guide introduces our SSD product portfolio and helps engineers and system integrators select the appropriate storage solution based on interface, performance, form factor and application requirements.
 </p>
 
 </div>
@@ -347,7 +437,7 @@ mSATA <span style="color:#888;">(Coming Soon)</span>
 
 <td>M.2 2280</td>
 
-<td>128GB / 256GB</td>
+<td>128GB / 256GB / 512GB / 1TB</td>
 
 <td>3D TLC</td>
 
@@ -365,7 +455,7 @@ mSATA <span style="color:#888;">(Coming Soon)</span>
 
 <td>M.2 2280</td>
 
-<td>256GB / 512GB / 1TB</td>
+<td>256GB / 512GB / 1TB / 2TB</td>
 
 <td>3D TLC</td>
 
@@ -379,27 +469,308 @@ mSATA <span style="color:#888;">(Coming Soon)</span>
 
 </div>
 
+
 <div class="card">
 
-<h2>Features</h2>
+<h2>Key Features</h2>
 
 <div class="features">
 
-<div class="feature">3D TLC NAND Flash</div>
-
 <div class="feature">SATA & PCIe NVMe Solutions</div>
+
+<div class="feature">3D TLC NAND Flash</div>
 
 <div class="feature">Commercial & Industrial Grade</div>
 
 <div class="feature">High Speed Performance</div>
 
-<div class="feature">RoHS Compliant</div>
-
 <div class="feature">Long-term Supply Support</div>
+
+<div class="feature">Low Power Consumption</div>
 
 <div class="feature">Engineering Support</div>
 
 <div class="feature">Samsung / SK hynix / Micron NAND Options</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Typical Applications</h2>
+
+<p>
+
+Our SSD solutions are widely used in embedded, industrial and enterprise systems requiring high reliability, fast performance and long-term product availability.
+
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+
+<div class="app-icon">🏭</div>
+
+<h3>Industrial PC</h3>
+
+<p>
+
+Reliable storage for industrial computing and automation systems.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🏥</div>
+
+<h3>Medical Equipment</h3>
+
+<p>
+
+Stable storage solutions for medical and diagnostic applications.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🎮</div>
+
+<h3>Gaming Systems</h3>
+
+<p>
+
+High-speed SSD performance for gaming machines and kiosks.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">💳</div>
+
+<h3>POS Systems</h3>
+
+<p>
+
+Fast and reliable storage for retail and payment terminals.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📟</div>
+
+<h3>Embedded Systems</h3>
+
+<p>
+
+Compact SSD solutions for embedded and fanless computers.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">⚙️</div>
+
+<h3>Factory Automation</h3>
+
+<p>
+
+Industrial-grade storage for manufacturing equipment.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">📡</div>
+
+<h3>Edge Computing</h3>
+
+<p>
+
+High-performance storage for distributed edge applications.
+
+</p>
+
+</div>
+
+<div class="app-card">
+
+<div class="app-icon">🤖</div>
+
+<h3>AI Computing</h3>
+
+<p>
+
+Accelerates AI inference and data-intensive computing workloads.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is the difference between SATA and NVMe SSD?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+SATA SSD uses the SATA interface with speeds up to approximately 550 MB/s, while NVMe SSD uses the PCIe interface to deliver significantly higher performance, lower latency and better scalability for demanding applications.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+Which SSD is better for industrial applications?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+Both SATA and NVMe SSDs are suitable for industrial systems. SATA SSDs are widely used for compatibility and cost efficiency, while NVMe SSDs are preferred for applications requiring high-speed data transfer and intensive workloads.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+What is the difference between M.2 2242 and M.2 2280?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+The numbers indicate the physical dimensions of the module. M.2 2242 measures 22 × 42 mm, while M.2 2280 measures 22 × 80 mm. The appropriate form factor depends on the available installation space and system design.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-question">
+
+<span class="faq-icon">+</span>
+
+Can SSD replace HDD?
+
+</div>
+
+<div class="faq-answer">
+
+<p>
+
+Yes. In most applications, SSDs can directly replace HDDs while providing faster boot times, lower power consumption, higher reliability and improved overall system performance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Technical Resources</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+Explore additional storage technology guides to better understand SSD interfaces, form factors and embedded storage solutions.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<span style="color:#333;">
+
+SATA vs NVMe SSD <span style="color:#888;">(Coming Soon)</span>
+
+</span>
+
+</div>
+
+<div class="feature">
+
+<span style="color:#333;">
+
+PCIe Gen3 vs Gen4 SSD <span style="color:#888;">(Coming Soon)</span>
+
+</span>
+
+</div>
+
+<div class="feature">
+
+<span style="color:#333;">
+
+M.2 2242 vs M.2 2280 <span style="color:#888;">(Coming Soon)</span>
+
+</span>
+
+</div>
+
+<div class="feature">
+
+<span style="color:#333;">
+
+eMMC Guide <span style="color:#888;">(Coming Soon)</span>
+
+</span>
+
+</div>
 
 </div>
 
@@ -415,11 +786,11 @@ Need a Datasheet or Product Information?
 
 <p style="color:#888;margin-bottom:25px;">
 
-Request the latest datasheet from our sales team.
+Request the latest datasheet or contact our engineering team for SSD recommendations.
 
 </p>
 
-<a href="mailto:scotty@deracle.co.kr?subject=Request Datasheet">
+<a href="mailto:scotty@deracle.co.kr?subject=Request SSD Datasheet">
 
 Request Datasheet
 
@@ -435,6 +806,35 @@ Request Datasheet
 
 </footer>
 
+<script>
+
+document.querySelectorAll('.faq-question').forEach(function(question){
+
+question.addEventListener('click',function(){
+
+const item=this.parentElement;
+const isActive=item.classList.contains('active');
+
+document.querySelectorAll('.faq-item').forEach(function(faq){
+
+faq.classList.remove('active');
+faq.querySelector('.faq-icon').textContent='+';
+
+});
+
+if(!isActive){
+
+item.classList.add('active');
+item.querySelector('.faq-icon').textContent='−';
+
+}
+
+});
+
+});
+
+</script>
+
 </body>
 
-</html>  
+</html>
