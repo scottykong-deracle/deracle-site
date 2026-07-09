@@ -136,6 +136,20 @@ gap:18px;
 font-size:18px;
 margin-top:15px;
 }
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px 60px;
+margin-top:15px;
+}
+
+@media(max-width:900px){
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+}
 
 .feature{
 display:flex;
@@ -474,7 +488,7 @@ mSATA <span style="color:#888;">(Coming Soon)</span>
 
 <h2>Key Features</h2>
 
-<div class="features">
+<div class="resource-grid">
 
 <div class="feature">SATA & PCIe NVMe Solutions</div>
 
