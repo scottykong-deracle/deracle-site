@@ -9,7 +9,7 @@
 
 <title>Embedded Memory Solutions | DERACLE</title>
 
-<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including DRAM IC, LPDDR and eMMC products supplied by DERACLE.">
+<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including eMMC, UFS, SPI NAND, LPDDR and DRAM IC products supplied by DERACLE.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -150,6 +150,35 @@ font-weight:bold;
 font-size:20px;
 }
 
+/* Product Guide Buttons */
+
+.guide-list{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:15px;
+margin-bottom:20px;
+}
+
+.guide-btn{
+display:block;
+padding:14px 18px;
+background:#ffffff;
+border:1px solid #e5e5e5;
+border-radius:12px;
+text-decoration:none;
+color:#333;
+font-weight:600;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.25s;
+}
+
+.guide-btn:hover{
+background:#4a6cf7;
+color:#fff;
+transform:translateX(4px);
+}
+
 .cta{
 text-align:center;
 margin:70px 0;
@@ -203,109 +232,239 @@ font-size:14px;
 
 </head>
 
-<body>
+<!DOCTYPE html>
+<html lang="en">
 
-<header>
+<head>
 
-<div class="logo">
+<meta charset="UTF-8">
 
-<img src="logo.png" alt="DERACLE Logo">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</div>
+<title>Embedded Memory Solutions | DERACLE</title>
 
-<nav>
+<meta name="description" content="Commercial & Industrial Embedded Memory Solutions including eMMC, UFS, SPI NAND, LPDDR and DRAM IC products supplied by DERACLE.">
 
-<a href="index.html#company">Company</a>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<a href="index.html#memory">Memory</a>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<a href="index.html#solutions">Display</a>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<a href="index.html#contact">Contact</a>
+<style>
 
-</nav>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-</header>
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.7;
+}
 
-<section class="hero">
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+z-index:1000;
+}
 
-<h1>Embedded Memory Solutions</h1>
+.logo img{
+height:48px;
+}
 
-<p>Commercial & Industrial Embedded Memory Products</p>
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
+}
 
-</section>
+nav a:hover{
+color:#4a6cf7;
+}
 
-<div class="container">
+.hero{
+padding:40px 20px 20px;
+text-align:center;
+}
 
-<div class="card">
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+}
 
-<h2>Introduction</h2>
+.hero p{
+font-size:22px;
+color:#666;
+}
 
-<p>
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
 
-DERACLE supplies embedded memory solutions through its partnership with KOWIN, offering reliable DRAM IC and embedded flash products for industrial and commercial applications.
+.card{
+background:#f8f9fb;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
 
-</p>
+.card h2{
+font-size:34px;
+margin-bottom:22px;
+}
 
-<br>
+.card p{
+font-size:18px;
+color:#555;
+}
 
-<p>
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+}
 
-Our embedded memory portfolio includes DDR3L SDRAM, DDR4 SDRAM, LPDDR4, LPDDR4X and eMMC 5.1 solutions designed for AI Edge Computing, Industrial PCs, Medical Equipment, POS Systems, IoT Devices and Embedded Systems with long-term product availability.
+.list{
+font-size:20px;
+line-height:2.2;
+}
 
-</p>
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
 
-</div>
+th{
+background:#4a6cf7;
+color:#fff;
+padding:18px;
+}
 
-<div class="grid2">
+td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #e5e5e5;
+}
 
-<div class="card">
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+font-size:18px;
+margin-top:15px;
+}
 
-<h2>Product Family</h2>
+.feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-<div class="list">
+.feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
 
-<strong>DRAM IC</strong><br><br>
+/* Product Guide Buttons */
 
-DDR3L SDRAM<br>
+.guide-list{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:15px;
+margin-bottom:20px;
+}
 
-DDR4 SDRAM<br>
+.guide-btn{
+display:block;
+padding:14px 18px;
+background:#ffffff;
+border:1px solid #e5e5e5;
+border-radius:12px;
+text-decoration:none;
+color:#333;
+font-weight:600;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.25s;
+}
 
-LPDDR4<br>
+.guide-btn:hover{
+background:#4a6cf7;
+color:#fff;
+transform:translateX(4px);
+}
 
-LPDDR4X<br><br>
+.cta{
+text-align:center;
+margin:70px 0;
+}
 
-<strong>Embedded Flash</strong><br><br>
+.cta a{
+background:#4a6cf7;
+padding:16px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+}
 
-eMMC 5.1
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+border-top:1px solid #eee;
+margin-top:50px;
+}
 
-</div>
+@media(max-width:900px){
 
-</div>
+header{
+padding:18px 20px;
+}
 
-<div class="card">
+.hero h1{
+font-size:40px;
+}
 
-<h2>Package Type</h2>
+.grid2{
+grid-template-columns:1fr;
+}
 
-<div class="list">
+.features{
+grid-template-columns:1fr;
+}
 
-FBGA Package<br>
+table{
+font-size:14px;
+}
 
-96-ball FBGA<br>
+}
 
-153-ball FBGA<br>
+</style>
 
-200-ball FBGA<br>
-
-Standard JEDEC Package<br>
-
-Industrial Grade Package
-
-</div>
-
-</div>
-
-</div>
+</head>
 
 <div class="card">
 
@@ -331,39 +490,7 @@ Industrial Grade Package
 
 <tr>
 
-<td>DDR3L SDRAM</td>
-
-<td>DRAM IC</td>
-
-<td>4Gb</td>
-
-<td>1866 Mbps</td>
-
-<td>FBGA</td>
-
-<td>Commercial</td>
-
-</tr>
-
-<tr>
-
-<td>DDR4 SDRAM</td>
-
-<td>DRAM IC</td>
-
-<td>8Gb</td>
-
-<td>2666 / 3200 Mbps</td>
-
-<td>FBGA</td>
-
-<td>Commercial / Industrial</td>
-
-</tr>
-
-<tr>
-
-<td>LPDDR4X</td>
+<td>LPDDR4 / LPDDR4X</td>
 
 <td>Low Power DRAM</td>
 
@@ -373,7 +500,7 @@ Industrial Grade Package
 
 <td>200-ball FBGA</td>
 
-<td>-25 ~ +85°C</td>
+<td>Commercial / Industrial</td>
 
 </tr>
 
@@ -388,6 +515,38 @@ Industrial Grade Package
 <td>HS400</td>
 
 <td>153-ball FBGA</td>
+
+<td>Commercial / Industrial</td>
+
+</tr>
+
+<tr>
+
+<td>UFS 2.2 / 3.1</td>
+
+<td>Embedded Flash</td>
+
+<td>128GB / 256GB</td>
+
+<td>High-Speed Serial</td>
+
+<td>FBGA</td>
+
+<td>Commercial / Industrial</td>
+
+</tr>
+
+<tr>
+
+<td>SPI NAND Flash</td>
+
+<td>Embedded Flash</td>
+
+<td>1Gb ~ 8Gb</td>
+
+<td>SPI Interface</td>
+
+<td>FBGA</td>
 
 <td>Commercial / Industrial</td>
 
@@ -408,7 +567,7 @@ Industrial Grade Package
 
 <div class="feature">Commercial & Industrial Grade</div>
 
-<div class="feature">DDR3L / DDR4 / LPDDR4X / eMMC Solutions</div>
+<div class="feature">eMMC / UFS / SPI NAND / LPDDR Solutions</div>
 
 <div class="feature">High Reliability Embedded Memory</div>
 
@@ -416,9 +575,9 @@ Industrial Grade Package
 
 <div class="feature">Engineering Support Available</div>
 
-<div class="feature">RoHS Compliant</div>
-
 <div class="feature">Samsung / SK hynix / Micron Die Options</div>
+
+<div class="feature">RoHS Compliant</div>
 
 </div>
 
@@ -430,7 +589,7 @@ Industrial Grade Package
 
 <p style="margin-bottom:25px;color:#666;">
 
-Explore our technical guides to better understand embedded memory technologies and related storage solutions.
+Explore our technology guides to better understand embedded memory architectures, storage technologies and industrial applications.
 
 </p>
 
@@ -441,6 +600,36 @@ Explore our technical guides to better understand embedded memory technologies a
 <a href="emmc-guide.html" style="text-decoration:none;color:#333;">
 
 eMMC Guide
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="ufs-guide.html" style="text-decoration:none;color:#333;">
+
+UFS Guide
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="spi-nand-guide.html" style="text-decoration:none;color:#333;">
+
+SPI NAND Guide
+
+</a>
+
+</div>
+
+<div class="feature">
+
+<a href="lpddr-guide.html" style="text-decoration:none;color:#333;">
+
+LPDDR Guide
 
 </a>
 
@@ -480,7 +669,7 @@ Need a Datasheet or Product Information?
 
 <p style="color:#888;margin-bottom:25px;">
 
-Request the latest datasheet or contact our engineering team for embedded memory recommendations.
+Contact our engineering team for embedded memory recommendations or request the latest product datasheets.
 
 </p>
 
@@ -503,3 +692,4 @@ Request Datasheet
 </body>
 
 </html>
+
