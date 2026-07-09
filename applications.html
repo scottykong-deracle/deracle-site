@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Solutions | DERACLE</title>
+<meta name="description" content="Explore how dERACLE's comprehensive KOWIN memory and display solutions drive innovation and performance across critical industries worldwide.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#ffffff;
+  color:#222;
+  line-height:1.7;
+}
+
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #ececec;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+  z-index:1000;
+}
+
+.logo img{
+  height:48px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  margin-left:35px;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#4a6cf7;
+}
+
+.hero{
+  padding:60px 20px 40px;
+  text-align:center;
+  background:#f8f9fb;
+}
+
+.hero h1{
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.hero p{
+  font-size:22px;
+  color:#555;
+  max-width:800px;
+  margin:0 auto 30px auto;
+}
+
+/* 히어로 영역에 배치할 첫 번째 사진 (KOWIN DRAM/SSD/임베디드 통합 그리드 비주얼) */
+.hero-image-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.card{
+  background:#f8f9fb;
+  border-radius:18px;
+  padding:40px 35px;
+  margin-bottom:35px;
+  box-shadow:0 2px 10px rgba(0,0,0,.03);
+}
+
+.card h2{
+  font-size:34px;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items: center;
+}
+
+/* 핵심 산업 분야 그리드 */
+.app-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.app-card{
+  background:#fff;
+  border:1px solid #ececec;
+  border-radius:16px;
+  padding:35px 20px;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.03);
+  transition:.3s;
+}
+
+.app-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.app-icon{
+  font-size:44px;
+  margin-bottom:18px;
+}
+
+.app-card h3{
+  font-size:20px;
+  margin-bottom:12px;
+  color:#111;
+}
+
+.app-card p{
+  font-size:15px;
+  color:#666;
+  line-height:1.6;
+}
+
+/* 강점 영역 우측 두 번째 사진 전용 스타일 */
+.values-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* 체크마크 특징 리스트 */
+.features-list {
+  margin-top: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.feature-item::before {
+  content: "✓";
+  color: #4a6cf7;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.feature-text h3 {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.feature-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 테크니컬 리소스 그리드 */
+.resource-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px 60px;
+  margin-top:20px;
+}
+
+.resource-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.resource-item::before{
+  content:"✓";
+  color:#4a6cf7;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.resource-item a{
+  text-decoration:none;
+  color:#333;
+  font-size:18px;
+  font-weight:500;
+  transition: 0.2s;
+}
+
+.resource-item a:hover {
+  color: #4a6cf7;
+}
+
+/* FAQ 스타일 */
+.faq-item{
+  background:#fff;
+  border:1px solid #e5e5e5;
+  border-radius:14px;
+  margin-top:18px;
+  overflow:hidden;
+}
+
+.faq-question{
+  padding:22px 28px;
+  font-size:22px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+}
+
+.faq-icon{
+  color:#4a6cf7;
+  font-size:28px;
+  font-weight:bold;
+  margin-right:16px;
+  width:28px;
+  text-align:center;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 40px 28px 72px;
+  font-size:18px;
+  color:#555;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  margin:50px 0 20px 0;
+}
+
+.cta p {
+  font-size: 18px;
+}
+
+.cta a{
+  background:#4a6cf7;
+  padding:16px 45px;
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:600;
+  display:inline-block;
+  transition: 0.3s;
+}
+
+.cta a:hover {
+  background: #3b5cd9;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#999;
+  font-size:14px;
+  border-top:1px solid #eee;
+  margin-top:50px;
+}
+
+/* 반응형 모바일 레이아웃 */
+@media(max-width:900px){
+  header{
+    padding:18px 20px;
+  }
+  .hero h1{
+    font-size:36px;
+  }
+  .hero p{
+    font-size:18px;
+  }
+  .card h2{
+    font-size:28px;
+  }
+  .grid2{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .app-grid{
+    grid-template-columns:1fr;
+  }
+  .resource-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="DERACLE Logo">
+  </div>
+  <nav>
+    <a href="index.html#company">Company</a>
+    <a href="index.html#memory">Memory</a>
+    <a href="index.html#solutions">Display</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO AREA -->
+<section class="hero">
+  <h1>Application Solutions</h1>
+  <p>Empowering Industry-Specific Performance and Certified Reliability across Global Markets</p>
+  
+  <!-- 첫 번째 사진 반영: KOWIN DRAM/SSD/임베디드 솔루션 인포그래픽 그리드 비주얼 -->
+  <div class="hero-image-container">
+    <img src="images/kowin-logo.webp" alt="KOWIN Comprehensive Product Portfolio Lineup">
+  </div>
+</section>
+
+<div class="container">
+
+<!-- SECTION 1: INDUSTRIAL APPLICATIONS GRID -->
+  <div class="card">
+    <h2>Industrial Applications</h2>
+    <div class="card-subtitle">Our memory and storage solutions are engineered to meet the stringent demands of diverse enterprise and embedded ecosystems.</div>
+    
+    <div class="app-grid">
+      <!-- Card 1 -->
+      <div class="app-card">
+        <div class="app-icon">🏭</div>
+        <h3>Industrial PC</h3>
+        <p>High-reliability computing with stable data storage and high-temperature tolerance for robust automation systems.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="app-card">
+        <div class="app-icon">🏥</div>
+        <h3>Medical Equipment</h3>
+        <p>Certified medical safety, long-term availability, and high-speed processing for critical diagnostic imaging devices.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="app-card">
+        <div class="app-icon">🎮</div>
+        <h3>Gaming Systems</h3>
+        <p>Immersive performance and high-end endurance built for casino gaming machines, interactive kiosks, and digital entertainment.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="app-card">
+        <div class="app-icon">💳</div>
+        <h3>POS & Kiosk</h3>
+        <p>Secure transaction storage providing fast, compact, and highly stable configurations for heavy-traffic retail terminals.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="app-card">
+        <div class="app-icon">📟</div>
+        <h3>Embedded Systems</h3>
+        <p>Space-efficient integration using ultra-compact SSD and embedded memory (eMMC/eMCP) tailored for fanless computers.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="app-card">
+        <div class="app-icon">⚙️</div>
+        <h3>Factory Automation</h3>
+        <p>Ruggedized manufacturing solutions engineered to withstand continuous vibration, physical shock, and extreme environments.</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="app-card">
+        <div class="app-icon">📡</div>
+        <h3>Edge Computing</h3>
+        <p>Distributed real-time processing with high-performance data storage optimized for complex network architectures.</p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="app-card">
+        <div class="app-icon">🤖</div>
+        <h3>AI Computing</h3>
+        <p>Next-gen data acceleration maximizing AI inference, machine learning workloads, and enterprise-level database speeds.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: CORE VALUES & SECOND IMAGE -->
+  <div class="card">
+    <div class="grid2">
+      <!-- Left Column: Core Values Text List -->
+      <div>
+        <h2>Industrial-Grade Core Values</h2>
+        <div class="card-subtitle" style="margin-bottom:25px;">Why global tier-1 customers choose dERACLE as their authorized strategic storage partner.</div>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-text">
+              <h3>Fixed BOM & PCN Support</h3>
+              <p>We guarantee highly stable, long-term hardware supply cycles by enforcing controlled component revisions and strict Product Change Notifications (PCN).</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-text">
+              <h3>Wide Temperature Testing</h3>
+              <p>Optional industrial-grade layouts and sorting solutions rigorously tested to operate flawlessly across severe temperature spectrums from -40°C to +85°C.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-text">
+              <h3>Tailored Sourcing & Technical Quotes</h3>
+              <p>Flexible support framework delivering customized display-memory structural integration along with highly competitive comparative quotes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column: 두 번째 사진 배치 영역 (흰색 캔버스 액자형 이미지 매칭) -->
+      <div class="values-image">
+        <img src="images/kowin-commercial.webp" alt="KOWIN Portable SSD and Memory Component Card Visual Layout">
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TECHNICAL RESOURCES -->
+  <div class="card">
+    <h2>Technical Knowledge Hub</h2>
+    <p style="margin-bottom:25px; color:#555;">Review our comprehensive storage engineering guides to properly select interfaces, architectures, and performance form factors.</p>
+    
+    <div class="resource-grid">
+      <div class="resource-item"><a href="sata-vs-nvme-ssd.html">SATA vs NVMe SSD Architecture</a></div>
+      <div class="resource-item"><a href="pcie-gen3-vs-gen4-ssd.html">PCIe Gen3 vs Gen4 Transfer Rates</a></div>
+      <div class="resource-item"><a href="m2-2242-vs-2280.html">M.2 2242 vs M.2 2280 Dimension Guide</a></div>
+      <div class="resource-item"><a href="slc-vs-mlc-vs-tlc-vs-qlc.html">NAND Cell Structures: SLC, MLC, TLC, QLC</a></div>
+      <div class="resource-item"><a href="emmc-guide.html">eMMC Implementation in Embedded Systems</a></div>
+    </div>
+
+    <!-- CTA Area -->
+    <div class="cta">
+      <p style="color:#222; font-weight:600; margin-bottom:10px;">Need an Official Application Guide or Datasheet?</p>
+      <p style="color:#666; margin-bottom:30px; font-size:16px;">Contact our authorized engineering team to request the latest technical data sheets or comparative tier-1 sample portfolios.</p>
+      <a href="mailto:scotty@deracle.co.kr?subject=Inquiry: Request KOWIN Application Guide & Datasheet">Request Technical Support</a>
+    </div>
+  </div>
+
+</div> <!-- Container End -->
+
+<footer>
+  © 2026 DERACLE. All rights reserved.
+</footer>
+
+<!-- INTERACTIVE FAQ/ACCORDION SCRIPT -->
+<script>
+document.querySelectorAll('.faq-question').forEach(function(question){
+  question.addEventListener('click', function(){
+    const item = this.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    document.querySelectorAll('.faq-item').forEach(function(faq){
+      faq.classList.remove('active');
+      faq.querySelector('.faq-icon').textContent = '+';
+    });
+    
+    if(!isActive){
+      item.classList.add('active');
+      item.querySelector('.faq-icon').textContent = '−';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
