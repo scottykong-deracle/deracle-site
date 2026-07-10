@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights - dERACLE</title>
-</head>
-<body>
+<!-- 기술 블로그 스타일 섹션 -->
+<style>
+    .tech-blog {
+        background-color: #0f172a; /* 딥 네이비 배경 */
+        color: #f8fafc;
+        padding: 60px 40px;
+        border-radius: 12px;
+        max-width: 800px;
+        margin: 40px auto;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .tech-blog h2 { color: #60a5fa; border-left: 4px solid #60a5fa; padding-left: 15px; }
+    .tech-blog ul { list-style: none; padding: 0; }
+    .tech-blog li { margin-bottom: 15px; padding-left: 25px; position: relative; }
+    .tech-blog li::before { content: "✔"; position: absolute; left: 0; color: #38bdf8; }
+    .footer-logo { text-align: right; margin-top: 40px; }
+</style>
 
-    <!-- 헤더 영역 -->
-    <script src="header.js"></script>
+<div class="tech-blog">
+    <h2>Technical Insight: eMMC HS400 Integration</h2>
+    <p>Efficient PCB fanout for legacy MPU designs without performance compromise.</p>
+    
+    <ul>
+        <li><strong>NC Pin Strategy:</strong> Verified "True NC" pins are safe for signal routing.</li>
+        <li><strong>Data Strobe (DS) Criticality:</strong> Identified DS pin as mandatory for HS400 mode.</li>
+        <li><strong>Outcome:</strong> Validation of design optimization to bridge HS200 and HS400 performance.</li>
+    </ul>
 
-    <!-- 본문 컨텐츠 영역 -->
-    <main style="max-width: 1000px; margin: 40px auto; padding: 20px;">
-        <h1>Insights & Case Studies</h1>
-        <p>Welcome to dERACLE Insights. Here we share technical expertise and market analysis.</p>
-    </main>
-
-    <!-- 로고 영역을 하단으로 이동 및 크기 축소 -->
-    <footer style="text-align: center; padding: 40px 20px;">
-        <img src="deracle-logo.jpg" alt="dERACLE Insight Logo" style="max-width: 200px; height: auto; opacity: 0.8;">
-    </footer>
-
-</body>
-</html>
+    <div class="footer-logo">
+        <img src="deracle-logo.jpg" alt="Logo" style="max-width: 150px; opacity: 0.9;">
+    </div>
+</div>
