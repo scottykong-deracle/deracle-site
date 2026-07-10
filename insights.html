@@ -1,61 +1,65 @@
-<style>
-    /* 전체 리셋 */
-    body { 
-        margin: 0; 
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-        color: #f1f5f9;
-        background-color: #0f172a;
-        line-height: 1.6;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | dERACLE</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0;
+            font-family: sans-serif; 
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+        /* 가장 안전한 방식: 컨테이너에 상단 여백을 직접 부여 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 150px 40px 50px 40px;
+        }
+        h1 { color: #60a5fa; font-size: 2.5rem; }
+        .case-step { margin-bottom: 30px; border-left: 4px solid #4a6cf7; padding-left: 20px; }
+        .logo-footer { display: flex; justify-content: flex-end; margin-top: 50px; }
+        .logo-footer img { height: 100px; width: auto; }
+    </style>
+</head>
+<body>
 
-    /* 가장 중요한 부분: 최상위 컨테이너에 헤더 높이만큼의 공간을 '강제'로 확보 */
-    .page-wrapper {
-        display: block;
-        padding-top: 180px; /* 여기서 헤더가 차지하는 공간을 확실히 확보합니다 */
-        width: 100%;
-    }
+    <script src="header.js"></script>
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 40px 80px 40px; 
-    }
-    
-    /* 헤더 요소가 절대 위치를 갖더라도 본문 침범 불가하게 설정 */
-    header { position: relative; z-index: 1; }
-    
-    .page-header { margin-bottom: 60px; }
-    h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; }
-    .subtitle { color: #94a3b8; font-size: 1.1rem; }
+    <div class="container">
+        <h1>Insights & Case Studies</h1>
+        <p style="color: #94a3b8; margin-bottom: 40px;">Technical support and solution optimization cases.</p>
+        
+        <article>
+            <h2 style="color: #60a5fa;">Case Study: eMMC PCB Fanout Optimization and Validation</h2>
+            
+            <div class="case-step">
+                <strong>Technical Inquiry</strong><br>
+                A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
+            </div>
 
-    article h2 { 
-        color: #60a5fa; 
-        font-size: 1.8rem; 
-        margin-top: 50px; 
-        margin-bottom: 30px;
-    }
-    
-    .case-step {
-        margin-bottom: 30px;
-        padding-left: 20px;
-        border-left: 4px solid #4a6cf7; 
-    }
-    .case-step strong {
-        color: #e2e8f0;
-        font-size: 1.3rem;
-        display: block;
-        margin-bottom: 10px;
-    }
+            <div class="case-step">
+                <strong>Technical Analysis</strong><br>
+                We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.
+            </div>
 
-    .logo-footer {
-        display: flex; 
-        justify-content: flex-end; 
-        margin-top: 100px;
-    }
-    .logo-footer img {
-        height: 100px;
-        width: auto;
-        object-fit: contain;
-    }
-</style>
+            <div class="case-step">
+                <strong>Strategic Action</strong><br>
+                During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.
+            </div>
+
+            <div class="case-step">
+                <strong>Result & Conclusion</strong><br>
+                The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
+            </div>
+            
+            <div class="logo-footer">
+                <img src="deracle-logo.jpg" alt="dERACLE Logo">
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>
