@@ -23,11 +23,11 @@ document.write(`
     <nav>
         <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
         <ul>
-            <li><a href="company.html">Company</a></li>
-            <li><a href="memory.html">Memory</a></li>
-            <li><a href="display.html">Display</a></li>
+            <li><a href="#company">Company</a></li>
+            <li><a href="#memory">Memory</a></li>
+            <li><a href="#solutions">Display</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
