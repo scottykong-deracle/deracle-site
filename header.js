@@ -7,7 +7,13 @@ document.write(`
         background: ${isInsights ? '#0f172a' : '#fff'}; 
         padding: 30px 0 10px 0; 
         border-bottom: 1px solid ${isInsights ? '#334155' : '#eee'}; 
-        position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center;
+        /* insights.html 일 때만 relative로 변경하여 고정 해제 */
+        position: ${isInsights ? 'relative' : 'sticky'}; 
+        top: 0; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        z-index: 1000;
     }
     nav { display: flex; align-items: center; width: 100%; }
     .logo { margin-left: 50px; }
