@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights | dERACLE</title>
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            background-color: #0f172a; 
-            color: #f1f5f9; 
-            font-family: sans-serif; 
-        }
+        body { margin: 0; padding: 0; background-color: #0f172a; color: #f1f5f9; font-family: sans-serif; }
         
-        /* 메뉴바의 간섭을 아예 물리적으로 차단하는 가장 큰 여백 설정 */
-        .wrapper {
-            padding-top: 180px; 
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 40px 50px 40px;
-        }
-
+        #content-wrapper { padding-top: 150px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 40px 50px 40px; }
+        
         .tag { display: inline-block; background-color: #1e293b; color: #60a5fa; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; }
         .date { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
         
-        h1 { color: #60a5fa; font-size: 2.5rem; margin-top: 0; }
+        h1 { color: #60a5fa; font-size: 2.5rem; margin-top: 0; margin-bottom: 5px; }
+        
+        /* 요청하신 굵기/크기 변경 적용 */
+        .subtitle { color: #f1f5f9; font-size: 1.3rem; font-weight: bold; margin-bottom: 40px; }
+        
         .case-step { margin-bottom: 30px; border-left: 4px solid #4a6cf7; padding-left: 20px; }
+        
+        /* 제목은 굵게, 내용은 연하게 */
+        .case-step strong { color: #ffffff; font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+        .case-step p { color: #94a3b8; margin: 0; }
+        
         .logo-footer { display: flex; justify-content: flex-end; margin-top: 50px; }
         .logo-footer img { height: 100px; width: auto; }
     </style>
@@ -37,36 +32,36 @@
 
     <script src="header.js"></script>
 
-    <!-- wrapper로 전체를 감싸고 padding-top을 적용 -->
-    <div class="wrapper">
+    <div id="content-wrapper">
         <div class="container">
             <div class="tag">#eMMC #Memory #Industrial</div>
             <div class="date">Published: July 10, 2026 | Case #001</div>
             
             <h1>Insights & Case Studies</h1>
-            <p style="color: #94a3b8; margin-bottom: 40px;">Technical support and solution optimization cases.</p>
+            <!-- 서브타이틀 굵게/크게 -->
+            <p class="subtitle">Technical support and solution optimization cases.</p>
             
             <article>
                 <h2 style="color: #60a5fa;">Case Study: eMMC PCB Fanout Optimization and Validation</h2>
                 
                 <div class="case-step">
-                    <strong>Technical Inquiry</strong><br>
-                    A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
+                    <strong>Technical Inquiry</strong>
+                    <p>A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.</p>
                 </div>
 
                 <div class="case-step">
-                    <strong>Technical Analysis</strong><br>
-                    We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.
+                    <strong>Technical Analysis</strong>
+                    <p>We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.</p>
                 </div>
 
                 <div class="case-step">
-                    <strong>Strategic Action</strong><br>
-                    During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.
+                    <strong>Strategic Action</strong>
+                    <p>During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.</p>
                 </div>
 
                 <div class="case-step">
-                    <strong>Result & Conclusion</strong><br>
-                    The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
+                    <strong>Result & Conclusion</strong>
+                    <p>The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.</p>
                 </div>
                 
                 <div class="logo-footer">
@@ -76,5 +71,14 @@
         </div>
     </div>
 
+    <script>
+        window.addEventListener('load', function() {
+            const header = document.querySelector('header') || document.querySelector('nav');
+            if (header) {
+                const headerHeight = header.offsetHeight;
+                document.getElementById('content-wrapper').style.paddingTop = (headerHeight + 30) + 'px';
+            }
+        });
+    </script>
 </body>
 </html>
