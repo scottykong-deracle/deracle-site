@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights | dERACLE</title>
     <style>
+        /* 기본 배경 및 폰트 설정 */
         body { 
             margin: 0; 
+            padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             color: #f1f5f9;
             background-color: #0f172a;
             line-height: 1.6;
         }
+
+        /* 메뉴바 영역이 절대 콘텐츠를 침범하지 못하도록 하는 최상위 컨테이너 */
+        .page-wrapper {
+            padding-top: 250px; /* 여기서 헤더와 콘텐츠 간의 간격을 강제로 생성 */
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            /* 상단 메뉴바 높이를 고려하여 여백을 200px로 더욱 확보 */
-            padding: 200px 40px 80px 40px; 
-            box-sizing: border-box;
+            padding: 0 40px 80px 40px; 
         }
         
         .page-header { margin-bottom: 60px; }
-        
-        /* 텍스트가 메뉴 뒤로 들어가는 것을 방지 */
-        h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; position: relative; }
+        h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; }
         .subtitle { color: #94a3b8; font-size: 1.1rem; }
 
         article h2 { 
@@ -61,41 +65,44 @@
 
     <script src="header.js"></script>
 
-    <div class="container">
-        <header class="page-header">
-            <h1>Insights & Case Studies</h1>
-            <p class="subtitle">Technical support and solution optimization cases.</p>
-        </header>
-        
-        <main>
-            <article>
-                <h2>Case Study: eMMC PCB Fanout Optimization and Validation</h2>
+    <!-- 모든 본문 내용을 page-wrapper로 감싸서 레이아웃 강제 분리 -->
+    <div class="page-wrapper">
+        <div class="container">
+            <header class="page-header">
+                <h1>Insights & Case Studies</h1>
+                <p class="subtitle">Technical support and solution optimization cases.</p>
+            </header>
+            
+            <main>
+                <article>
+                    <h2>Case Study: eMMC PCB Fanout Optimization and Validation</h2>
 
-                <div class="case-step">
-                    <strong>Technical Inquiry</strong>
-                    A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
-                </div>
+                    <div class="case-step">
+                        <strong>Technical Inquiry</strong>
+                        A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
+                    </div>
 
-                <div class="case-step">
-                    <strong>Technical Analysis</strong>
-                    We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.
-                </div>
+                    <div class="case-step">
+                        <strong>Technical Analysis</strong>
+                        We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.
+                    </div>
 
-                <div class="case-step">
-                    <strong>Strategic Action</strong>
-                    During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.
-                </div>
+                    <div class="case-step">
+                        <strong>Strategic Action</strong>
+                        During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.
+                    </div>
 
-                <div class="case-step">
-                    <strong>Result & Conclusion</strong>
-                    The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
-                </div>
-                
-                <div class="logo-footer">
-                    <img src="deracle-logo.jpg" alt="dERACLE Logo">
-                </div>
-            </article>
-        </main>
+                    <div class="case-step">
+                        <strong>Result & Conclusion</strong>
+                        The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
+                    </div>
+                    
+                    <div class="logo-footer">
+                        <img src="deracle-logo.jpg" alt="dERACLE Logo">
+                    </div>
+                </article>
+            </main>
+        </div>
     </div>
 
 </body>
