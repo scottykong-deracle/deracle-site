@@ -1,41 +1,58 @@
 // header.js
-const isInsights = window.location.pathname.includes('insights.html');
-
+// 모든 페이지에서 동일한 메뉴바를 생성합니다.
 document.write(`
 <style>
+    /* 헤더 및 네비게이션 스타일 */
     header { 
-        background: ${isInsights ? '#0f172a' : '#fff'}; 
-        padding: 30px 0 10px 0; 
-        border-bottom: 1px solid ${isInsights ? '#334155' : '#eee'}; 
-        /* insights.html 일 때만 relative로 변경하여 고정 해제 */
-        position: ${isInsights ? 'relative' : 'sticky'}; 
+        position: sticky; 
         top: 0; 
+        background: #fff; 
+        border-bottom: 1px solid #ececec; 
         display: flex; 
         justify-content: space-between; 
-        align-items: center;
-        z-index: 1000;
+        align-items: center; 
+        padding: 18px 50px; 
+        z-index: 1000; 
     }
-    nav { display: flex; align-items: center; width: 100%; }
-    .logo { margin-left: 50px; }
-    .logo img { height: 35px; }
-    nav ul { display: flex; list-style: none; margin: 0; padding: 0; margin-left: auto; margin-right: 50px; }
-    nav ul li { margin-left: 30px; }
-    nav ul li a { 
+    
+    .logo img { 
+        height: 48px; 
+    }
+    
+    nav { 
+        display: flex; 
+        align-items: center; 
+    }
+    
+    nav a { 
         text-decoration: none; 
-        color: ${isInsights ? '#f1f5f9' : '#333'}; 
+        color: #333; 
+        margin-left: 35px; 
+        font-weight: 500; 
+        transition: .3s; 
     }
-    nav ul li a:hover { color: #4a6cf7; }
+    
+    nav a:hover { 
+        color: #4a6cf7; 
+    }
+    
+    /* 모바일 대응 (필요시) */
+    @media(max-width: 900px) { 
+        header { padding: 18px 20px; } 
+        nav a { margin-left: 15px; }
+    }
 </style>
+
 <header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="DERACLE Logo"></a>
+    </div>
     <nav>
-        <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
-        <ul>
-            <li><a href="index.html#company">Company</a></li>
-            <li><a href="index.html#memory">Memory</a></li>
-            <li><a href="index.html#solutions">Display</a></li>
-            <li><a href="insights.html">Insights</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+        <a href="index.html#company">Company</a>
+        <a href="index.html#memory">Memory</a>
+        <a href="index.html#solutions">Display</a>
+        <a href="insights.html">Insights</a>
+        <a href="index.html#contact">Contact</a>
     </nav>
 </header>
 `);
