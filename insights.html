@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights | dERACLE</title>
+    <title>eMMC Fanout Optimization Case Study | Insights | dERACLE</title>
     <style>
         body { 
             margin: 0; 
@@ -15,59 +15,87 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 80px 40px;
+            padding: 150px 40px 80px 40px; /* 상단 헤더 고정을 위한 여백 확보 */
         }
-        h1 { color: #60a5fa; margin-bottom: 5px; }
-        h2 { color: #60a5fa; font-size: 1.5rem; margin-top: 40px; }
-        .case-section {
-            padding-bottom: 20px;
-            border-bottom: 1px solid #334155;
-            margin-bottom: 30px;
+        
+        /* Header Title Area */
+        .page-header { margin-bottom: 60px; }
+        h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; }
+        .subtitle { color: #94a3b8; font-size: 1.1rem; }
+
+        /* Article Content */
+        article h2 { 
+            color: #60a5fa; 
+            font-size: 1.8rem; 
+            margin-top: 50px; 
+            margin-bottom: 25px;
+            border-bottom: 2px solid #334155; /* 각 케이스의 시작을 강조 */
+            padding-bottom: 10px;
         }
+        
+        /* Case Step Styling (Phase 제거 후 강조 처리) */
+        .case-step {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #4a6cf7; /* 좌측에 파란색 바를 넣어 흐름 시각화 */
+        }
+        .case-step strong {
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Footer Logo */
         .logo-footer {
             display: flex; 
             justify-content: flex-end; 
-            margin-top: 50px;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Loaded via JS (Fixed position already handled) -->
     <script src="header.js"></script>
 
     <div class="container">
-        <header>
+        <header class="page-header">
             <h1>Insights & Case Studies</h1>
-            <p style="color: #94a3b8; margin-bottom: 40px;">Technical support and solution optimization cases.</p>
+            <p class="subtitle">Technical support and solution optimization cases.</p>
         </header>
         
         <main>
             <article>
-                <h2 style="margin-top:0;">Case Study: eMMC PCB Fanout Optimization and Validation</h2>
+                <!-- 게시물 제목 -->
+                <h2 style="margin-top:0; border-bottom:none;">Case Study: eMMC PCB Fanout Optimization and Validation</h2>
 
-                <div class="case-section">
-                    <p><strong>[Phase 1: Technical Inquiry]</strong><br>
-                    A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.</p>
+                <!-- 단계별 내용 (자연스러운 흐름으로 변경) -->
+                <div class="case-step">
+                    <strong>Technical Inquiry</strong>
+                    A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
                 </div>
 
-                <div class="case-section">
-                    <p><strong>[Phase 2: Technical Analysis]</strong><br>
-                    We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.</p>
+                <div class="case-step">
+                    <strong>Technical Analysis</strong>
+                    We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.
                 </div>
 
-                <div class="case-section">
-                    <p><strong>[Phase 3: Strategic Action]</strong><br>
-                    During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.</p>
+                <div class="case-step">
+                    <strong>Strategic Action</strong>
+                    During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.
                 </div>
 
-                <div class="case-section">
-                    <p><strong>[Phase 4: Result & Conclusion]</strong><br>
-                    The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.</p>
+                <div class="case-step">
+                    <strong>Result & Conclusion</strong>
+                    The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
                 </div>
                 
-                <!-- Specified Logo -->
+                <!-- 확대된 로고 (deracle-logo.jpg 사용) -->
                 <div class="logo-footer">
-                    <img src="deracle-logo.jpg" alt="dERACLE Logo" style="height: 40px;">
+                    <img src="deracle-logo.jpg" alt="dERACLE Logo" style="height: 80px;">
                 </div>
             </article>
         </main>
