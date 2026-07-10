@@ -1,32 +1,48 @@
-<!-- 기술 블로그 스타일 섹션 -->
-<style>
-    .tech-blog {
-        background-color: #0f172a; /* 딥 네이비 배경 */
-        color: #f8fafc;
-        padding: 60px 40px;
-        border-radius: 12px;
-        max-width: 800px;
-        margin: 40px auto;
-        font-family: 'Segoe UI', sans-serif;
-    }
-    .tech-blog h2 { color: #60a5fa; border-left: 4px solid #60a5fa; padding-left: 15px; }
-    .tech-blog ul { list-style: none; padding: 0; }
-    .tech-blog li { margin-bottom: 15px; padding-left: 25px; position: relative; }
-    .tech-blog li::before { content: "✔"; position: absolute; left: 0; color: #38bdf8; }
-    .footer-logo { text-align: right; margin-top: 40px; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | dERACLE</title>
+    <style>
+        /* 페이지 전체 다크 모드 배경 */
+        body {
+            background-color: #0f172a; 
+            color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        /* 콘텐츠를 담는 중앙 박스 */
+        .container {
+            max-width: 800px;
+            margin: 80px auto; /* 헤더 아래로 여백 */
+            padding: 40px;
+        }
+        /* 기술 블로그 포스트 영역 */
+        .post-box {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
 
-<div class="tech-blog">
-    <h2>Technical Insight: eMMC HS400 Integration</h2>
-    <p>Efficient PCB fanout for legacy MPU designs without performance compromise.</p>
-    
-    <ul>
-        <li><strong>NC Pin Strategy:</strong> Verified "True NC" pins are safe for signal routing.</li>
-        <li><strong>Data Strobe (DS) Criticality:</strong> Identified DS pin as mandatory for HS400 mode.</li>
-        <li><strong>Outcome:</strong> Validation of design optimization to bridge HS200 and HS400 performance.</li>
-    </ul>
+    <!-- 고정 헤더: 기존 로고/메뉴 유지 -->
+    <script src="header.js"></script>
 
-    <div class="footer-logo">
-        <img src="deracle-logo.jpg" alt="Logo" style="max-width: 150px; opacity: 0.9;">
+    <div class="container">
+        <!-- 1. 타이틀 영역 -->
+        <header>
+            <h1 style="color: #60a5fa; margin-bottom: 5px;">Insights & Case Studies</h1>
+            <p style="color: #94a3b8; margin-bottom: 40px;">Professional technical analysis and industry updates.</p>
+        </header>
+
+        <!-- 2. 기술 포스트 본문 영역 -->
+        <main class="post-box" id="main-content">
+            <!-- 여기에 추후 내용이 채워집니다 -->
+        </main>
     </div>
-</div>
+
+</body>
+</html>
