@@ -1,12 +1,13 @@
-// header.js 수정본 (메뉴 오른쪽 정렬)
+// header.js
 document.write(`
 <style>
-    header { background: #fff; padding: 15px 50px; border-bottom: 1px solid #eee; }
-    nav { display: flex; justify-content: space-between; align-items: center; } /* 이 줄이 메뉴를 오른쪽으로 보냅니다 */
-    .logo img { height: 40px; }
+    header { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; }
+    /* nav를 감싸는 컨테이너에 space-between을 주어 로고와 메뉴를 양 끝으로 배치합니다 */
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .logo img { height: 35px; }
     nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-    nav ul li { margin-left: 25px; } /* 메뉴 간 간격 조절 */
-    nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+    nav ul li { margin-left: 30px; } /* 메뉴 간격 유지 */
+    nav ul li a { text-decoration: none; color: #333; font-weight: 500; font-size: 15px; }
     nav ul li a:hover { color: #4a6cf7; }
 </style>
 <header>
