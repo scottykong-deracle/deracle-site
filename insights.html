@@ -7,17 +7,18 @@
     <style>
         body { margin: 0; padding: 0; background-color: #0f172a; color: #f1f5f9; font-family: sans-serif; }
         
-        /* 헤더의 sticky 속성을 강제 해제 */
-        header { position: relative !important; }
-
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 40px 50px 40px; }
+        /* 1. 컨테이너에 상단 여백을 충분히 주어 헤더와 겹치지 않게 함 */
+        .container { max-width: 800px; margin: 0 auto; padding: 120px 40px 50px 40px; }
         
+        /* 2. 태그 스타일 */
         .tag { display: inline-block; background-color: #1e293b; color: #60a5fa; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; margin-bottom: 10px; }
         .date { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
         
+        /* 3. 제목 및 서브타이틀 */
         h1 { color: #60a5fa; font-size: 2.5rem; margin-top: 0; margin-bottom: 5px; }
         .subtitle { color: #f8fafc; font-size: 1.4rem; font-weight: 700; margin-bottom: 40px; }
         
+        /* 4. 본문 스타일 */
         .case-step { margin-bottom: 30px; border-left: 4px solid #4a6cf7; padding-left: 20px; }
         .case-step strong { color: #ffffff; font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 8px; }
         .case-step p { color: #cbd5e1; margin: 0; font-size: 1rem; line-height: 1.5; }
