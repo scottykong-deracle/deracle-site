@@ -7,6 +7,7 @@ document.write(`
         background: ${isInsights ? '#0f172a' : '#fff'}; 
         padding: 30px 0 10px 0; 
         border-bottom: 1px solid ${isInsights ? '#334155' : '#eee'}; 
+        position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center;
     }
     nav { display: flex; align-items: center; width: 100%; }
     .logo { margin-left: 50px; }
@@ -23,11 +24,11 @@ document.write(`
     <nav>
         <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
         <ul>
-            <li><a href="#company">Company</a></li>
-            <li><a href="#memory">Memory</a></li>
-            <li><a href="#solutions">Display</a></li>
+            <li><a href="index.html#company">Company</a></li>
+            <li><a href="index.html#memory">Memory</a></li>
+            <li><a href="index.html#solutions">Display</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
