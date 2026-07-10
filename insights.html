@@ -15,12 +15,15 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            /* 헤더와 메뉴바가 겹치지 않도록 충분한 상단 여백 확보 */
-            padding: 180px 40px 80px 40px; 
+            /* 상단 메뉴바 높이를 고려하여 여백을 200px로 더욱 확보 */
+            padding: 200px 40px 80px 40px; 
+            box-sizing: border-box;
         }
         
         .page-header { margin-bottom: 60px; }
-        h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; }
+        
+        /* 텍스트가 메뉴 뒤로 들어가는 것을 방지 */
+        h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; position: relative; }
         .subtitle { color: #94a3b8; font-size: 1.1rem; }
 
         article h2 { 
@@ -47,7 +50,6 @@
             justify-content: flex-end; 
             margin-top: 100px;
         }
-        /* 로고 품질 유지 */
         .logo-footer img {
             height: 100px;
             width: auto;
