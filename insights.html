@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eMMC Fanout Optimization Case Study | Insights | dERACLE</title>
+    <title>Insights | dERACLE</title>
     <style>
         body { 
             margin: 0; 
@@ -15,50 +15,48 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 150px 40px 80px 40px; /* 상단 헤더 고정을 위한 여백 확보 */
+            /* 헤더와 메뉴바가 겹치지 않도록 충분한 상단 여백 확보 */
+            padding: 180px 40px 80px 40px; 
         }
         
-        /* Header Title Area */
         .page-header { margin-bottom: 60px; }
         h1 { color: #60a5fa; margin-bottom: 5px; font-size: 2.5rem; }
         .subtitle { color: #94a3b8; font-size: 1.1rem; }
 
-        /* Article Content */
         article h2 { 
             color: #60a5fa; 
             font-size: 1.8rem; 
             margin-top: 50px; 
-            margin-bottom: 25px;
-            border-bottom: 2px solid #334155; /* 각 케이스의 시작을 강조 */
-            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
         
-        /* Case Step Styling (Phase 제거 후 강조 처리) */
         .case-step {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             padding-left: 20px;
-            border-left: 3px solid #4a6cf7; /* 좌측에 파란색 바를 넣어 흐름 시각화 */
+            border-left: 4px solid #4a6cf7; 
         }
         .case-step strong {
             color: #e2e8f0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        /* Footer Logo */
         .logo-footer {
             display: flex; 
             justify-content: flex-end; 
-            margin-top: 80px;
-            padding-top: 30px;
-            border-top: 1px solid #334155;
+            margin-top: 100px;
+        }
+        /* 로고 품질 유지 */
+        .logo-footer img {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Loaded via JS (Fixed position already handled) -->
     <script src="header.js"></script>
 
     <div class="container">
@@ -69,10 +67,8 @@
         
         <main>
             <article>
-                <!-- 게시물 제목 -->
-                <h2 style="margin-top:0; border-bottom:none;">Case Study: eMMC PCB Fanout Optimization and Validation</h2>
+                <h2>Case Study: eMMC PCB Fanout Optimization and Validation</h2>
 
-                <!-- 단계별 내용 (자연스러운 흐름으로 변경) -->
                 <div class="case-step">
                     <strong>Technical Inquiry</strong>
                     A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.
@@ -93,9 +89,8 @@
                     The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.
                 </div>
                 
-                <!-- 확대된 로고 (deracle-logo.jpg 사용) -->
                 <div class="logo-footer">
-                    <img src="deracle-logo.jpg" alt="dERACLE Logo" style="height: 80px;">
+                    <img src="deracle-logo.jpg" alt="dERACLE Logo">
                 </div>
             </article>
         </main>
