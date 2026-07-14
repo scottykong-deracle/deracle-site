@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TLCM Display Solutions | DERACLE</title>
+
+<meta name="description" content="Industrial Touch LCD Complete Module (TLCM) Solutions with IPS LCD, Optical Clear Adhesive (OCA), PCAP Touch and Custom Cover Glass by DERACLE.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+z-index:1000;
+}
+
+.logo img{
+height:48px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4a6cf7;
+}
+
+.hero{
+padding:40px 20px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#666;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.card{
+background:#f8f9fb;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+
+.card h2{
+font-size:34px;
+margin-bottom:22px;
+}
+
+.card p{
+font-size:18px;
+color:#555;
+}
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+}
+
+.list{
+font-size:20px;
+line-height:2.2;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+th{
+background:#4a6cf7;
+color:#fff;
+padding:18px;
+}
+
+td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #e5e5e5;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+font-size:18px;
+margin-top:15px;
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+/* Applications */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:30px;
+}
+
+.app-card{
+background:#fff;
+border:1px solid #ececec;
+border-radius:16px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.3s;
+}
+
+.app-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.app-icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.app-card h3{
+font-size:20px;
+margin-bottom:12px;
+}
+
+.app-card p{
+font-size:16px;
+color:#666;
+}
+
+/* FAQ */
+
+.faq-item{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:14px;
+margin-top:18px;
+overflow:hidden;
+}
+
+.faq-question{
+padding:22px 28px;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.faq-icon{
+color:#4a6cf7;
+font-size:28px;
+font-weight:bold;
+margin-right:16px;
+width:28px;
+text-align:center;
+}
+
+.faq-answer{
+display:none;
+padding:0 40px 28px 72px;
+font-size:18px;
+color:#555;
+}
+
+.faq-item.active .faq-answer{
+display:block;
+}
+
+/* Technical Resources */
+
+.resource-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px 60px;
+margin-top:15px;
+}
+
+.resource-grid .feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.resource-grid .feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+.resource-grid a{
+text-decoration:none;
+color:#333;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin:70px 0;
+}
+
+.cta a{
+background:#4a6cf7;
+padding:16px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+margin:8px;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+border-top:1px solid #eee;
+margin-top:50px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+padding:18px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.grid2{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.app-grid{
+grid-template-columns:1fr;
+}
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+table{
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script src="header.js"></script>
+
+<section class="hero">
+
+<h1>27" TLCM Display Solution</h1>
+
+<p>Industrial All-in-One Ready-to-Go Touch Display Module</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:30px auto 30px auto;">
+
+<img src="images/tlcm-front.webp"
+alt="27 inch TLCM Front"
+style="width:100%;height:280px;object-fit:contain;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05);background:#ffffff;">
+
+<img src="images/tlcm-rear.webp"
+alt="27 inch TLCM Rear"
+style="width:100%;height:280px;object-fit:contain;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05);background:#ffffff;">
+
+</div>
+
+<div class="highlight-box">
+
+<div style="color:#4a6cf7;font-weight:600;">
+✓ IPS Technology
+</div>
+
+<div style="color:#4a6cf7;font-weight:600;">
+✓ Optical Clear Adhesive (OCA) Bonding
+</div>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Overview</h2>
+
+<p>
+
+DERACLE has launched its Touch LCD Complete Module (TLCM), integrating a premium IPS LCD panel, projected capacitive touch screen and Optical Clear Adhesive (OCA) bonding into one industrial-ready display solution.
+
+</p>
+
+<br>
+
+<p>
+
+Designed for Gaming, Industrial, Medical, POS, Kiosk and HMI applications requiring high reliability, improved visibility and long-term product availability.
+
+</p>
+
+<br>
+
+<p>
+
+<strong>Additional TLCM models will be continuously updated.</strong>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Why DERACLE</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<div>
+
+<strong>Custom Assembly Module</strong><br>
+
+Selected BOE Open Cell<br>
+
+Sorted A Grade Only
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div>
+
+<strong>High Brightness</strong><br>
+
+Enhanced up to 450 nits<br>
+
+Semi-Outdoor Ready
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div>
+
+<strong>Optical Clear Adhesive</strong><br>
+
+Reduced Reflection<br>
+
+Significantly Improved Visibility
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div>
+
+<strong>Custom Cover Glass</strong><br>
+
+Custom Black Band Design<br>
+
+Minimal Tooling Cost
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="grid2">
+
+<div class="card">
+
+<h2>Solution Type</h2>
+
+<div class="list">
+
+Touch LCD Complete Module (TLCM)<br>
+
+Custom Cover Glass<br>
+
+Optical Clear Adhesive (OCA)<br>
+
+Custom Assembly Module
+
+</div>
+
+</div>
+
+<div class="card">
+
+Contact DERACLE
+
+<div class="list">
+
+27" Available<br>
+
+21.5" <span style="color:#888;">(Coming Soon)</span><br>
+
+23.8" <span style="color:#888;">(Coming Soon)</span><br>
+
+32" <span style="color:#888;">(Coming Soon)</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Available Products</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+Our Touch LCD Complete Module (TLCM) portfolio will be continuously expanded with additional display sizes and customized solutions.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Model</th>
+
+<th>LCD Panel</th>
+
+<th>Size</th>
+
+<th>Resolution</th>
+
+<th>Brightness</th>
+
+<th>Touch</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>LPW270M05-TA50</td>
+
+<td>BOE IPS</td>
+
+<td>27"</td>
+
+<td>1920 × 1080</td>
+
+<td>450 nits</td>
+
+<td>10-Point PCAP</td>
+
+<td>Available</td>
+
+</tr>
+
+<tr>
+
+<td colspan="7" style="color:#888;font-style:italic;">
+
+More TLCM models will be continuously updated.
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>General Features</h2>
+
+<div class="features">
+
+<div class="feature">IPS Technology</div>
+
+<div class="feature">27" Full HD Display</div>
+
+<div class="feature">450 nits High Brightness</div>
+
+<div class="feature">Optical Clear Adhesive (OCA)</div>
+
+<div class="feature">10-Point PCAP Touch</div>
+
+<div class="feature">Dual LVDS Interface</div>
+
+<div class="feature">USB Plug & Play Touch</div>
+
+<div class="feature">Semi-Outdoor Ready</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Quick Specifications</h2>
+
+<table>
+
+<tr>
+
+<th style="width:35%;">Item</th>
+
+<th>Specification</th>
+
+</tr>
+
+<tr>
+
+<td>Model</td>
+
+<td>LPW270M05-TA50</td>
+
+</tr>
+
+<tr>
+
+<td>LCD Panel</td>
+
+<td>BOE IPS Open Cell</td>
+
+</tr>
+
+<tr>
+
+<td>Panel Grade</td>
+
+<td>Sorted A Grade Only</td>
+
+</tr>
+
+<tr>
+
+<td>Display Size</td>
+
+<td>27"</td>
+
+</tr>
+
+<tr>
+
+<td>Resolution</td>
+
+<td>1920 × 1080 (FHD)</td>
+
+</tr>
+
+<tr>
+
+<td>Brightness</td>
+
+<td>450 nits (Typ.)</td>
+
+</tr>
+
+<tr>
+
+<td>Contrast Ratio</td>
+
+<td>1000 : 1</td>
+
+</tr>
+
+<tr>
+
+<td>Viewing Angle</td>
+
+<td>89° / 89° / 89° / 89°</td>
+
+</tr>
+
+<tr>
+
+<td>LCD Interface</td>
+
+<td>Dual LVDS</td>
+
+</tr>
+
+<tr>
+
+<td>Touch Interface</td>
+
+<td>USB Plug &amp; Play</td>
+
+</tr>
+
+<tr>
+
+<td>Touch Controller</td>
+
+<td>EETI (Version Available Upon Request)</td>
+
+</tr>
+
+<tr>
+
+<td>Touch Technology</td>
+
+<td>Projected Capacitive (PCAP), 10-Point Multi-Touch</td>
+
+</tr>
+
+<tr>
+
+<td>Bonding</td>
+
+<td>Optical Clear Adhesive (OCA)</td>
+
+</tr>
+
+<tr>
+
+<td>Cover Glass</td>
+
+<td>Custom Cover Lens Available</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Typical Applications</h2>
+
+<p>
+
+DERACLE TLCM solutions are designed for industrial environments requiring high reliability, excellent visibility and long-term product availability.
+
+</p>
+
+<div class="app-grid">
+
+<div class="app-card">
+<div class="app-icon">🎮</div>
+<h3>Gaming</h3>
+<p>Casino gaming machines and amusement equipment.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🏭</div>
+<h3>Industrial</h3>
+<p>Industrial control systems and factory automation.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🏥</div>
+<h3>Medical</h3>
+<p>Medical devices and diagnostic equipment.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">💳</div>
+<h3>POS</h3>
+<p>Retail terminals and self-service payment systems.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🖥️</div>
+<h3>HMI</h3>
+<p>Human Machine Interface applications.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">🛒</div>
+<h3>Kiosk</h3>
+<p>Interactive kiosks and public information terminals.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">☀️</div>
+<h3>Semi-Outdoor</h3>
+<p>High brightness displays for improved outdoor visibility.</p>
+</div>
+
+<div class="app-card">
+<div class="app-icon">📺</div>
+<h3>Digital Signage</h3>
+<p>Commercial display and advertising solutions.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Can custom LCD panel modules be supplied separately?
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. Custom LCD panel modules are available separately according to your project requirements.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Can you provide custom touch screens separately?
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. Standalone projected capacitive touch screens can also be supplied.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Do you also supply LCD control boards?
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. Compatible LCD controller board solutions can be recommended according to customer requirements.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Can the cover glass be customized?
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. Black band width, logo printing, glass thickness and surface finish can be customized with minimal tooling cost.
+</p>
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+<span class="faq-icon">+</span>
+Will more TLCM products be added?
+</div>
+
+<div class="faq-answer">
+<p>
+Yes. Additional TLCM models and display sizes will be continuously updated.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Technical Resources</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+
+Additional TLCM technical guides will be available soon.
+
+</p>
+
+<div class="resource-grid">
+
+<div class="feature">
+Optical Clear Adhesive (OCA) Guide
+<span style="color:#888;">(Coming Soon)</span>
+</div>
+
+<div class="feature">
+Touch Screen Guide
+<span style="color:#888;">(Coming Soon)</span>
+</div>
+
+<div class="feature">
+Cover Glass Guide
+<span style="color:#888;">(Coming Soon)</span>
+</div>
+
+<div class="feature">
+LVDS Interface Guide
+<span style="color:#888;">(Coming Soon)</span>
+</div>
+
+<div class="feature">
+LCD Panel Guide
+<span style="color:#888;">(Coming Soon)</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="cta">
+
+<p style="color:#666;margin-bottom:25px;">
+
+Need technical information or engineering support?
+
+</p>
+
+<a href="mailto:scotty@deracle.co.kr?subject=Request TLCM Datasheet">
+
+Request Datasheet &amp; Quote
+
+</a>
+
+<br><br>
+
+<a href="mailto:scotty@deracle.co.kr?subject=Contact DERACLE">
+Contact DERACLE
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 DERACLE. All rights reserved.
+
+</footer>
+
+<script>
+
+document.querySelectorAll('.faq-question').forEach(function(question){
+
+question.addEventListener('click',function(){
+
+const item=this.parentElement;
+const isActive=item.classList.contains('active');
+
+document.querySelectorAll('.faq-item').forEach(function(faq){
+
+faq.classList.remove('active');
+faq.querySelector('.faq-icon').textContent='+';
+
+});
+
+if(!isActive){
+
+item.classList.add('active');
+item.querySelector('.faq-icon').textContent='−';
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
