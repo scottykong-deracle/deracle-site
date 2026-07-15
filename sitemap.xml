@@ -2,8 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.deracle.co.kr/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/applications.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/ddr3-vs-ddr4-vs-ddr5.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/dram-modules.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/ecc-vs-non-ecc.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/embedded-memory.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/emmc-guide.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/insights.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/lpddr-guide.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/m2-2242-vs-2280.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/pcie-gen3-vs-gen4-ssd.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/rdimm-vs-udimm-vs-sodimm.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/sata-vs-nvme-ssd.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/slc-vs-mlc-vs-tlc-vs-qlc.html</loc>
+  </url>
+  <url>
+    <loc>https://www.deracle.co.kr/spi-nand-guide.html</loc>
   </url>
 </urlset>
