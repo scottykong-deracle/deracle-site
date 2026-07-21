@@ -1,26 +1,368 @@
-<article class="news-item">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="date">Jul 2026</div>
+<title>Industry News | dERACLE</title>
+<meta name="description" content="Latest updates from Korea's memory industry including DRAM, NAND Flash, SSD, AI memory, CXL and semiconductor technologies.">
 
-    <h2 style="color:#60a5fa;font-size:1.8rem;margin-bottom:15px;">
-        Korean Memory Makers Expand CXL Controller Partnerships
-    </h2>
+<link rel="canonical" href="https://www.deracle.co.kr/industry-news.html">
 
-    <p style="color:#cbd5e1;line-height:1.7;">
-        Leading Korean memory manufacturers are strengthening partnerships with
-        specialized CXL controller companies to accelerate next-generation memory
-        solutions while focusing on their core DRAM and NAND technologies.
-    </p>
+<script src="header.js"></script>
 
-    <p style="margin-top:20px;">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0f172a;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+.container{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
+    padding:0 30px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    padding:90px 0 70px;
+
+    text-align:center;
+
+    border-bottom:1px solid #23324a;
+
+    margin-bottom:60px;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:#ffffff;
+
+}
+
+.hero p{
+
+    color:#94a3b8;
+
+    font-size:1.15rem;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   NEWS CARD
+=========================== */
+
+.news-card{
+
+    position:relative;
+
+    background:#182234;
+
+    border:1px solid #2c3b52;
+
+    border-radius:18px;
+
+    padding:34px 38px;
+
+    margin-bottom:32px;
+
+    overflow:hidden;
+
+    transition:all .28s ease;
+
+}
+
+.news-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:#3b82f6;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+    0 16px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   DATE
+=========================== */
+
+.news-date{
+
+    display:inline-block;
+
+    color:#94a3b8;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.news-title{
+
+    color:#60a5fa;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin-bottom:20px;
+
+}
+
+.news-title a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+.news-title a:hover{
+
+    color:#93c5fd;
+
+}
+
+/* ===========================
+   SUMMARY
+=========================== */
+
+.news-summary{
+
+    color:#d5dbe5;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    margin-bottom:26px;
+
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.news-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#60a5fa;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.news-link:hover{
+
+    color:#93c5fd;
+
+    transform:translateX(4px);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.logo-footer{
+
+    text-align:center;
+
+    padding:70px 0;
+
+}
+
+.logo-footer img{
+
+    height:85px;
+
+    width:auto;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:70px 0 55px;
+
+}
+
+.hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.news-card{
+
+    padding:28px;
+
+}
+
+.news-title{
+
+    font-size:1.55rem;
+
+}
+
+.news-summary{
+
+    font-size:1rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header></header>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Industry News</h1>
+
+<p>
+Latest updates from Korea's memory industry.
+Stay informed with developments in DRAM, NAND Flash,
+SSD, AI memory, CXL, semiconductor technologies and
+the global storage ecosystem.
+</p>
+
+</div>
+
+</section>
+
+<main class="container">
+
+<article class="news-card">
+
+    <div class="news-date">Jul 2026</div>
+
+    <h2 class="news-title">
         <a href="https://zdnet.co.kr/view/?no=20260720150435"
            target="_blank"
-           rel="noopener noreferrer"
-           style="color:#60a5fa;font-weight:bold;text-decoration:none;">
-            Read Original →
+           rel="noopener noreferrer">
+            Korean Memory Makers Expand CXL Controller Partnerships
         </a>
+    </h2>
+
+    <p class="news-summary">
+        Leading Korean memory manufacturers are strengthening partnerships
+        with specialized CXL controller companies to accelerate next-generation
+        memory solutions while maintaining a strong focus on core DRAM and
+        NAND technologies. The strategy enables faster commercialization
+        of CXL memory products by leveraging ecosystem collaboration while
+        concentrating internal resources on advanced memory development.
     </p>
+
+    <a class="news-link"
+       href="https://zdnet.co.kr/view/?no=20260720150435"
+       target="_blank"
+       rel="noopener noreferrer">
+        Read Original →
+    </a>
 
 </article>
 
-<hr style="border:0;border-top:1px solid #334155;margin:50px 0;">
+</main>
+
+<footer class="logo-footer">
+
+    <img src="images/logo-white.webp"
+         alt="dERACLE Logo">
+
+</footer>
+
+</body>
+</html>
