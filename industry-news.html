@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Industry News | dERACLE</title>
-<meta name="description" content="Latest updates from Korea's memory industry including DRAM, NAND Flash, SSD, AI memory, CXL and semiconductor technologies.">
+
+<meta name="description" content="Latest updates from Korea's memory industry.">
 
 <link rel="canonical" href="https://www.deracle.co.kr/industry-news.html">
 
@@ -32,24 +34,22 @@ body{
 
 .container{
     width:100%;
-    max-width:1150px;
-    margin:auto;
-    padding:0 30px;
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 28px;
 }
 
-/* ===========================
+/* =========================
    HERO
-=========================== */
+========================= */
 
 .hero{
 
-    padding:90px 0 70px;
-
     text-align:center;
 
-    border-bottom:1px solid #23324a;
+    padding:80px 0 55px;
 
-    margin-bottom:60px;
+    margin-bottom:45px;
 
 }
 
@@ -59,47 +59,41 @@ body{
 
     font-weight:700;
 
-    margin-bottom:18px;
-
     color:#ffffff;
+
+    margin-bottom:18px;
 
 }
 
 .hero p{
 
+    font-size:1.1rem;
+
     color:#94a3b8;
-
-    font-size:1.15rem;
-
-    max-width:760px;
-
-    margin:auto;
-
-    line-height:1.8;
 
 }
 
-/* ===========================
+/* =========================
    NEWS CARD
-=========================== */
+========================= */
 
 .news-card{
 
     position:relative;
 
-    background:#182234;
+    background:#182235;
 
-    border:1px solid #2c3b52;
+    border:1px solid #2c3d56;
 
     border-radius:18px;
 
     padding:34px 38px;
 
-    margin-bottom:32px;
+    margin-bottom:34px;
+
+    transition:.25s ease;
 
     overflow:hidden;
-
-    transition:all .28s ease;
 
 }
 
@@ -123,28 +117,25 @@ body{
 
 .news-card:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-5px);
 
     border-color:#60a5fa;
 
-    box-shadow:
-    0 16px 40px rgba(0,0,0,.35);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 
 }
 
-/* ===========================
+/* =========================
    DATE
-=========================== */
+========================= */
 
 .news-date{
 
-    display:inline-block;
-
     color:#94a3b8;
 
-    font-size:.88rem;
+    font-size:.9rem;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:.08em;
 
@@ -154,13 +145,11 @@ body{
 
 }
 
-/* ===========================
+/* =========================
    TITLE
-=========================== */
+========================= */
 
 .news-title{
-
-    color:#60a5fa;
 
     font-size:2rem;
 
@@ -168,15 +157,17 @@ body{
 
     line-height:1.35;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
 .news-title a{
 
-    color:inherit;
+    color:#60a5fa;
 
     text-decoration:none;
+
+    transition:.2s;
 
 }
 
@@ -186,25 +177,25 @@ body{
 
 }
 
-/* ===========================
+/* =========================
    SUMMARY
-=========================== */
+========================= */
 
 .news-summary{
 
-    color:#d5dbe5;
+    color:#d6dde7;
 
     font-size:1.05rem;
 
-    line-height:1.9;
+    line-height:1.85;
 
-    margin-bottom:26px;
+    margin-bottom:24px;
 
 }
 
-/* ===========================
+/* =========================
    LINK
-=========================== */
+========================= */
 
 .news-link{
 
@@ -216,11 +207,11 @@ body{
 
     color:#60a5fa;
 
-    font-weight:700;
-
     text-decoration:none;
 
-    transition:.25s;
+    font-weight:700;
+
+    transition:.2s;
 
 }
 
@@ -228,41 +219,25 @@ body{
 
     color:#93c5fd;
 
-    transform:translateX(4px);
+    transform:translateX(3px);
 
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-
-.logo-footer{
-
-    text-align:center;
-
-    padding:70px 0;
-
-}
-
-.logo-footer img{
-
-    height:85px;
-
-    width:auto;
-
-    opacity:.95;
-
-}
-
-/* ===========================
+/* =========================
    MOBILE
-=========================== */
+========================= */
 
 @media(max-width:768px){
 
+.container{
+
+    padding:0 20px;
+
+}
+
 .hero{
 
-    padding:70px 0 55px;
+    padding:65px 0 40px;
 
 }
 
@@ -312,12 +287,7 @@ body{
 
 <h1>Industry News</h1>
 
-<p>
-Latest updates from Korea's memory industry.
-Stay informed with developments in DRAM, NAND Flash,
-SSD, AI memory, CXL, semiconductor technologies and
-the global storage ecosystem.
-</p>
+<p>Latest updates from Korea's memory industry.</p>
 
 </div>
 
@@ -338,12 +308,9 @@ the global storage ecosystem.
     </h2>
 
     <p class="news-summary">
-        Leading Korean memory manufacturers are strengthening partnerships
-        with specialized CXL controller companies to accelerate next-generation
-        memory solutions while maintaining a strong focus on core DRAM and
-        NAND technologies. The strategy enables faster commercialization
-        of CXL memory products by leveraging ecosystem collaboration while
-        concentrating internal resources on advanced memory development.
+        Leading Korean memory manufacturers are strengthening partnerships with
+        specialized CXL controller companies to accelerate next-generation
+        memory solutions while focusing on core DRAM and NAND technologies.
     </p>
 
     <a class="news-link"
@@ -357,12 +324,6 @@ the global storage ecosystem.
 
 </main>
 
-<footer class="logo-footer">
-
-    <img src="images/logo-white.webp"
-         alt="dERACLE Logo">
-
-</footer>
-
 </body>
+
 </html>
