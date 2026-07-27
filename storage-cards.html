@@ -2,650 +2,828 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Industrial Storage Cards | SD Card, microSD & USB Flash Drive | DERACLE</title>
+<meta charset="UTF-8">
 
-    <meta name="description"
-        content="DERACLE supplies commercial and industrial storage cards including SD Card, microSD Card and USB Flash Drive for embedded systems, industrial PCs, POS, medical equipment and data logging applications.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords"
-        content="Industrial SD Card, Industrial microSD, USB Flash Drive, Storage Card, Flash Storage, Embedded Storage, Industrial Memory, DERACLE">
+<title>Storage Cards | DERACLE</title>
 
-    <link rel="canonical" href="https://www.deracle.co.kr/storage-cards.html">
+<meta name="description" content="Commercial & Industrial SD Card, microSD Card and USB Flash Drive Solutions supplied by DERACLE for embedded, industrial, medical and POS applications.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Industrial Storage Cards | DERACLE">
-    <meta property="og:description"
-        content="Commercial and Industrial Storage Cards including SD Card, microSD and USB Flash Drive.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.deracle.co.kr/storage-cards.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <script src="header.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* ==========================================================
-           그대로 SSD Solutions 페이지의 CSS 사용
-           (여기부터 SSD Solutions의 <style> 전체를
-           마지막 </style>까지 그대로 복사)
-           ========================================================== */
+<style>
 
-    </style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.7;
+}
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #ececec;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+z-index:1000;
+}
+
+.logo img{
+height:48px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:35px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4a6cf7;
+}
+
+.hero{
+padding:40px 20px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#666;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+.card{
+background:#f8f9fb;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+
+.card h2{
+font-size:34px;
+margin-bottom:22px;
+}
+
+.card p{
+font-size:18px;
+color:#555;
+}
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+}
+
+.list{
+font-size:20px;
+line-height:2.2;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+th{
+background:#4a6cf7;
+color:#fff;
+padding:18px;
+}
+
+td{
+padding:18px;
+text-align:center;
+border-bottom:1px solid #e5e5e5;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+font-size:18px;
+margin-top:15px;
+}
+
+.resource-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px 60px;
+margin-top:15px;
+}
+
+.resource-grid .feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.resource-grid .feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+.resource-grid a{
+text-decoration:none;
+color:#333;
+}
+
+@media(max-width:900px){
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.feature::before{
+content:"✓";
+color:#4a6cf7;
+font-weight:bold;
+font-size:20px;
+}
+
+/* Applications */
+
+.app-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+margin-top:30px;
+}
+
+.app-card{
+background:#fff;
+border:1px solid #ececec;
+border-radius:16px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.04);
+transition:.3s;
+}
+
+.app-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+.app-icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.app-card h3{
+font-size:20px;
+margin-bottom:12px;
+}
+
+.app-card p{
+font-size:16px;
+color:#666;
+}
+
+/* FAQ */
+
+.faq-item{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:14px;
+margin-top:18px;
+overflow:hidden;
+}
+
+.faq-question{
+padding:22px 28px;
+font-size:22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.faq-icon{
+color:#4a6cf7;
+font-size:28px;
+font-weight:bold;
+margin-right:16px;
+width:28px;
+text-align:center;
+}
+
+.faq-answer{
+display:none;
+padding:0 40px 28px 72px;
+font-size:18px;
+color:#555;
+}
+
+.faq-item.active .faq-answer{
+display:block;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+margin:70px 0;
+}
+
+.cta a{
+background:#4a6cf7;
+padding:16px 45px;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+border-top:1px solid #eee;
+margin-top:50px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+padding:18px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.grid2{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.app-grid{
+grid-template-columns:1fr;
+}
+
+table{
+font-size:14px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header></header>
+<script src="header.js"></script>
 
 <section class="hero">
 
-    <div class="hero-content">
+<h1>Storage Cards</h1>
 
-        <div class="hero-text">
+<p>Commercial & Industrial SD Card, microSD Card & USB Flash Drive Solutions</p>
 
-            <span class="hero-tag">
-                INDUSTRIAL FLASH STORAGE
-            </span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:30px auto;">
 
-            <h1>
-                Storage Cards
-            </h1>
+<img src="images/storage-card.webp"
+alt="Industrial Storage Cards"
+style="width:100%;height:280px;object-fit:contain;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05);background:#ffffff;">
 
-            <p class="hero-subtitle">
+<img src="images/storage-solutions.webp"
+alt="Storage Solutions"
+style="width:100%;height:280px;object-fit:contain;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.05);background:#ffffff;">
 
-                Reliable Industrial SD Card,
-                microSD Card and USB Flash Drive
-                solutions for embedded systems,
-                industrial automation,
-                medical equipment and POS applications.
+</div>
 
-            </p>
+<div class="highlight-box">
 
-            <div class="hero-buttons">
+<div style="color:#4a6cf7;font-weight:600;">
 
-                <a href="#products" class="btn-primary">
-                    View Products
-                </a>
+✓ Commercial & Industrial Storage
 
-                <a href="#contact" class="btn-secondary">
-                    Request Datasheet
-                </a>
+</div>
 
-            </div>
+<div style="color:#4a6cf7;font-weight:600;">
 
-        </div>
+✓ Reliable Flash Memory Solutions
 
-        <div class="hero-image">
+</div>
 
-            <img src="images/storage-cards.png"
-                 alt="Industrial Storage Cards">
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<section class="highlight-section">
+<div class="container">
 
-    <div class="container">
+<div class="card">
 
-        <div class="highlight-grid">
+<h2>Introduction</h2>
 
-            <div class="highlight-card">
+<p>
 
-                <h3>
-                    Commercial & Industrial
-                </h3>
+DERACLE supplies commercial and industrial Storage Card solutions for embedded, industrial and commercial applications requiring reliable flash memory storage.
 
-                <p>
+</p>
 
-                    Storage solutions available for
-                    commercial and industrial applications.
+<p>
 
-                </p>
+Our Storage Card portfolio includes SD Card, microSD Card and USB Flash Drive products designed for Industrial PCs, Medical Equipment, POS Systems, Embedded Computing, Factory Automation and Data Logging applications with dependable long-term supply support.
 
-            </div>
+</p>
 
-            <div class="highlight-card">
+<p>
 
-                <h3>
-                    Reliable Flash Storage
-                </h3>
+This guide introduces our Storage Card product portfolio and helps engineers and system integrators select the appropriate removable flash storage solution based on interface, capacity and application requirements.
 
-                <p>
+</p>
 
-                    Stable performance with long-term
-                    product availability.
+</div>
 
-                </p>
 
-            </div>
+<div class="grid2">
 
-        </div>
+<div class="card">
 
-    </div>
+<h2>Product Family</h2>
 
-</section>
+<div class="list">
 
-<!-- ==========================================================
-     INTRODUCTION
-========================================================== -->
+SD Card<br>
 
-<section class="section">
+microSD Card<br>
 
-    <div class="container">
+USB Flash Drive<br>
 
-        <div class="section-title">
+Industrial Storage
 
-            <h2>
-                Industrial Storage Card Solutions
-            </h2>
+</div>
 
-            <p>
+</div>
 
-                DERACLE provides reliable flash storage products
-                designed for commercial and industrial environments.
-                Our portfolio includes SD Cards, microSD Cards and
-                USB Flash Drives for embedded systems, industrial
-                automation, medical devices, POS terminals and
-                other mission-critical applications.
+<div class="card">
 
-            </p>
+<h2>Applications</h2>
 
-        </div>
+<div class="list">
 
-        <div class="info-card">
+Embedded Systems<br>
 
-            <div class="info-content">
+Industrial PC<br>
 
-                <h3>
-                    Reliable Flash Storage for Industrial Applications
-                </h3>
+Medical Equipment<br>
 
-                <p>
+POS Systems
 
-                    Storage cards are widely used for operating
-                    systems, firmware, configuration files,
-                    application software and secure data logging.
+</div>
 
-                    DERACLE offers carefully selected flash storage
-                    solutions with stable supply, multiple capacity
-                    options and dependable performance for long-life
-                    industrial equipment.
+</div>
 
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="card">
 
-    </div>
+<h2>Available Products</h2>
 
-</section>
+<table>
 
+<tr>
 
-<!-- ==========================================================
-     PRODUCT PORTFOLIO
-========================================================== -->
+<th>Product</th>
 
-<section id="products" class="section section-light">
+<th>Interface</th>
 
-    <div class="container">
+<th>Capacity</th>
 
-        <div class="section-title">
+<th>Grade</th>
 
-            <h2>
-                Product Portfolio
-            </h2>
+<th>Typical Use</th>
 
-            <p>
+</tr>
 
-                Commercial and Industrial Flash Storage
-                Solutions for Embedded Systems.
+<tr>
 
-            </p>
+<td>SD Card</td>
 
-        </div>
+<td>SD</td>
 
-        <div class="table-wrapper">
+<td>8GB ~ 512GB</td>
 
-            <table class="product-table">
+<td>Commercial / Industrial</td>
 
-                <thead>
+<td>Industrial Equipment</td>
 
-                    <tr>
+</tr>
 
-                        <th>Product</th>
-                        <th>Interface</th>
-                        <th>Capacity</th>
-                        <th>Grade</th>
+<tr>
 
-                    </tr>
+<td>microSD Card</td>
 
-                </thead>
+<td>microSD</td>
 
-                <tbody>
+<td>8GB ~ 512GB</td>
 
-                    <tr>
+<td>Commercial / Industrial</td>
 
-                        <td>
-                            SD Card
-                        </td>
+<td>Embedded Systems</td>
 
-                        <td>
-                            SD
-                        </td>
+</tr>
 
-                        <td>
-                            Various Capacities
-                        </td>
+<tr>
 
-                        <td>
-                            Commercial / Industrial
-                        </td>
+<td>USB Flash Drive</td>
 
-                    </tr>
+<td>USB 2.0 / USB 3.0</td>
 
-                    <tr>
+<td>8GB ~ 512GB</td>
 
-                        <td>
-                            microSD Card
-                        </td>
+<td>Commercial</td>
 
-                        <td>
-                            microSD
-                        </td>
+<td>Data Transfer</td>
 
-                        <td>
-                            Various Capacities
-                        </td>
+</tr>
 
-                        <td>
-                            Commercial / Industrial
-                        </td>
+</table>
 
-                    </tr>
+</div>
 
-                    <tr>
 
-                        <td>
-                            USB Flash Drive
-                        </td>
+<div class="card">
 
-                        <td>
-                            USB 2.0 / USB 3.0
-                        </td>
+<h2>Key Features</h2>
 
-                        <td>
-                            Various Capacities
-                        </td>
+<div class="features">
 
-                        <td>
-                            Commercial
-                        </td>
+<div class="feature">Commercial & Industrial Grade</div>
 
-                    </tr>
+<div class="feature">Reliable Flash Memory</div>
 
-                </tbody>
+<div class="feature">Long-term Product Availability</div>
 
-            </table>
+<div class="feature">Multiple Capacity Options</div>
 
-        </div>
+<div class="feature">Engineering Support</div>
 
-    </div>
+<div class="feature">Stable Supply Chain</div>
 
-</section>
+<div class="feature">High Compatibility</div>
 
-<!-- ====== PART 1 END ====== -->
+<div class="feature">Quality Assured Products</div>
 
-<!-- ==========================================================
-     WHY CHOOSE DERACLE
-========================================================== -->
+</div>
 
-<section class="section">
+</div>
 
-    <div class="container">
+<div class="card">
 
-        <div class="section-title">
+<h2>Typical Applications</h2>
 
-            <h2>
-                Why Choose DERACLE
-            </h2>
+<p>
 
-            <p>
+Our Storage Card solutions are widely used in industrial and embedded systems requiring dependable removable flash storage, stable performance and long product lifecycle support.
 
-                More than simply supplying storage devices,
-                DERACLE provides dependable flash storage
-                solutions backed by engineering support and
-                stable long-term supply.
+</p>
 
-            </p>
+<div class="app-grid">
 
-        </div>
+<div class="app-card">
 
-        <div class="feature-grid">
+<div class="app-icon">🏭</div>
 
-            <div class="feature-card">
-                <h3>Long-term Supply</h3>
-                <p>Stable product lifecycle for industrial equipment.</p>
-            </div>
+<h3>Industrial PC</h3>
 
-            <div class="feature-card">
-                <h3>Industrial Reliability</h3>
-                <p>Designed for demanding embedded applications.</p>
-            </div>
+<p>
 
-            <div class="feature-card">
-                <h3>Engineering Support</h3>
-                <p>Technical assistance for product selection.</p>
-            </div>
+Reliable boot media, operating system storage and data logging for industrial computing systems.
 
-            <div class="feature-card">
-                <h3>Flexible Capacity</h3>
-                <p>Multiple capacities for various system requirements.</p>
-            </div>
+</p>
 
-            <div class="feature-card">
-                <h3>Commercial & Industrial</h3>
-                <p>Available in commercial and industrial grades.</p>
-            </div>
+</div>
 
-            <div class="feature-card">
-                <h3>Consistent Quality</h3>
-                <p>Reliable flash storage from qualified manufacturers.</p>
-            </div>
+<div class="app-card">
 
-        </div>
+<div class="app-icon">🏥</div>
 
-    </div>
+<h3>Medical Equipment</h3>
 
-</section>
+<p>
 
+Reliable storage for diagnostic equipment, medical imaging systems and healthcare devices.
 
+</p>
 
-<!-- ==========================================================
-     TYPICAL APPLICATIONS
-========================================================== -->
+</div>
 
-<section class="section section-light">
+<div class="app-card">
 
-    <div class="container">
+<div class="app-icon">💳</div>
 
-        <div class="section-title">
+<h3>POS Systems</h3>
 
-            <h2>
-                Typical Applications
-            </h2>
+<p>
 
-            <p>
+Secure storage for retail terminals, payment systems and self-service kiosks.
 
-                Storage cards are widely used in industrial
-                and embedded systems where reliable flash
-                storage is required.
+</p>
 
-            </p>
+</div>
 
-        </div>
+<div class="app-card">
 
-        <div class="application-grid">
+<div class="app-icon">📟</div>
 
-            <div class="application-card">
+<h3>Embedded Systems</h3>
 
-                <h3>
-                    Industrial PC
-                </h3>
+<p>
 
-                <p>
+Compact flash storage for embedded controllers, IoT devices and industrial automation.
 
-                    Operating system,
-                    application software,
-                    and data storage.
+</p>
 
-                </p>
+</div>
 
-            </div>
+</div>
 
-            <div class="application-card">
+</div>
 
-                <h3>
-                    Medical Equipment
-                </h3>
 
-                <p>
+<div class="card">
 
-                    Secure storage for
-                    medical devices
-                    and diagnostic systems.
+<h2>Frequently Asked Questions</h2>
 
-                </p>
+<div class="faq-item">
 
-            </div>
+<div class="faq-question">
 
-            <div class="application-card">
+<span class="faq-icon">+</span>
 
-                <h3>
-                    POS Systems
-                </h3>
+What is the difference between SD Card and microSD Card?
 
-                <p>
+</div>
 
-                    Reliable storage
-                    for retail terminals
-                    and kiosks.
+<div class="faq-answer">
 
-                </p>
+<p>
 
-            </div>
+Both products provide the same storage functionality. The primary difference is physical size. microSD Cards are designed for compact embedded devices, while SD Cards are commonly used in larger industrial equipment and portable devices.
 
-            <div class="application-card">
+</p>
 
-                <h3>
-                    Embedded Systems
-                </h3>
+</div>
 
-                <p>
+</div>
 
-                    Boot media,
-                    firmware,
-                    and application storage.
 
-                </p>
+<div class="faq-item">
 
-            </div>
+<div class="faq-question">
 
-        </div>
+<span class="faq-icon">+</span>
 
-    </div>
+Do you offer Industrial Grade Storage Cards?
 
-</section>
+</div>
 
+<div class="faq-answer">
 
+<p>
 
-<!-- ==========================================================
-     FAQ
-========================================================== -->
+Yes. DERACLE supplies both commercial and industrial grade Storage Card solutions with stable supply for embedded and industrial applications.
 
-<section class="section">
+</p>
 
-    <div class="container">
+</div>
 
-        <div class="section-title">
+</div>
 
-            <h2>
-                Frequently Asked Questions
-            </h2>
 
-        </div>
+<div class="faq-item">
 
-        <div class="faq-container">
+<div class="faq-question">
 
-            <div class="faq-item">
+<span class="faq-icon">+</span>
 
-                <button class="faq-question">
+What capacities are available?
 
-                    What is the difference between SD Card and microSD Card?
+</div>
 
-                </button>
+<div class="faq-answer">
 
-                <div class="faq-answer">
+<p>
 
-                    <p>
+Capacity options typically range from 8GB to 512GB depending on product type, application requirements and availability.
 
-                        microSD provides the same basic storage
-                        functionality as SD Card but in a much
-                        smaller form factor for compact embedded
-                        devices.
+</p>
 
-                    </p>
+</div>
 
-                </div>
+</div>
 
-            </div>
 
-            <div class="faq-item">
+<div class="faq-item">
 
-                <button class="faq-question">
+<div class="faq-question">
 
-                    What is Industrial Grade Storage?
+<span class="faq-icon">+</span>
 
-                </button>
+Can DERACLE recommend the right Storage Card?
 
-                <div class="faq-answer">
+</div>
 
-                    <p>
+<div class="faq-answer">
 
-                        Industrial grade products are designed
-                        for higher reliability, extended operating
-                        temperatures and long product lifecycle.
+<p>
 
-                    </p>
+Yes. Our engineering team can recommend the appropriate SD Card, microSD Card or USB Flash Drive based on interface, capacity, operating environment and product lifecycle requirements.
 
-                </div>
+</p>
 
-            </div>
+</div>
 
-            <div class="faq-item">
+</div>
 
-                <button class="faq-question">
+</div>
 
-                    Do you supply USB Flash Drives?
+<div class="card">
 
-                </button>
+<h2>Technical Resources</h2>
 
-                <div class="faq-answer">
+<p style="margin-bottom:25px;color:#666;">
 
-                    <p>
+Explore additional flash memory guides to better understand storage technologies and select the right removable storage solution for your embedded applications.
 
-                        Yes.
-                        DERACLE supplies USB Flash Drives
-                        suitable for commercial and industrial
-                        applications.
+</p>
 
-                    </p>
+<div class="resource-grid">
 
-                </div>
+<div class="feature">
 
-            </div>
+<a href="ssd-solutions.html">
 
-            <div class="faq-item">
+Industrial SSD Solutions
 
-                <button class="faq-question">
+</a>
 
-                    How can I select the right storage solution?
+</div>
 
-                </button>
+<div class="feature">
 
-                <div class="faq-answer">
+<a href="dram-modules.html">
 
-                    <p>
+Industrial DRAM Modules
 
-                        Our engineering team can recommend
-                        the most suitable storage product
-                        based on capacity,
-                        interface,
-                        operating environment
-                        and lifecycle requirements.
+</a>
 
-                    </p>
+</div>
 
-                </div>
+<div class="feature">
 
-            </div>
+<a href="embedded-memory.html">
 
-        </div>
+Embedded Memory Solutions
 
-    </div>
+</a>
 
-</section>
+</div>
 
+<div class="feature">
 
+<a href="industrial-memory.html">
 
-<!-- ==========================================================
-     CTA
-========================================================== -->
+Industrial Memory Guide
 
-<section id="contact" class="cta-section">
+</a>
 
-    <div class="container">
+</div>
 
-        <h2>
+<div class="feature">
 
-            Need a Datasheet?
+<a href="contact.html">
 
-        </h2>
+Request Product Information
 
-        <p>
+</a>
 
-            Contact DERACLE for product information,
-            engineering support and the latest storage
-            card solutions.
+</div>
 
-        </p>
+<div class="feature">
 
-        <a href="contact.html" class="btn-primary">
+<a href="about.html">
 
-            Request Datasheet
+About DERACLE
 
-        </a>
+</a>
 
-    </div>
+</div>
 
-</section>
+</div>
 
 
+<div class="cta">
+
+<p style="color:#666;margin-bottom:10px;">
+
+Need a Datasheet or Product Information?
+
+</p>
+
+<p style="color:#888;margin-bottom:25px;">
+
+Contact DERACLE for the latest Storage Card solutions, product recommendations and engineering support.
+
+</p>
+
+<a href="mailto:scotty@deracle.co.kr?subject=Request Storage Card Datasheet">
+
+Request Datasheet
+
+</a>
+
+</div>
+
+</div>
 
 <footer>
 
-    <div class="container">
-
-        <p>
-
-            © 2026 DERACLE Co., Ltd.
-            All Rights Reserved.
-
-        </p>
-
-    </div>
+© 2026 DERACLE. All rights reserved.
 
 </footer>
 
-
-
 <script>
 
-document.querySelectorAll(".faq-question").forEach(button => {
+document.querySelectorAll('.faq-question').forEach(function(question){
 
-    button.addEventListener("click", () => {
+question.addEventListener('click',function(){
 
-        const item = button.parentElement;
+const item=this.parentElement;
+const isActive=item.classList.contains('active');
 
-        item.classList.toggle("active");
+document.querySelectorAll('.faq-item').forEach(function(faq){
 
-    });
+faq.classList.remove('active');
+faq.querySelector('.faq-icon').textContent='+';
+
+});
+
+if(!isActive){
+
+item.classList.add('active');
+item.querySelector('.faq-icon').textContent='−';
+
+}
+
+});
 
 });
 
@@ -654,3 +832,4 @@ document.querySelectorAll(".faq-question").forEach(button => {
 </body>
 
 </html>
+
