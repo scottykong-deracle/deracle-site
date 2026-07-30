@@ -44,33 +44,21 @@ body{
 ========================= */
 
 .hero{
-
     text-align:center;
-
     padding:120px 0 55px;
-
     margin-bottom:45px;
-
 }
 
 .hero h1{
-
     font-size:3rem;
-
     font-weight:700;
-
     color:#ffffff;
-
     margin-bottom:18px;
-
 }
 
 .hero p{
-
     font-size:1.1rem;
-
     color:#94a3b8;
-
 }
 
 /* =========================
@@ -78,51 +66,30 @@ body{
 ========================= */
 
 .news-card{
-
     position:relative;
-
     background:#182235;
-
     border:1px solid #2c3d56;
-
     border-radius:18px;
-
     padding:34px 38px;
-
     margin-bottom:34px;
-
     transition:.25s ease;
-
     overflow:hidden;
-
 }
 
 .news-card::before{
-
     content:"";
-
     position:absolute;
-
     left:0;
-
     top:0;
-
     width:5px;
-
     height:100%;
-
     background:#3b82f6;
-
 }
 
 .news-card:hover{
-
     transform:translateY(-5px);
-
     border-color:#60a5fa;
-
     box-shadow:0 15px 35px rgba(0,0,0,.35);
-
 }
 
 /* =========================
@@ -130,19 +97,12 @@ body{
 ========================= */
 
 .news-date{
-
     color:#94a3b8;
-
     font-size:.9rem;
-
     font-weight:700;
-
     letter-spacing:.08em;
-
     text-transform:uppercase;
-
     margin-bottom:16px;
-
 }
 
 /* =========================
@@ -150,31 +110,20 @@ body{
 ========================= */
 
 .news-title{
-
     font-size:2rem;
-
     font-weight:700;
-
     line-height:1.35;
-
     margin-bottom:18px;
-
 }
 
 .news-title a{
-
     color:#60a5fa;
-
     text-decoration:none;
-
     transition:.2s;
-
 }
 
 .news-title a:hover{
-
     color:#93c5fd;
-
 }
 
 /* =========================
@@ -182,15 +131,10 @@ body{
 ========================= */
 
 .news-summary{
-
     color:#d6dde7;
-
     font-size:1.05rem;
-
     line-height:1.85;
-
     margin-bottom:24px;
-
 }
 
 /* =========================
@@ -198,40 +142,26 @@ body{
 ========================= */
 
 .news-link{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     color:#60a5fa;
-
     text-decoration:none;
-
     font-weight:700;
-
     transition:.2s;
-
 }
 
 .news-link:hover{
-
     color:#93c5fd;
-
     transform:translateX(3px);
-
 }
 /* =========================
    MAIN
 ========================= */
 
 main{
-
     min-height:70vh;
-
     padding-bottom:80px;
-
 }
     
 /* =========================
@@ -241,45 +171,31 @@ main{
 @media(max-width:768px){
 
 .container{
-
     padding:0 20px;
-
 }
 
 .hero{
-
     padding:65px 0 40px;
-
 }
 
 .hero h1{
-
     font-size:2.2rem;
-
 }
 
 .hero p{
-
     font-size:1rem;
-
 }
 
 .news-card{
-
     padding:28px;
-
 }
 
 .news-title{
-
     font-size:1.55rem;
-
 }
 
 .news-summary{
-
     font-size:1rem;
-
 }
 
 }
@@ -290,80 +206,39 @@ main{
 
 <body>
 
-
 <section class="hero">
-
 <div class="container">
-
 <h1>Industry News</h1>
-
 <p>Latest updates from Korea's memory industry.</p>
-
 </div>
-
 </section>
 
 <main class="container">
 
+<!-- 1. [최신] 삼성전자 실적 관련 기사 (맨 위 배치) -->
 <article class="news-card">
-
     <div class="news-date">Jul 2026</div>
-
     <h2 class="news-title">
-        <a href="https://zdnet.co.kr/view/?no=20260720150435"
+        <a href="https://n.news.naver.com/article/015/0005315502"
            target="_blank"
            rel="noopener noreferrer">
-            Korean Memory Makers Expand CXL Controller Partnerships
+            Samsung Electronics Achieves Record-Breaking Performance Driven by AI Memory Supercycle
         </a>
     </h2>
-
     <p class="news-summary">
-        Leading Korean memory manufacturers are strengthening partnerships with
-        specialized CXL controller companies to accelerate next-generation
-        memory solutions while focusing on core DRAM and NAND technologies.
+        Samsung Electronics reported its strongest quarterly performance ever, driven by soaring global demand for AI memory, HBM, and advanced semiconductor solutions. This record-breaking achievement highlights Korea's continued leadership in next-generation memory technologies and long-term supply stability.
     </p>
-
     <a class="news-link"
-       href="https://zdnet.co.kr/view/?no=20260720150435"
+       href="https://n.news.naver.com/article/015/0005315502"
        target="_blank"
        rel="noopener noreferrer">
         Read Original →
     </a>
-
 </article>
+
+<!-- 2. SK 하이닉스 실적 관련 기사 (기존 3번째 기사가 두 번째로 이동) -->
 <article class="news-card">
-
     <div class="news-date">Jul 2026</div>
-
-    <h2 class="news-title">
-        <a href="https://www.newsis.com/view/NISX20260629_0003687807"
-           target="_blank"
-           rel="noopener noreferrer">
-            Korea Reinforces Global Memory Leadership Through New Semiconductor Investments
-        </a>
-    </h2>
-
-    <p class="news-summary">
-        Samsung Electronics and SK hynix are expanding domestic semiconductor
-        investments to strengthen Korea's memory ecosystem and support future
-        demand for AI, data centers, and industrial applications. The initiative
-        is expected to reinforce manufacturing capacity, improve long-term supply
-        stability, and further enhance Korea's global leadership in advanced
-        DRAM and NAND technologies.
-    </p>
-
-    <a class="news-link"
-       href="https://www.newsis.com/view/NISX20260629_0003687807"
-       target="_blank"
-       rel="noopener noreferrer">
-        Read Original →
-    </a>
-
-</article>
-<article class="news-card">
-
-    <div class="news-date">Jul 2026</div>
-
     <h2 class="news-title">
         <a href="https://n.news.naver.com/mnews/article/016/0002676555?sid=101"
            target="_blank"
@@ -371,7 +246,6 @@ main{
             SK hynix Achieves Record Revenue and Operating Profit
         </a>
     </h2>
-
     <p class="news-summary">
         SK hynix reported its strongest quarterly performance ever,
         achieving record revenue and operating profit on the back of
@@ -380,15 +254,63 @@ main{
         technologies and the growing global demand for next-generation
         memory solutions.
     </p>
-
     <a class="news-link"
        href="https://n.news.naver.com/mnews/article/016/0002676555?sid=101"
        target="_blank"
        rel="noopener noreferrer">
         Read Original →
     </a>
-
 </article>
+
+<!-- 3. 반도체 투자 관련 기사 (기존 2번째 기사) -->
+<article class="news-card">
+    <div class="news-date">Jul 2026</div>
+    <h2 class="news-title">
+        <a href="https://www.newsis.com/view/NISX20260629_0003687807"
+           target="_blank"
+           rel="noopener noreferrer">
+            Korea Reinforces Global Memory Leadership Through New Semiconductor Investments
+        </a>
+    </h2>
+    <p class="news-summary">
+        Samsung Electronics and SK hynix are expanding domestic semiconductor
+        investments to strengthen Korea's memory ecosystem and support future
+        demand for AI, data centers, and industrial applications. The initiative
+        is expected to reinforce manufacturing capacity, improve long-term supply
+        stability, and further enhance Korea's global leadership in advanced
+        DRAM and NAND technologies.
+    </p>
+    <a class="news-link"
+       href="https://www.newsis.com/view/NISX20260629_0003687807"
+       target="_blank"
+       rel="noopener noreferrer">
+        Read Original →
+    </a>
+</article>
+
+<!-- 4. CXL 컨트롤러 관련 기사 (기존 첫 번째 기사가 맨 아래로 이동) -->
+<article class="news-card">
+    <div class="news-date">Jul 2026</div>
+    <h2 class="news-title">
+        <a href="https://zdnet.co.kr/view/?no=20260720150435"
+           target="_blank"
+           rel="noopener noreferrer">
+            Korean Memory Makers Expand CXL Controller Partnerships
+        </a>
+    </h2>
+    <p class="news-summary">
+        Leading Korean memory manufacturers are strengthening partnerships with
+        specialized CXL controller companies to accelerate next-generation
+        memory solutions while focusing on core DRAM and NAND technologies.
+    </p>
+    <a class="news-link"
+       href="https://zdnet.co.kr/view/?no=20260720150435"
+       target="_blank"
+       rel="noopener noreferrer">
+        Read Original →
+    </a>
+</article>
+
 </main>
 
 </body>
