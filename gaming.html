@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Spare Parts & Retrofit Solutions | DERACLE</title>
+
+<meta name="description" content="Gaming machine spare parts, iDeck touch panels, buttons, video cards and alternative sourcing solutions by DERACLE.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:65px 20px 45px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:46px;
+    font-weight:700;
+    letter-spacing:-1px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#666;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+
+/* =========================
+   CATEGORY CARDS
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin:20px 0 75px;
+}
+
+.category-card{
+    position:relative;
+    background:#f7f8fa;
+    border:1px solid #e9ebef;
+    border-radius:20px;
+    padding:38px 38px 78px;
+    min-height:260px;
+    overflow:hidden;
+    transition:.3s ease;
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(20,30,50,.09);
+}
+
+.category-number{
+    font-size:13px;
+    font-weight:700;
+    color:#4a6cf7;
+    letter-spacing:1px;
+    margin-bottom:16px;
+}
+
+.category-card h2{
+    font-size:27px;
+    line-height:1.3;
+    margin-bottom:15px;
+    letter-spacing:-.4px;
+}
+
+.category-card p{
+    font-size:16px;
+    color:#666;
+    max-width:480px;
+}
+
+.sourcing-note{
+    display:block;
+    margin-top:14px;
+    color:#888;
+    font-size:14px;
+    font-style:italic;
+}
+
+.category-link{
+    position:absolute;
+    bottom:30px;
+    left:38px;
+    color:#4a6cf7;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+.category-link:hover{
+    color:#222;
+}
+
+.category-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#4a6cf7;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.3s ease;
+}
+
+.category-card:hover::after{
+    transform:scaleX(1);
+}
+
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product-section{
+    margin-bottom:80px;
+    scroll-margin-top:100px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#777;
+    font-size:16px;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:#fff;
+    border:1px solid #e8e8e8;
+    border-radius:16px;
+    overflow:hidden;
+    transition:.3s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.product-image{
+    width:100%;
+    height:190px;
+    background:#f7f8fa;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-model{
+    color:#4a6cf7;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:7px;
+}
+
+.product-name{
+    font-size:17px;
+    font-weight:600;
+    line-height:1.4;
+}
+
+
+/* =========================
+   SOURCING SECTION
+========================= */
+
+.sourcing{
+    background:#f7f8fa;
+    border-radius:20px;
+    padding:55px 40px;
+    text-align:center;
+    margin-bottom:70px;
+    scroll-margin-top:100px;
+}
+
+.sourcing h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.sourcing p{
+    max-width:760px;
+    margin:0 auto 18px;
+    color:#666;
+    font-size:17px;
+}
+
+.sourcing-note-large{
+    color:#777;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.sourcing-button{
+    display:inline-block;
+    background:#4a6cf7;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 32px;
+    border-radius:9px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.sourcing-button:hover{
+    background:#222;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.cta{
+    text-align:center;
+    margin:70px 0;
+}
+
+.cta p{
+    color:#666;
+    margin-bottom:22px;
+}
+
+.cta a{
+    display:inline-block;
+    background:#4a6cf7;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#999;
+    font-size:14px;
+    border-top:1px solid #eee;
+    margin-top:50px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:750px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-card{
+        padding:32px 28px 75px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<script src="header.js"></script>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>Gaming Spare Parts & Retrofit Solutions</h1>
+
+    <p>
+        Replacement Parts, Components & Sourcing Solutions for Gaming Machines
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- =========================
+     CATEGORY CARDS
+========================= -->
+
+<div class="category-grid">
+
+
+    <!-- 01 -->
+
+    <div class="category-card">
+
+        <div class="category-number">
+            01 / TOUCH & iDECK
+        </div>
+
+        <h2>Touch & iDeck Parts</h2>
+
+        <p>
+            Touch panels, iDeck assemblies and related components
+            for gaming machine repair and retrofit applications.
+        </p>
+
+        <a href="#touch-ideck" class="category-link">
+            VIEW PRODUCTS →
+        </a>
+
+    </div>
+
+
+    <!-- 02 -->
+
+    <div class="category-card">
+
+        <div class="category-number">
+            02 / BUTTONS
+        </div>
+
+        <h2>Buttons & Parts</h2>
+
+        <p>
+            Replacement gaming buttons and related components
+            for machine repair, maintenance and retrofit projects.
+        </p>
+
+        <a href="#buttons" class="category-link">
+            VIEW PRODUCTS →
+        </a>
+
+    </div>
+
+
+    <!-- 03 -->
+
+    <div class="category-card">
+
+        <div class="category-number">
+            03 / VIDEO
+        </div>
+
+        <h2>Gaming Video Cards</h2>
+
+        <p>
+            Replacement graphics cards for gaming platforms,
+            cabinets and system retrofit applications.
+        </p>
+
+        <a href="#video-cards" class="category-link">
+            VIEW PRODUCTS →
+        </a>
+
+    </div>
+
+
+    <!-- 04 -->
+
+    <div class="category-card">
+
+        <div class="category-number">
+            04 / SOURCING
+        </div>
+
+        <h2>Hard-to-Find Gaming Parts</h2>
+
+        <p>
+            Need a replacement for a hard-to-find or discontinued
+            gaming part? We can assist with sourcing selected parts
+            and alternative components based on availability.
+        </p>
+
+        <span class="sourcing-note">
+            Selected SUZOHAPP parts may also be available upon request.
+        </span>
+
+        <a href="#sourcing" class="category-link">
+            REQUEST A PART →
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     TOUCH & iDECK
+========================= -->
+
+<section class="product-section" id="touch-ideck">
+
+    <div class="section-title">
+
+        <h2>Touch & iDeck Parts</h2>
+
+        <p>
+            Touch panels and iDeck components for gaming machine applications.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP001.webp"
+                     alt="TP001 Bally Alpha 2 Pro V22 iDeck">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP001</div>
+                <div class="product-name">
+                    Bally Alpha 2 Pro V22 (Upright)
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP002.webp"
+                     alt="TP002 Bally Alpha Pro Wave iDeck">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP002</div>
+                <div class="product-name">
+                    Bally Alpha Pro-Wave / V27 Games / SciGames Bally Wave iDeck
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP003.webp"
+                     alt="TP003 SG Kascada Touch Screen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP003</div>
+                <div class="product-name">
+                    SG Kascada Touch Screen
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP004.webp"
+                     alt="TP004 SG TwinStar Touch Screen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP004</div>
+                <div class="product-name">
+                    SG TwinStar Touch Screen
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP005.webp"
+                     alt="TP005 3M Effinet TwinStar Touch Screen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP005</div>
+                <div class="product-name">
+                    3M Effinet TwinStar / SG J43 Touch Screen
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP006.webp"
+                     alt="TP006 SG TwinStar Touch Screen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP006</div>
+                <div class="product-name">
+                    SG TwinStar Touch Screen
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP007.webp"
+                     alt="TP007 Aristocrat Mars-X Touchscreen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP007</div>
+                <div class="product-name">
+                    Aristocrat Mars-X 15.1" PCAP Touch
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP008.webp"
+                     alt="TP008 Aristocrat Helix Touch Sensor">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP008</div>
+                <div class="product-name">
+                    Aristocrat Helix Touch Sensor for XT Cabinet
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP009.webp"
+                     alt="TP009 SG Cosmic iDeck Touchscreen">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP009</div>
+                <div class="product-name">
+                    SG Cosmic iDeck Touchscreen
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/TP010.webp"
+                     alt="TP010 Aristocrat ATI Neptune iDeck">
+            </div>
+            <div class="product-info">
+                <div class="product-model">TP010</div>
+                <div class="product-name">
+                    Aristocrat ATI Neptune iDeck Touch Screen 23"
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BUTTONS
+========================= -->
+
+<section class="product-section" id="buttons">
+
+    <div class="section-title">
+
+        <h2>Buttons & Parts</h2>
+
+        <p>
+            Replacement buttons and components for gaming machine maintenance.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP001.webp"
+                     alt="BP001 Bally Wave Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP001</div>
+                <div class="product-name">
+                    Bally Wave Button
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP002.webp"
+                     alt="BP002 Bally V22 V32 Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP002</div>
+                <div class="product-name">
+                    Bally V22 / V32 Button
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP003.webp"
+                     alt="BP003 Bally TwinStar Play Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP003</div>
+                <div class="product-name">
+                    Bally TwinStar Play Button
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP004.webp"
+                     alt="BP004 Kascada Play Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP004</div>
+                <div class="product-name">
+                    Kascada Play Button
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP005.webp"
+                     alt="BP005 Aristocrat MarsX Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP005</div>
+                <div class="product-name">
+                    Aristocrat MarsX Button
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/BP006.webp"
+                     alt="BP006 Aristocrat Neptune Button">
+            </div>
+            <div class="product-info">
+                <div class="product-model">BP006</div>
+                <div class="product-name">
+                    Aristocrat Neptune Button
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VIDEO CARDS
+========================= -->
+
+<section class="product-section" id="video-cards">
+
+    <div class="section-title">
+
+        <h2>Gaming Video Cards</h2>
+
+        <p>
+            Replacement graphics cards for gaming platforms and retrofit applications.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC001.webp"
+                     alt="VC001 Nvidia Quadro K620">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC001</div>
+                <div class="product-name">
+                    Nvidia Quadro K620 Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC002.webp"
+                     alt="VC002 Nvidia Quadro K2000">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC002</div>
+                <div class="product-name">
+                    Nvidia Quadro K2000 Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC003.webp"
+                     alt="VC003 SG Bally TwinStar ES8870">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC003</div>
+                <div class="product-name">
+                    SG Bally TwinStar ES8870 MXM 6DP Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC004.webp"
+                     alt="VC004 Aristocrat Helix MK8 K1200">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC004</div>
+                <div class="product-name">
+                    Aristocrat Helix MK8 Video Card - K1200
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC005.webp"
+                     alt="VC005 SG Bally TwinStar Mega Link">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC005</div>
+                <div class="product-name">
+                    SG Bally TwinStar Mega Link AMG E8870
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC006.webp"
+                     alt="VC006 Aristocrat Mars X Video Card">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC006</div>
+                <div class="product-name">
+                    Aristocrat Mars X Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC007.webp"
+                     alt="VC007 AMD Embedded Radeon E9260">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC007</div>
+                <div class="product-name">
+                    AMD Embedded Radeon E9260 Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC008.webp"
+                     alt="VC008 Aristocrat Helix GT630">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC008</div>
+                <div class="product-name">
+                    Aristocrat Helix GT630 Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC009.webp"
+                     alt="VC009 Aruze 7750 4 Mini DP">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC009</div>
+                <div class="product-name">
+                    Aruze 7750 4-Mini-DP Video Card
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/gaming/VC010.webp"
+                     alt="VC010 Konami Concerto Video Card">
+            </div>
+            <div class="product-info">
+                <div class="product-model">VC010</div>
+                <div class="product-name">
+                    Konami Concerto Video Card - E8860MXM, 2GB, K3.5
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOURCING
+========================= -->
+
+<section class="sourcing" id="sourcing">
+
+    <h2>Hard-to-Find Gaming Parts</h2>
+
+    <p>
+        Looking for a specific gaming machine component?
+        Send us the part number, machine model, or product photo
+        and we will review available sourcing options.
+    </p>
+
+    <div class="sourcing-note-large">
+        Selected SUZOHAPP parts may also be available upon request.
+    </div>
+
+    <a class="sourcing-button"
+       href="mailto:scotty@deracle.co.kr?subject=Gaming Spare Parts Inquiry">
+        REQUEST A PART
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<div class="cta">
+
+    <p>
+        Looking for a specific gaming machine part?
+    </p>
+
+    <a href="mailto:scotty@deracle.co.kr?subject=Gaming Spare Parts Inquiry">
+        Request a Part
+    </a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+© 2026 DERACLE. All rights reserved.
+
+</footer>
+
+
+</body>
+
+</html>
