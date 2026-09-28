@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gaming Spare Parts & Retrofit Solutions | DERACLE</title>
@@ -11,44 +12,59 @@
 <meta name="description" content="Gaming machine spare parts, iDeck touch panels, buttons, video cards and alternative sourcing solutions by DERACLE.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:#ffffff;
-    color:#222;
-    line-height:1.7;
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111827;
+    line-height: 1.6;
 }
+
 
 /* =========================
    HERO
 ========================= */
 
-.hero{
-    padding:65px 20px 45px;
-    text-align:center;
+.hero {
+    padding: 110px 20px 80px;
+    text-align: center;
+    background: #ffffff;
 }
 
-.hero h1{
-    font-size:46px;
-    font-weight:700;
-    letter-spacing:-1px;
-    margin-bottom:12px;
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
 }
 
-.hero p{
-    font-size:20px;
-    color:#666;
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #667085;
 }
 
 
@@ -56,98 +72,86 @@ body{
    CONTAINER
 ========================= */
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
 /* =========================
-   CATEGORY CARDS
+   CATEGORY SECTION
 ========================= */
 
-.category-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-    margin:20px 0 75px;
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
 }
 
-.category-card{
-    position:relative;
-    background:#f7f8fa;
-    border:1px solid #e9ebef;
-    border-radius:20px;
-    padding:38px 38px 78px;
-    min-height:260px;
-    overflow:hidden;
-    transition:.3s ease;
+.category-card {
+    position: relative;
+    padding: 38px;
+    background: #f6f7f9;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    overflow: hidden;
 }
 
-.category-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(20,30,50,.09);
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-.category-number{
-    font-size:13px;
-    font-weight:700;
-    color:#4a6cf7;
-    letter-spacing:1px;
-    margin-bottom:16px;
+.category-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: #4a6cf7;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
 }
 
-.category-card h2{
-    font-size:27px;
-    line-height:1.3;
-    margin-bottom:15px;
-    letter-spacing:-.4px;
+.category-card:hover::after {
+    transform: scaleX(1);
 }
 
-.category-card p{
-    font-size:16px;
-    color:#666;
-    max-width:480px;
+.category-number {
+    color: #4a6cf7;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
-.sourcing-note{
-    display:block;
-    margin-top:14px;
-    color:#888;
-    font-size:14px;
-    font-style:italic;
+.category-card h2 {
+    font-size: 25px;
+    margin-bottom: 14px;
 }
 
-.category-link{
-    position:absolute;
-    bottom:30px;
-    left:38px;
-    color:#4a6cf7;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
+.category-card p {
+    color: #667085;
+    font-size: 15px;
+    margin-bottom: 18px;
 }
 
-.category-link:hover{
-    color:#222;
+.category-link {
+    color: #4a6cf7;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.category-card::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:#4a6cf7;
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.3s ease;
-}
-
-.category-card:hover::after{
-    transform:scaleX(1);
+.sourcing-note {
+    display: block;
+    margin-bottom: 20px;
+    color: #7a8494;
+    font-size: 13px;
 }
 
 
@@ -155,24 +159,31 @@ body{
    PRODUCT SECTION
 ========================= */
 
-.product-section{
-    margin-bottom:80px;
-    scroll-margin-top:100px;
+.product-section {
+    margin-bottom: 90px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
+.section-heading {
+    margin-bottom: 30px;
 }
 
-.section-title h2{
-    font-size:32px;
-    margin-bottom:8px;
+.section-label {
+    color: #4a6cf7;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
-.section-title p{
-    color:#777;
-    font-size:16px;
+.section-heading h2 {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #667085;
+    font-size: 16px;
 }
 
 
@@ -180,131 +191,212 @@ body{
    PRODUCT GRID
 ========================= */
 
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.product-card{
-    background:#fff;
-    border:1px solid #e8e8e8;
-    border-radius:16px;
-    overflow:hidden;
-    transition:.3s ease;
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e6e8ec;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    border-color: #d9def0;
 }
 
-.product-image{
-    width:100%;
-    height:190px;
-    background:#f7f8fa;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:15px;
+.product-image {
+    height: 210px;
+    padding: 15px;
+    background: #f7f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.product-info{
-    padding:20px;
+.no-image {
+    height: 210px;
+    background: #f1f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a94a6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
-.product-model{
-    color:#4a6cf7;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.5px;
-    margin-bottom:7px;
+.product-info {
+    padding: 20px;
 }
 
-.product-name{
-    font-size:17px;
-    font-weight:600;
-    line-height:1.4;
+.product-model {
+    color: #4a6cf7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 7px;
 }
 
-
-/* =========================
-   SOURCING SECTION
-========================= */
-
-.sourcing{
-    background:#f7f8fa;
-    border-radius:20px;
-    padding:55px 40px;
-    text-align:center;
-    margin-bottom:70px;
-    scroll-margin-top:100px;
+.product-info h3 {
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 10px;
 }
 
-.sourcing h2{
-    font-size:30px;
-    margin-bottom:15px;
-}
-
-.sourcing p{
-    max-width:760px;
-    margin:0 auto 18px;
-    color:#666;
-    font-size:17px;
-}
-
-.sourcing-note-large{
-    color:#777;
-    font-size:15px;
-    margin-bottom:25px;
-}
-
-.sourcing-button{
-    display:inline-block;
-    background:#4a6cf7;
-    color:#fff;
-    text-decoration:none;
-    padding:14px 32px;
-    border-radius:9px;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.sourcing-button:hover{
-    background:#222;
+.product-detail {
+    color: #98a2b3;
+    font-size: 12px;
 }
 
 
 /* =========================
-   FINAL CTA
+   SOURCING
 ========================= */
 
-.cta{
-    text-align:center;
-    margin:70px 0;
+.sourcing {
+    margin: 20px 0 80px;
+    padding: 65px 30px;
+    background: #f6f7f9;
+    border-radius: 20px;
+    text-align: center;
 }
 
-.cta p{
-    color:#666;
-    margin-bottom:22px;
+.sourcing h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
 }
 
-.cta a{
-    display:inline-block;
-    background:#4a6cf7;
-    color:#fff;
-    text-decoration:none;
-    padding:15px 40px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:600;
+.sourcing p {
+    max-width: 760px;
+    margin: 0 auto 20px;
+    color: #667085;
+    font-size: 16px;
+}
+
+.sourcing-note-large {
+    margin-bottom: 28px;
+    color: #667085;
+    font-size: 14px;
+}
+
+.sourcing-button {
+    display: inline-block;
+    padding: 15px 32px;
+    background: #4a6cf7;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.sourcing-button:hover {
+    background: #3d5fe0;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 38px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.20);
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f3f6;
+    color: #475467;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 36px;
+}
+
+.modal-close:hover {
+    background: #e6e8ec;
+}
+
+.modal-model {
+    color: #4a6cf7;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 28px;
+    padding-right: 35px;
+}
+
+.modal-description-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.modal-description {
+    padding: 20px;
+    background: #f6f7f9;
+    border-radius: 12px;
+    color: #475467;
+    font-size: 15px;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.modal-description.empty {
+    color: #98a2b3;
+    font-style: italic;
 }
 
 
@@ -312,13 +404,12 @@ body{
    FOOTER
 ========================= */
 
-footer{
-    text-align:center;
-    padding:40px;
-    color:#999;
-    font-size:14px;
-    border-top:1px solid #eee;
-    margin-top:50px;
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    color: #98a2b3;
+    font-size: 13px;
 }
 
 
@@ -326,44 +417,75 @@ footer{
    RESPONSIVE
 ========================= */
 
-@media(max-width:1000px){
+@media (max-width: 1000px) {
 
-    .product-grid{
-        grid-template-columns:repeat(3,1fr);
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
 
-@media(max-width:750px){
 
-    .hero h1{
-        font-size:36px;
+@media (max-width: 750px) {
+
+    .hero {
+        padding: 80px 20px 60px;
     }
 
-    .hero p{
-        font-size:18px;
+    .hero h1 {
+        font-size: 38px;
     }
 
-    .category-grid{
-        grid-template-columns:1fr;
+    .category-grid {
+        grid-template-columns: 1fr;
     }
 
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-@media(max-width:500px){
 
-    .product-grid{
-        grid-template-columns:1fr;
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 32px;
     }
 
-    .category-card{
-        padding:32px 28px 75px;
+    .hero p {
+        font-size: 16px;
     }
 
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        padding: 28px;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-content {
+        padding: 28px 22px;
+    }
+
+}
+
+
+/* =========================
+   CLICK INDICATOR
+========================= */
+
+.click-detail {
+    margin-top: 10px;
+    color: #4a6cf7;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 </style>
@@ -373,10 +495,11 @@ footer{
 
 <body>
 
+
 <script src="header.js"></script>
 
 
-<!-- =========================
+<!-- ========================
      HERO
 ========================= -->
 
@@ -394,26 +517,22 @@ footer{
 <div class="container">
 
 
-<!-- =========================
+<!-- ========================
      CATEGORY CARDS
 ========================= -->
 
-<div class="category-grid">
+<section class="category-grid">
 
-
-    <!-- 01 -->
 
     <div class="category-card">
 
-        <div class="category-number">
-            01 / TOUCH & iDECK
-        </div>
+        <div class="category-number">01 / TOUCH & IDECK</div>
 
         <h2>Touch & iDeck Parts</h2>
 
         <p>
-            Touch panels, iDeck assemblies and related components
-            for gaming machine repair and retrofit applications.
+            Replacement touch panels and iDeck components for Bally,
+            SG, Aristocrat and other gaming machines.
         </p>
 
         <a href="#touch-ideck" class="category-link">
@@ -423,19 +542,15 @@ footer{
     </div>
 
 
-    <!-- 02 -->
-
     <div class="category-card">
 
-        <div class="category-number">
-            02 / BUTTONS
-        </div>
+        <div class="category-number">02 / BUTTONS</div>
 
         <h2>Buttons & Parts</h2>
 
         <p>
-            Replacement gaming buttons and related components
-            for machine repair, maintenance and retrofit projects.
+            Gaming machine buttons and replacement parts for
+            Bally, SG and Aristocrat platforms.
         </p>
 
         <a href="#buttons" class="category-link">
@@ -445,19 +560,15 @@ footer{
     </div>
 
 
-    <!-- 03 -->
-
     <div class="category-card">
 
-        <div class="category-number">
-            03 / VIDEO
-        </div>
+        <div class="category-number">03 / VIDEO CARDS</div>
 
         <h2>Gaming Video Cards</h2>
 
         <p>
-            Replacement graphics cards for gaming platforms,
-            cabinets and system retrofit applications.
+            Video cards and graphics solutions used in
+            casino gaming machines and gaming platforms.
         </p>
 
         <a href="#video-cards" class="category-link">
@@ -467,20 +578,16 @@ footer{
     </div>
 
 
-    <!-- 04 -->
-
     <div class="category-card">
 
-        <div class="category-number">
-            04 / SOURCING
-        </div>
+        <div class="category-number">04 / SOURCING</div>
 
         <h2>Hard-to-Find Gaming Parts</h2>
 
         <p>
-            Need a replacement for a hard-to-find or discontinued
-            gaming part? We can assist with sourcing selected parts
-            and alternative components based on availability.
+            Need a replacement for a hard-to-find or discontinued gaming part?
+            We can assist with sourcing selected parts and alternative
+            components based on availability.
         </p>
 
         <span class="sourcing-note">
@@ -493,22 +600,27 @@ footer{
 
     </div>
 
-</div>
+
+</section>
 
 
-
-<!-- =========================
-     TOUCH & iDECK
+<!-- ========================
+     TOUCH & IDECK
 ========================= -->
 
 <section class="product-section" id="touch-ideck">
 
-    <div class="section-title">
+    <div class="section-heading">
+
+        <div class="section-label">
+            01 / TOUCH & IDECK
+        </div>
 
         <h2>Touch & iDeck Parts</h2>
 
         <p>
-            Touch panels and iDeck components for gaming machine applications.
+            Replacement touch panels and iDeck components for gaming machines.
+            Click a product to view available description details.
         </p>
 
     </div>
@@ -517,143 +629,365 @@ footer{
     <div class="product-grid">
 
 
-        <div class="product-card">
+        <!-- TP001 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP001',
+                'Bally Alpha 2 Pro V22',
+                'Bally Alpha Pro Ceronix Sensor Bally Alpha Pro Button Deck / BALLY ALPHA 2 PRO V22 (UP RIGHT)\\n\\nWe can supply new complete drop-in replacement iDeck'
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP001.webp"
-                     alt="TP001 Bally Alpha 2 Pro V22 iDeck">
+                     alt="TP001 Bally Alpha 2 Pro V22">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP001</div>
-                <div class="product-name">
-                    Bally Alpha 2 Pro V22 (Upright)
+
+                <h3>Bally Alpha 2 Pro V22</h3>
+
+                <div class="product-detail">
+                    Ceronix Sensor / Bally Alpha Pro Button Deck
                 </div>
+
+                <div class="click-detail">
+                    CLICK FOR DETAILS →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP002 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP002',
+                'Bally Alpha Pro-Wave / V27 iDeck',
+                'Bally Alpha Pro-Wave and V27 Games/SciGames Bally Wave I-deck Touchscreen Sensor 98-1100-0217-1 For Bally'
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP002.webp"
-                     alt="TP002 Bally Alpha Pro Wave iDeck">
+                     alt="TP002 Bally Alpha Pro Wave V27">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP002</div>
-                <div class="product-name">
-                    Bally Alpha Pro-Wave / V27 Games / SciGames Bally Wave iDeck
+
+                <h3>Bally Alpha Pro-Wave & V27 iDeck</h3>
+
+                <div class="product-detail">
+                    Touchscreen Sensor 98-1100-0217-1
                 </div>
+
+                <div class="click-detail">
+                    CLICK FOR DETAILS →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP003 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP003',
+                'SG Kascada Touch Screen',
+                '2 Models:\\n1. Tovis\\n2. 3M Kortek and Effinet'
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP003.webp"
                      alt="TP003 SG Kascada Touch Screen">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP003</div>
-                <div class="product-name">
-                    SG Kascada Touch Screen
+
+                <h3>SG Kascada Touch Screen</h3>
+
+                <div class="product-detail">
+                    Tovis / 3M Kortek / Effinet
                 </div>
+
+                <div class="click-detail">
+                    CLICK FOR DETAILS →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP004 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP004',
+                'SG Twinstar Touch Screen',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP004.webp"
-                     alt="TP004 SG TwinStar Touch Screen">
+                     alt="TP004 SG Twinstar Touch Screen">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP004</div>
-                <div class="product-name">
-                    SG TwinStar Touch Screen
+
+                <h3>SG Twinstar Touch Screen</h3>
+
+                <div class="product-detail">
+                    TOVIS YT194YF2A / 98-1100-0694-1
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP005 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP005',
+                '3M Effinet TwinStar / SG J43',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP005.webp"
-                     alt="TP005 3M Effinet TwinStar Touch Screen">
+                     alt="TP005 3M Effinet TwinStar">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP005</div>
-                <div class="product-name">
-                    3M Effinet TwinStar / SG J43 Touch Screen
+
+                <h3>3M Effinet TwinStar / SG J43</h3>
+
+                <div class="product-detail">
+                    3M 98-1100-0694-1
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP006 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP006',
+                'SG Twinstar Touch Screen',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP006.webp"
-                     alt="TP006 SG TwinStar Touch Screen">
+                     alt="TP006 SG Twinstar Touch Screen">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP006</div>
-                <div class="product-name">
-                    SG TwinStar Touch Screen
+
+                <h3>SG Twinstar Touch Screen</h3>
+
+                <div class="product-detail">
+                    Touch Screen
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP007 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP007',
+                'Aristocrat Mars-X Touchscreen',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP007.webp"
-                     alt="TP007 Aristocrat Mars-X Touchscreen">
+                     alt="TP007 Aristocrat Mars X Touchscreen">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP007</div>
-                <div class="product-name">
-                    Aristocrat Mars-X 15.1" PCAP Touch
+
+                <h3>Aristocrat Mars-X Touchscreen</h3>
+
+                <div class="product-detail">
+                    15.1&quot; PCAP Touch / Without Controller
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP008 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP008',
+                'Aristocrat Helix Touch Sensor',
+                'Aristocrat Helix Touch Sensor for XT Cabinet including white strip'
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP008.webp"
                      alt="TP008 Aristocrat Helix Touch Sensor">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP008</div>
-                <div class="product-name">
-                    Aristocrat Helix Touch Sensor for XT Cabinet
+
+                <h3>Aristocrat Helix Touch Sensor</h3>
+
+                <div class="product-detail">
+                    For XT Cabinet / Including White Strip
                 </div>
+
+                <div class="click-detail">
+                    CLICK FOR DETAILS →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP009 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP009',
+                'SG Cosmic iDeck Touchscreen',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP009.webp"
                      alt="TP009 SG Cosmic iDeck Touchscreen">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP009</div>
-                <div class="product-name">
-                    SG Cosmic iDeck Touchscreen
+
+                <h3>SG Cosmic iDeck Touchscreen</h3>
+
+                <div class="product-detail">
+                    iDeck Touchscreen
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- TP010 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP010',
+                'Aristocrat ATI Neptune iDeck',
+                ''
+             )">
+
             <div class="product-image">
                 <img src="images/gaming/TP010.webp"
                      alt="TP010 Aristocrat ATI Neptune iDeck">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">TP010</div>
-                <div class="product-name">
-                    Aristocrat ATI Neptune iDeck Touch Screen 23"
+
+                <h3>Aristocrat ATI Neptune iDeck</h3>
+
+                <div class="product-detail">
+                    23&quot; Touch Screen
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
+        </div>
+
+
+        <!-- TP011 -->
+
+        <div class="product-card"
+             onclick="openProduct(
+                'TP011',
+                'Mojo WS 21.5&quot; Touch Screen',
+                ''
+             )">
+
+            <div class="product-image no-image">
+                IMAGE COMING SOON
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-model">TP011</div>
+
+                <h3>Mojo WS 21.5&quot; Touch Screen</h3>
+
+                <div class="product-detail">
+                    Touch Screen
+                </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
+            </div>
+
         </div>
 
 
@@ -662,19 +996,23 @@ footer{
 </section>
 
 
-
-<!-- =========================
+<!-- ========================
      BUTTONS
 ========================= -->
 
 <section class="product-section" id="buttons">
 
-    <div class="section-title">
+    <div class="section-heading">
+
+        <div class="section-label">
+            02 / BUTTONS
+        </div>
 
         <h2>Buttons & Parts</h2>
 
         <p>
-            Replacement buttons and components for gaming machine maintenance.
+            Gaming machine buttons and replacement parts.
+            Click a product for more information.
         </p>
 
     </div>
@@ -683,87 +1021,153 @@ footer{
     <div class="product-grid">
 
 
-        <div class="product-card">
+        <!-- BP001 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP001','Bally Wave Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP001.webp"
                      alt="BP001 Bally Wave Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP001</div>
-                <div class="product-name">
-                    Bally Wave Button
+
+                <h3>Bally Wave Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- BP002 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP002','Bally V22 / V32 Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP002.webp"
                      alt="BP002 Bally V22 V32 Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP002</div>
-                <div class="product-name">
-                    Bally V22 / V32 Button
+
+                <h3>Bally V22 / V32 Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- BP003 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP003','Bally TwinStar Play Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP003.webp"
                      alt="BP003 Bally TwinStar Play Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP003</div>
-                <div class="product-name">
-                    Bally TwinStar Play Button
+
+                <h3>Bally TwinStar Play Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- BP004 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP004','Kascada Play Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP004.webp"
                      alt="BP004 Kascada Play Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP004</div>
-                <div class="product-name">
-                    Kascada Play Button
+
+                <h3>Kascada Play Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- BP005 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP005','Aristocrat MarsX Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP005.webp"
                      alt="BP005 Aristocrat MarsX Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP005</div>
-                <div class="product-name">
-                    Aristocrat MarsX Button
+
+                <h3>Aristocrat MarsX Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- BP006 -->
+
+        <div class="product-card"
+             onclick="openProduct('BP006','Aristocrat Neptune Button','')">
+
             <div class="product-image">
                 <img src="images/gaming/BP006.webp"
                      alt="BP006 Aristocrat Neptune Button">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">BP006</div>
-                <div class="product-name">
-                    Aristocrat Neptune Button
+
+                <h3>Aristocrat Neptune Button</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
@@ -772,19 +1176,23 @@ footer{
 </section>
 
 
-
-<!-- =========================
+<!-- ========================
      VIDEO CARDS
 ========================= -->
 
 <section class="product-section" id="video-cards">
 
-    <div class="section-title">
+    <div class="section-heading">
+
+        <div class="section-label">
+            03 / VIDEO CARDS
+        </div>
 
         <h2>Gaming Video Cards</h2>
 
         <p>
-            Replacement graphics cards for gaming platforms and retrofit applications.
+            Video cards and graphics solutions used in gaming machines.
+            Click a product for more information.
         </p>
 
     </div>
@@ -793,143 +1201,257 @@ footer{
     <div class="product-grid">
 
 
-        <div class="product-card">
+        <!-- VC001 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC001','Nvidia Quadro K620 Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC001.webp"
                      alt="VC001 Nvidia Quadro K620">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC001</div>
-                <div class="product-name">
-                    Nvidia Quadro K620 Video Card
+
+                <h3>Nvidia Quadro K620 Video Card</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC002 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC002','Nvidia Quadro K2000 Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC002.webp"
                      alt="VC002 Nvidia Quadro K2000">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC002</div>
-                <div class="product-name">
-                    Nvidia Quadro K2000 Video Card
+
+                <h3>Nvidia Quadro K2000 Video Card</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC003 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC003','SG Bally TwinStar 4.2.2X ES8870 MXM 6DP Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC003.webp"
                      alt="VC003 SG Bally TwinStar ES8870">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC003</div>
-                <div class="product-name">
-                    SG Bally TwinStar ES8870 MXM 6DP Video Card
+
+                <h3>SG Bally TwinStar 4.2.2X ES8870 MXM 6DP</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC004 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC004','Aristocrat Helix MK8 Video Card - K1200','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC004.webp"
                      alt="VC004 Aristocrat Helix MK8 K1200">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC004</div>
-                <div class="product-name">
-                    Aristocrat Helix MK8 Video Card - K1200
+
+                <h3>Aristocrat Helix MK8 Video Card - K1200</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC005 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC005','SG Bally TwinStar Mega Link AMG E8870 Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC005.webp"
                      alt="VC005 SG Bally TwinStar Mega Link">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC005</div>
-                <div class="product-name">
-                    SG Bally TwinStar Mega Link AMG E8870
+
+                <h3>SG Bally TwinStar Mega Link AMG E8870</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC006 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC006','Aristocrat Mars X Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC006.webp"
                      alt="VC006 Aristocrat Mars X Video Card">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC006</div>
-                <div class="product-name">
-                    Aristocrat Mars X Video Card
+
+                <h3>Aristocrat Mars X Video Card</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC007 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC007','AMD Embedded Radeon E9260 Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC007.webp"
                      alt="VC007 AMD Embedded Radeon E9260">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC007</div>
-                <div class="product-name">
-                    AMD Embedded Radeon E9260 Video Card
+
+                <h3>AMD Embedded Radeon E9260</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC008 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC008','Aristocrat Helix GT630 Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC008.webp"
                      alt="VC008 Aristocrat Helix GT630">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC008</div>
-                <div class="product-name">
-                    Aristocrat Helix GT630 Video Card
+
+                <h3>Aristocrat Helix GT630 Video Card</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC009 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC009','Aruze 7750 4-Mini-DP Video Card','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC009.webp"
                      alt="VC009 Aruze 7750 4 Mini DP">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC009</div>
-                <div class="product-name">
-                    Aruze 7750 4-Mini-DP Video Card
+
+                <h3>Aruze 7750 4-Mini-DP Video Card</h3>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="product-card">
+        <!-- VC010 -->
+
+        <div class="product-card"
+             onclick="openProduct('VC010','Konami Concerto Video Card – E8860MXM, 2GB, K3.5','')">
+
             <div class="product-image">
                 <img src="images/gaming/VC010.webp"
                      alt="VC010 Konami Concerto Video Card">
             </div>
+
             <div class="product-info">
+
                 <div class="product-model">VC010</div>
-                <div class="product-name">
-                    Konami Concerto Video Card - E8860MXM, 2GB, K3.5
+
+                <h3>Konami Concerto Video Card</h3>
+
+                <div class="product-detail">
+                    E8860MXM / 2GB / K3.5
                 </div>
+
+                <div class="click-detail">
+                    VIEW PRODUCT →
+                </div>
+
             </div>
+
         </div>
 
 
@@ -938,8 +1460,7 @@ footer{
 </section>
 
 
-
-<!-- =========================
+<!-- ========================
      SOURCING
 ========================= -->
 
@@ -965,32 +1486,138 @@ footer{
 </section>
 
 
+</div>
 
-<!-- =========================
-     FINAL CTA
+
+<!-- ========================
+     PRODUCT DETAIL MODAL
 ========================= -->
 
-<div class="cta">
+<div class="modal" id="productModal">
 
-    <p>
-        Looking for a specific gaming machine part?
-    </p>
+    <div class="modal-content">
 
-    <a href="mailto:scotty@deracle.co.kr?subject=Gaming Spare Parts Inquiry">
-        Request a Part
-    </a>
+        <button class="modal-close"
+                onclick="closeProduct()">
+            ×
+        </button>
+
+        <div class="modal-model"
+             id="modalModel">
+        </div>
+
+        <h2 id="modalTitle">
+        </h2>
+
+        <div class="modal-description-title">
+            Description
+        </div>
+
+        <div class="modal-description"
+             id="modalDescription">
+        </div>
+
+    </div>
 
 </div>
 
 
-</div>
-
+<!-- ========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© 2026 DERACLE. All rights reserved.
+    © 2026 DERACLE. All rights reserved.
 
 </footer>
+
+
+<script>
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+function openProduct(model, title, description) {
+
+    document.getElementById("modalModel").textContent = model;
+
+    document.getElementById("modalTitle").textContent = title;
+
+    const descriptionBox =
+        document.getElementById("modalDescription");
+
+    if (description && description.trim() !== "") {
+
+        descriptionBox.textContent = description;
+
+        descriptionBox.classList.remove("empty");
+
+    } else {
+
+        descriptionBox.textContent =
+            "No additional description available.";
+
+        descriptionBox.classList.add("empty");
+
+    }
+
+    document
+        .getElementById("productModal")
+        .classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeProduct() {
+
+    document
+        .getElementById("productModal")
+        .classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================
+   CLOSE BY BACKGROUND
+========================= */
+
+document
+    .getElementById("productModal")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            closeProduct();
+
+        }
+
+    });
+
+
+/* =========================
+   CLOSE WITH ESC
+========================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeProduct();
+
+    }
+
+});
+
+</script>
 
 
 </body>
