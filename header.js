@@ -47,12 +47,13 @@ document.write(`
     <div class="logo">
         <a href="index.html"><img src="logo.png" alt="DERACLE Logo"></a>
     </div>
-    <nav>
-        <a href="index.html#company">Company</a>
-        <a href="index.html#memory">Memory</a>
-        <a href="index.html#solutions">Display</a>
-        <a href="insights.html">Insights</a>
-        <a href="index.html#contact">Contact</a>
-    </nav>
+   <nav>
+    <a href="index.html#company">Company</a>
+    <a href="index.html#memory">Memory</a>
+    <a href="index.html#solutions">Display</a>
+    <a href="gaming.html">Gaming</a>
+    <a href="insights.html">Insights</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
 </header>
 `);
