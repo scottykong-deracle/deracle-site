@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,6 +158,23 @@ body{
 }
 
 /* =========================
+   BACK TO INSIGHTS
+========================= */
+
+.back-link{
+    display:inline-block;
+    margin-top:10px;
+    color:#60a5fa;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.back-link:hover{
+    color:#93c5fd;
+    text-decoration:underline;
+}
+
+/* =========================
    MAIN
 ========================= */
 
@@ -164,40 +182,40 @@ main{
     min-height:70vh;
     padding-bottom:80px;
 }
-    
+
 /* =========================
    MOBILE
 ========================= */
 
 @media(max-width:768px){
 
-.container{
-    padding:0 20px;
-}
+    .container{
+        padding:0 20px;
+    }
 
-.hero{
-    padding:65px 0 40px;
-}
+    .hero{
+        padding:65px 0 40px;
+    }
 
-.hero h1{
-    font-size:2.2rem;
-}
+    .hero h1{
+        font-size:2.2rem;
+    }
 
-.hero p{
-    font-size:1rem;
-}
+    .hero p{
+        font-size:1rem;
+    }
 
-.news-card{
-    padding:28px;
-}
+    .news-card{
+        padding:28px;
+    }
 
-.news-title{
-    font-size:1.55rem;
-}
+    .news-title{
+        font-size:1.55rem;
+    }
 
-.news-summary{
-    font-size:1rem;
-}
+    .news-summary{
+        font-size:1rem;
+    }
 
 }
 
@@ -208,15 +226,15 @@ main{
 <body>
 
 <section class="hero">
-<div class="container">
-<h1>Industry News</h1>
-<p>Latest updates from Korea's memory industry.</p>
-</div>
+    <div class="container">
+        <h1>Industry News</h1>
+        <p>Latest updates from Korea's memory industry.</p>
+    </div>
 </section>
 
 <main class="container">
 
-<!-- 낸드 및 로봇용 D램 최신 기사 (최상단) -->
+<!-- NAND and robotics memory news -->
 <article class="news-card">
     <div class="news-date">OCT 2026</div>
     <h2 class="news-title">
@@ -237,7 +255,7 @@ main{
     </a>
 </article>
 
-<!-- 기존 삼성전자 3분기 실적 속보 기사 -->
+<!-- Samsung Q3 earnings news -->
 <article class="news-card">
     <div class="news-date">OCT 2026</div>
     <h2 class="news-title">
@@ -258,7 +276,7 @@ main{
     </a>
 </article>
 
-<!-- 기존 1. 10월 최신 뉴스 -->
+<!-- October memory market news -->
 <article class="news-card">
     <div class="news-date">OCT 2026</div>
     <h2 class="news-title">
@@ -279,7 +297,7 @@ main{
     </a>
 </article>
 
-<!-- NAND 가격 하락 압력 기사 -->
+<!-- NAND price pressure -->
 <article class="news-card">
     <div class="news-date">SEP 2026</div>
     <h2 class="news-title">
@@ -300,7 +318,7 @@ main{
     </a>
 </article>
 
-<!-- D램 모듈 시장 59% 성장 기사 -->
+<!-- DRAM module market growth -->
 <article class="news-card">
     <div class="news-date">SEP 2026</div>
     <h2 class="news-title">
@@ -321,7 +339,7 @@ main{
     </a>
 </article>
 
-<!-- SK Hynix & Intel U.S. Memory Partnership Talks -->
+<!-- SK hynix and Intel partnership talks -->
 <article class="news-card">
     <div class="news-date">SEP 2026</div>
     <h2 class="news-title">
@@ -342,7 +360,7 @@ main{
     </a>
 </article>
 
-<!-- SK hynix Indiana Fab Groundbreaking -->
+<!-- SK hynix Indiana fab -->
 <article class="news-card">
     <div class="news-date">AUG 2026</div>
     <h2 class="news-title">
@@ -353,7 +371,7 @@ main{
         </a>
     </h2>
     <p class="news-summary">
-        SK hynix has officially broken ground on its new $4 billion advanced packaging and R&D facility for AI memory in West Lafayette, Indiana. Set to begin mass production of next-generation HBM by late 2029, the plant will process wafers delivered from Korea. This strategic hub aims to stabilize the U.S. semiconductor supply chain and foster localized AI infrastructure through close partnerships with Purdue University.
+        SK hynix has officially broken ground on its new $4 billion advanced packaging and R&amp;D facility for AI memory in West Lafayette, Indiana. Set to begin mass production of next-generation HBM by late 2029, the plant will process wafers delivered from Korea. This strategic hub aims to stabilize the U.S. semiconductor supply chain and foster localized AI infrastructure through close partnerships with Purdue University.
     </p>
     <a class="news-link"
        href="https://news.skhynix.com/"
@@ -363,7 +381,7 @@ main{
     </a>
 </article>
 
-<!-- D램 가치 관련 조선비즈 기사 -->
+<!-- Korean DRAM value and gold -->
 <article class="news-card">
     <div class="news-date">AUG 2026</div>
     <h2 class="news-title">
@@ -384,7 +402,7 @@ main{
     </a>
 </article>
 
-<!-- 메모리 슈퍼사이클 관련 조선닷컴 기사 -->
+<!-- Memory supercycle -->
 <article class="news-card">
     <div class="news-date">AUG 2026</div>
     <h2 class="news-title">
@@ -405,7 +423,7 @@ main{
     </a>
 </article>
 
-<!-- 삼성전자 실적 관련 기사 -->
+<!-- Samsung earnings -->
 <article class="news-card">
     <div class="news-date">JUL 2026</div>
     <h2 class="news-title">
@@ -425,6 +443,8 @@ main{
         Read Original →
     </a>
 </article>
+
+<a class="back-link" href="insights.html">← Back to Insights</a>
 
 </main>
 
