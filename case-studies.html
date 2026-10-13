@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights | dERACLE</title>
+    <title>Case Studies | dERACLE</title>
 
     <style>
         body {
@@ -76,6 +77,33 @@
             font-size: 1rem;
             line-height: 1.5;
         }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
@@ -91,7 +119,7 @@
         Published: June 2026 | Case #001
     </div>
 
-    <h1>Insights & Case Studies</h1>
+    <h1>Insights &amp; Case Studies</h1>
 
     <p class="subtitle">
         Technical support and solution optimization cases.
@@ -99,48 +127,55 @@
 
     <article>
 
-       <h2 style="color:#60a5fa; font-size:1.8rem;">
-    Case Study #001 | SATA SSD Performance Drop Analysis
-</h2>
+        <h2 style="color:#60a5fa; font-size:1.8rem;">
+            Case Study #001 | SATA SSD Performance Drop Analysis
+        </h2>
 
         <div class="case-step">
             <strong>Technical Inquiry</strong>
             <p>
-                A customer reported reduced write performance after a 72-hour burn-in test on a 128GB SATA SSD and requested technical verification.
+                A customer reported reduced write performance after a 72-hour
+                burn-in test on a 128GB SATA SSD and requested technical verification.
             </p>
         </div>
 
         <div class="case-step">
             <strong>Technical Analysis</strong>
             <p>
-                Our engineers reproduced the customer's test environment and confirmed the SSD hardware operated normally. The performance change was identified as firmware behavior under intensive write conditions.
+                Our engineers reproduced the customer's test environment and
+                confirmed the SSD hardware operated normally. The performance
+                change was identified as firmware behavior under intensive write conditions.
             </p>
         </div>
 
         <div class="case-step">
             <strong>Strategic Action</strong>
             <p>
-                Returned samples, new production units, and comparison devices were evaluated to verify the root cause under identical test conditions.
+                Returned samples, new production units, and comparison devices
+                were evaluated to verify the root cause under identical test conditions.
             </p>
         </div>
 
         <div class="case-step">
-            <strong>Result & Conclusion</strong>
+            <strong>Result &amp; Conclusion</strong>
             <p>
-                The investigation confirmed the performance change was firmware-related rather than a hardware defect, providing the customer with verified technical guidance for product validation.
+                The investigation confirmed the performance change was firmware-related
+                rather than a hardware defect, providing the customer with verified
+                technical guidance for product validation.
             </p>
         </div>
 
         <div class="case-step">
             <strong>Engineering Value</strong>
             <p>
-                System-level validation, firmware behavior analysis, and root cause investigation for industrial storage applications.
+                System-level validation, firmware behavior analysis, and root cause
+                investigation for industrial storage applications.
             </p>
         </div>
 
     </article>
 
-    <hr style="border:0;border-top:1px solid #334155;margin:60px 0;">
+    <hr style="border:0; border-top:1px solid #334155; margin:60px 0;">
 
     <div class="tag">#eMMC #Memory #Industrial</div>
 
@@ -150,112 +185,135 @@
 
     <article>
 
-       <h2 style="color:#60a5fa;font-size:1.8rem;">
-    Case Study #002 | eMMC PCB Fanout Optimization and Validation
-</h2>
+        <h2 style="color:#60a5fa; font-size:1.8rem;">
+            Case Study #002 | eMMC PCB Fanout Optimization and Validation
+        </h2>
 
         <div class="case-step">
             <strong>Technical Inquiry</strong>
-            <p>A client requested confirmation on whether 'Not Connected' (NC) pins on an eMMC BGA footprint could be shorted to adjacent lines to simplify their PCB routing.</p>
+            <p>
+                A client requested confirmation on whether 'Not Connected' (NC)
+                pins on an eMMC BGA footprint could be shorted to adjacent lines
+                to simplify their PCB routing.
+            </p>
         </div>
 
         <div class="case-step">
             <strong>Technical Analysis</strong>
-            <p>We verified that the specified NC pins are internally disconnected, confirming they can be safely used for routing without affecting device operation.</p>
+            <p>
+                We verified that the specified NC pins are internally disconnected,
+                confirming they can be safely used for routing without affecting device operation.
+            </p>
         </div>
 
         <div class="case-step">
             <strong>Strategic Action</strong>
-            <p>During the layout review, we proactively identified a missing Data Strobe (DS) connection for HS400 performance and supplied verified samples to ensure seamless prototype testing.</p>
+            <p>
+                During the layout review, we proactively identified a missing
+                Data Strobe (DS) connection for HS400 performance and supplied
+                verified samples to ensure seamless prototype testing.
+            </p>
         </div>
 
         <div class="case-step">
-            <strong>Result & Conclusion</strong>
-            <p>The client successfully integrated the samples into their manufacturing process, ensuring both design flexibility and optimized performance for their final application.</p>
+            <strong>Result &amp; Conclusion</strong>
+            <p>
+                The client successfully integrated the samples into their manufacturing
+                process, ensuring both design flexibility and optimized performance
+                for their final application.
+            </p>
         </div>
 
     </article>
-<hr style="border:0;border-top:1px solid #334155;margin:60px 0;">
 
-<div class="tag">#DRAM #SSD #OEM</div>
+    <hr style="border:0; border-top:1px solid #334155; margin:60px 0;">
 
-<div class="date">
-    Published: July 2026 | Case #003
-</div>
+    <div class="tag">#DRAM #SSD #OEM</div>
 
-<article>
-
-   <h2 style="color:#60a5fa;font-size:1.8rem;">
-    Case Study #003 | OEM Memory Branding
-</h2>
-
-    <div class="case-step">
-        <strong>Requirement</strong>
-        <p>
-            A customer requested DRAM and SSD modules supplied under their own brand and company logo.
-        </p>
+    <div class="date">
+        Published: July 2026 | Case #003
     </div>
 
-    <div class="case-step">
-        <strong>Solution</strong>
-        <p>
-            KOWIN offers OEM / Private Label services, including custom product labels and customer logo printing.
-        </p>
+    <article>
+
+        <h2 style="color:#60a5fa; font-size:1.8rem;">
+            Case Study #003 | OEM Memory Branding
+        </h2>
+
+        <div class="case-step">
+            <strong>Requirement</strong>
+            <p>
+                A customer requested DRAM and SSD modules supplied under their
+                own brand and company logo.
+            </p>
+        </div>
+
+        <div class="case-step">
+            <strong>Solution</strong>
+            <p>
+                KOWIN offers OEM / Private Label services, including custom
+                product labels and customer logo printing.
+            </p>
+        </div>
+
+        <div class="case-step">
+            <strong>Capability</strong>
+            <p>
+                Available for qualified OEM projects with flexible branding support.
+            </p>
+        </div>
+
+    </article>
+
+    <hr style="border:0; border-top:1px solid #334155; margin:60px 0;">
+
+    <div class="tag">#DRAM #DDR5 #Compatibility</div>
+
+    <div class="date">
+        Published: September 2026 | Case #004
     </div>
 
-    <div class="case-step">
-        <strong>Capability</strong>
-        <p>
-            Available for qualified OEM projects with flexible branding support.
-        </p>
-    </div>
+    <article>
 
-</article>
-</article>
+        <h2 style="color:#60a5fa; font-size:1.8rem;">
+            Case Study #004 | DDR5-5600 SO-DIMM Compatibility Validation
+        </h2>
 
-<hr style="border:0;border-top:1px solid #334155;margin:60px 0;">
+        <div class="case-step">
+            <strong>Requirement</strong>
+            <p>
+                Customer required validation of a DDR5-5600 16GB SO-DIMM
+                across multiple platforms.
+            </p>
+        </div>
 
-<div class="tag">#DRAM #DDR5 #Compatibility</div>
+        <div class="case-step">
+            <strong>Testing</strong>
+            <p>
+                Tested module detection, performance, stability and stress using
+                CPU-Z, AIDA64, MemTest86 and RunMemtestPro.
+            </p>
+        </div>
 
-<div class="date">
-    Published: September 2026 | Case #004
-</div>
+        <div class="case-step">
+            <strong>Result</strong>
+            <p>
+                Validated on 9 Intel &amp; AMD platforms with 0 errors in
+                stability and stress testing.
+            </p>
+        </div>
 
-<article>
+        <div class="case-step">
+            <strong>Conclusion</strong>
+            <p>
+                Verified DDR5-5600 performance and platform compatibility for
+                reliable system integration.
+            </p>
+        </div>
 
-   <h2 style="color:#60a5fa;font-size:1.8rem;">
-    Case Study #004 | DDR5-5600 SO-DIMM Compatibility Validation
-</h2>
+    </article>
 
-    <div class="case-step">
-        <strong>Requirement</strong>
-        <p>
-            Customer required validation of a DDR5-5600 16GB SO-DIMM across multiple platforms.
-        </p>
-    </div>
-
-    <div class="case-step">
-        <strong>Testing</strong>
-        <p>
-            Tested module detection, performance, stability and stress using CPU-Z, AIDA64, MemTest86 and RunMemtestPro.
-        </p>
-    </div>
-
-    <div class="case-step">
-        <strong>Result</strong>
-        <p>
-            Validated on 9 Intel & AMD platforms with 0 errors in stability and stress testing.
-        </p>
-    </div>
-
-    <div class="case-step">
-        <strong>Conclusion</strong>
-        <p>
-            Verified DDR5-5600 performance and platform compatibility for reliable system integration.
-        </p>
-    </div>
-
-</article>
+    <a class="back-link" href="insights.html">← Back to Insights</a>
 
 </div>
 
