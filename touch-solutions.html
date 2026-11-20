@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Touch & Advanced Optical Solutions | dERACLE</title>
-  <meta name="description" content="dERACLE touch screen, optical bonding, heated glass and military optical glass solutions.">
+  <meta name="description" content="dERACLE touch screen, optical bonding, heated glass and military optical glass solutions for industrial, gaming, HMI, kiosk and POS applications.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.deracle.co.kr/touch-solutions.html">
 
@@ -27,6 +27,7 @@
 
     a { color: inherit; }
 
+    /* HERO */
     .hero {
       background: linear-gradient(115deg, #0b1222 0%, #142846 65%, #1c3e66 100%);
       color: #fff;
@@ -64,10 +65,12 @@
     }
 
     .hero-image {
+      display: block;
       width: 100%;
-      height: 340px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 16px;
+      object-position: center center;
+      border-radius: 12px;
       border: 1px solid rgba(255,255,255,.18);
     }
 
@@ -85,6 +88,7 @@
 
     .button:hover { background: #3655d6; }
 
+    /* COMMON SECTIONS */
     .section { padding: 70px 24px; }
 
     .section-inner {
@@ -110,6 +114,7 @@
       margin: 0;
     }
 
+    /* TOUCH SOLUTIONS */
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -157,6 +162,7 @@
 
     .controller-line strong { color: #142846; }
 
+    /* RESISTIVE TOUCH */
     .technology-section { background: #f5f7fb; }
 
     .technology-grid {
@@ -196,6 +202,7 @@
       font-family: Arial, sans-serif;
     }
 
+    /* OPTICAL BONDING */
     .bonding-section { background: #fff; }
 
     .bonding-flow {
@@ -206,7 +213,6 @@
     }
 
     .flow-step {
-      position: relative;
       padding: 20px 13px;
       text-align: center;
       border: 1px solid #e3e9f2;
@@ -265,6 +271,7 @@
       font-size: 14px;
     }
 
+    /* ADVANCED GLASS */
     .advanced-section { background: #f5f7fb; }
 
     .advanced-grid {
@@ -300,6 +307,7 @@
       border-radius: 9px;
     }
 
+    /* CONTACT */
     .closing {
       background: #edf3fb;
       padding: 48px 24px;
@@ -322,21 +330,28 @@
       font-size: 13px;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
 
-      .hero-image { height: 300px; }
+      .hero-image { height: 180px; }
 
       .features,
       .advanced-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .bonding-flow { grid-template-columns: repeat(2, 1fr); }
+      .bonding-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 600px) {
       .hero { padding: 55px 20px; }
+
       .section { padding: 55px 20px; }
 
       .features,
@@ -347,9 +362,10 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-image { height: 230px; }
+      .hero-image { height: 180px; }
 
       .section-heading h2 { font-size: 26px; }
+
       .closing h2 { font-size: 24px; }
     }
   </style>
@@ -362,21 +378,15 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
+
       <div>
         <div class="eyebrow">Advanced Display & Optical Solutions</div>
 
         <h1>Touch & Advanced Optical Solutions</h1>
 
         <p>
-          Custom touch screen, optical bonding and
-          specialized glass solutions for industrial,
-          aerospace and defense-related applications.
-        </p>
-
-        <p>
-          dERACLE coordinates with specialized manufacturing
-          partners to provide application-specific sourcing
-          and integrated solutions.
+          Touch screen, optical bonding and specialized glass solutions
+          for industrial, gaming, HMI, kiosk, POS and defense applications.
         </p>
 
         <a class="button" href="index.html#contact">Contact Us →</a>
@@ -389,12 +399,14 @@
           alt="Industrial touch screen solution"
         >
       </div>
+
     </div>
   </section>
 
   <!-- TOUCH SCREEN -->
   <section class="section">
     <div class="section-inner">
+
       <div class="section-heading">
         <h2>Touch Screen Solutions</h2>
         <p>
@@ -409,8 +421,8 @@
           <div class="feature-mark">01</div>
           <h3>PCAP Touch</h3>
           <p>
-            Project-specific projected capacitive touch
-            solutions with customized sensor and cover glass designs.
+            Projected capacitive touch solutions with
+            customized sensor and cover glass designs.
           </p>
         </div>
 
@@ -427,8 +439,8 @@
           <div class="feature-mark">03</div>
           <h3>Custom Touch Design</h3>
           <p>
-            Custom black border design, cover glass shape,
-            dimensions, printing and customer logo integration.
+            Custom black band design, cover glass shape,
+            dimensions and customer logo printing.
           </p>
         </div>
 
@@ -440,15 +452,17 @@
           EETI · Ilitek · Goodix
         </p>
         <p class="subtext">
-          USB / I²C Interface Support, subject to controller selection
+          USB / I²C Interface Support
         </p>
       </div>
+
     </div>
   </section>
 
   <!-- RESISTIVE TOUCH STRUCTURE -->
   <section class="section technology-section">
     <div class="section-inner">
+
       <div class="section-heading">
         <h2>Resistive Touch Technology</h2>
         <p>
@@ -460,46 +474,56 @@
 
         <div class="technology-card">
           <h3>4-Wire Resistive</h3>
+
           <p class="subtext">
             X and Y voltage gradients are applied across
             the two conductive layers.
           </p>
 
           <svg class="diagram" viewBox="0 0 440 190" role="img" aria-label="4-wire resistive touch cross section">
+
             <rect x="55" y="25" width="330" height="25" rx="3" fill="#b8d8ef" stroke="#6389a8"/>
             <rect x="55" y="57" width="330" height="8" fill="#4a6cf7"/>
             <rect x="55" y="78" width="330" height="8" fill="#8b9bad"/>
             <rect x="55" y="91" width="330" height="25" rx="3" fill="#d9e5ef" stroke="#9aabba"/>
+
             <path d="M55 70 L35 70 L35 55" fill="none" stroke="#4a6cf7" stroke-width="2"/>
             <path d="M385 70 L405 70 L405 55" fill="none" stroke="#4a6cf7" stroke-width="2"/>
             <path d="M55 95 L35 95 L35 130" fill="none" stroke="#8b9bad" stroke-width="2"/>
             <path d="M385 95 L405 95 L405 130" fill="none" stroke="#8b9bad" stroke-width="2"/>
+
             <text x="220" y="18" text-anchor="middle" class="diagram-label">Top Film</text>
             <text x="220" y="76" text-anchor="middle" class="diagram-small">Conductive Layer</text>
             <text x="220" y="139" text-anchor="middle" class="diagram-label">Bottom Glass</text>
             <text x="220" y="166" text-anchor="middle" class="diagram-small">Schematic Cross Section</text>
+
           </svg>
         </div>
 
         <div class="technology-card">
           <h3>5-Wire Resistive</h3>
+
           <p class="subtext">
             The bottom conductive layer provides the
             voltage gradient, while the top layer senses touch.
           </p>
 
           <svg class="diagram" viewBox="0 0 440 190" role="img" aria-label="5-wire resistive touch cross section">
+
             <rect x="55" y="25" width="330" height="25" rx="3" fill="#b8d8ef" stroke="#6389a8"/>
             <rect x="55" y="57" width="330" height="8" fill="#4a6cf7"/>
             <rect x="55" y="78" width="330" height="8" fill="#8b9bad"/>
             <rect x="55" y="91" width="330" height="25" rx="3" fill="#d9e5ef" stroke="#9aabba"/>
+
             <path d="M55 100 L35 100 L35 130" fill="none" stroke="#4a6cf7" stroke-width="2"/>
             <path d="M385 100 L405 100 L405 130" fill="none" stroke="#4a6cf7" stroke-width="2"/>
             <path d="M220 100 L220 140" fill="none" stroke="#4a6cf7" stroke-width="2"/>
+
             <text x="220" y="18" text-anchor="middle" class="diagram-label">Top Film</text>
             <text x="220" y="76" text-anchor="middle" class="diagram-small">Sensing Layer</text>
             <text x="220" y="139" text-anchor="middle" class="diagram-label">Bottom Glass</text>
             <text x="220" y="166" text-anchor="middle" class="diagram-small">Schematic Cross Section</text>
+
           </svg>
         </div>
 
@@ -510,6 +534,7 @@
   <!-- OPTICAL BONDING PROCESS -->
   <section class="section bonding-section">
     <div class="section-inner">
+
       <div class="section-heading">
         <h2>Optical Bonding Process</h2>
         <p>
@@ -552,11 +577,13 @@
 
       </div>
 
-      <!-- BONDING STRUCTURE SKETCH -->
+      <!-- OPTICAL BONDING STRUCTURE -->
       <div class="technology-card" style="margin-top:28px;">
+
         <h3>Optical Bonding Structure</h3>
 
         <svg class="diagram" viewBox="0 0 700 235" role="img" aria-label="Optical bonding layer structure">
+
           <rect x="95" y="20" width="510" height="35" rx="5" fill="#b8d8ef" stroke="#6389a8"/>
           <text x="350" y="43" text-anchor="middle" class="diagram-label">Cover Glass</text>
 
@@ -569,11 +596,15 @@
           <rect x="95" y="153" width="510" height="28" rx="4" fill="#cbd5e1" stroke="#9aabba"/>
           <text x="350" y="172" text-anchor="middle" class="diagram-label">Display Module</text>
 
-          <text x="350" y="215" text-anchor="middle" class="diagram-small">Simplified conceptual layer structure</text>
+          <text x="350" y="215" text-anchor="middle" class="diagram-small">
+            Simplified conceptual layer structure
+          </text>
+
         </svg>
       </div>
 
       <div class="bonding-methods">
+
         <div class="method">
           <h3>OCA Bonding</h3>
           <p>
@@ -589,18 +620,21 @@
             bonding material and cured as required.
           </p>
         </div>
+
       </div>
 
       <p class="subtext" style="text-align:center; margin-top:18px;">
-        Process configuration depends on the display structure,
-        bonding material and manufacturing partner.
+        Process configuration depends on the display structure
+        and selected bonding method.
       </p>
+
     </div>
   </section>
 
   <!-- ADVANCED GLASS -->
   <section class="section advanced-section">
     <div class="section-inner">
+
       <div class="section-heading">
         <h2>Advanced Glass Solutions</h2>
         <p>
@@ -613,13 +647,23 @@
 
         <!-- HEATER GLASS -->
         <div class="advanced-card">
+
           <svg class="advanced-diagram" viewBox="0 0 300 145" role="img" aria-label="Heated glass layer illustration">
+
             <rect x="35" y="27" width="230" height="22" rx="3" fill="#b8d8ef" stroke="#6389a8"/>
             <rect x="35" y="53" width="230" height="8" fill="#e6a23c"/>
             <rect x="35" y="65" width="230" height="22" rx="3" fill="#d9e5ef" stroke="#9aabba"/>
-            <path d="M80 18 Q70 5 80 0 M150 18 Q140 5 150 0 M220 18 Q210 5 220 0" fill="none" stroke="#e6a23c" stroke-width="2"/>
-            <text x="150" y="108" text-anchor="middle" class="diagram-label">Transparent Heating Layer</text>
-            <text x="150" y="127" text-anchor="middle" class="diagram-small">Conceptual Structure</text>
+
+            <path d="M80 18 Q70 5 80 0 M150 18 Q140 5 150 0 M220 18 Q210 5 220 0"
+              fill="none" stroke="#e6a23c" stroke-width="2"/>
+
+            <text x="150" y="108" text-anchor="middle" class="diagram-label">
+              Transparent Heating Layer
+            </text>
+            <text x="150" y="127" text-anchor="middle" class="diagram-small">
+              Conceptual Structure
+            </text>
+
           </svg>
 
           <h3>Heater Glass</h3>
@@ -629,17 +673,30 @@
             Heating layer, electrical design and optical
             performance are reviewed per project.
           </p>
+
         </div>
 
         <!-- AR GLASS -->
         <div class="advanced-card">
+
           <svg class="advanced-diagram" viewBox="0 0 300 145" role="img" aria-label="AR coated optical glass illustration">
+
             <rect x="42" y="47" width="216" height="43" rx="4" fill="#b8d8ef" stroke="#6389a8"/>
             <rect x="42" y="39" width="216" height="7" fill="#4a6cf7"/>
-            <path d="M65 10 L110 34 M150 7 L150 34 M235 10 L190 34" stroke="#e6a23c" stroke-width="3" fill="none"/>
-            <path d="M65 10 L95 27 M235 10 L205 27" stroke="#4a6cf7" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
-            <text x="150" y="110" text-anchor="middle" class="diagram-label">Anti-Reflective Coating</text>
-            <text x="150" y="128" text-anchor="middle" class="diagram-small">Conceptual Surface Layer</text>
+
+            <path d="M65 10 L110 34 M150 7 L150 34 M235 10 L190 34"
+              stroke="#e6a23c" stroke-width="3" fill="none"/>
+
+            <path d="M65 10 L95 27 M235 10 L205 27"
+              stroke="#4a6cf7" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+
+            <text x="150" y="110" text-anchor="middle" class="diagram-label">
+              Anti-Reflective Coating
+            </text>
+            <text x="150" y="128" text-anchor="middle" class="diagram-small">
+              Conceptual Surface Layer
+            </text>
+
           </svg>
 
           <h3>Military AR Glass</h3>
@@ -649,16 +706,27 @@
             Wavelength range, reflectance and durability
             require specification review.
           </p>
+
         </div>
 
         <!-- REAR ITO -->
         <div class="advanced-card">
+
           <svg class="advanced-diagram" viewBox="0 0 300 145" role="img" aria-label="Rear side ITO glass illustration">
+
             <rect x="42" y="35" width="216" height="48" rx="4" fill="#d9e5ef" stroke="#9aabba"/>
             <rect x="42" y="85" width="216" height="8" fill="#4a6cf7"/>
-            <path d="M65 105 L65 122 M105 105 L105 122 M145 105 L145 122 M185 105 L185 122 M225 105 L225 122" stroke="#4a6cf7" stroke-width="2"/>
-            <text x="150" y="58" text-anchor="middle" class="diagram-label">Optical Glass</text>
-            <text x="150" y="137" text-anchor="middle" class="diagram-small">Rear-side ITO Layer</text>
+
+            <path d="M65 105 L65 122 M105 105 L105 122 M145 105 L145 122 M185 105 L185 122 M225 105 L225 122"
+              stroke="#4a6cf7" stroke-width="2"/>
+
+            <text x="150" y="58" text-anchor="middle" class="diagram-label">
+              Optical Glass
+            </text>
+            <text x="150" y="137" text-anchor="middle" class="diagram-small">
+              Rear-side ITO Layer
+            </text>
+
           </svg>
 
           <h3>Rear-side ITO Glass</h3>
@@ -667,6 +735,7 @@
             coating options for specialized military
             and optical glass applications.
           </p>
+
         </div>
 
       </div>
