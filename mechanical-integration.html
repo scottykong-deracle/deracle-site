@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanical & Integration Solutions | dERACLE</title>
+<meta name="description" content="Mechanical integration solutions for industrial displays, including metal frames, custom housings, mechanical assembly, cable harnesses and accessories.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', Arial, sans-serif;
+  color: #202938;
+  line-height: 1.65;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0b1428, #172b4d);
+  color: #fff;
+  padding: 75px 20px 70px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 780px;
+  margin: 0 auto 30px;
+  color: #d0d8e6;
+  font-size: 17px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 520px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.section {
+  padding: 75px 20px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #152238;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #687386;
+  max-width: 780px;
+  margin: 0 auto 45px;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid #e7ebf1;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(20, 35, 60, 0.045);
+  transition: all .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(20, 35, 60, 0.09);
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+  color: #172b4d;
+}
+
+.card p {
+  font-size: 14px;
+  color: #687386;
+  line-height: 1.8;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  color: #4268ad;
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-list li {
+  font-size: 14px;
+  color: #596579;
+  padding: 6px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.dark-section {
+  background: linear-gradient(180deg, #0b1428, #111e34);
+  color: #fff;
+}
+
+.dark-section .section-title {
+  color: #fff;
+}
+
+.dark-section .section-subtitle {
+  color: #bdc8d9;
+}
+
+.dark-card {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 13px;
+  padding: 26px;
+}
+
+.dark-card h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dark-card p {
+  color: #c1cada;
+  font-size: 14px;
+}
+
+.diagram-box {
+  background: #f6f8fb;
+  border: 1px solid #e4e9f0;
+  border-radius: 14px;
+  padding: 30px;
+  margin-top: 35px;
+}
+
+.diagram-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1d2d47;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flow-item {
+  background: #fff;
+  border: 1px solid #dce4ef;
+  border-radius: 10px;
+  padding: 18px 16px;
+  min-width: 145px;
+  text-align: center;
+  flex: 1;
+}
+
+.flow-item strong {
+  display: block;
+  font-size: 14px;
+  color: #1c355d;
+  margin-bottom: 5px;
+}
+
+.flow-item span {
+  display: block;
+  font-size: 12px;
+  color: #748094;
+}
+
+.flow-arrow {
+  color: #5276b1;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.process-note {
+  text-align: center;
+  color: #748094;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+.svg-diagram {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 15px auto 0;
+}
+
+.cta {
+  padding: 65px 20px;
+  text-align: center;
+  background: #f5f7fa;
+}
+
+.cta h2 {
+  font-size: 27px;
+  color: #172b4d;
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #4268ad;
+  color: #fff;
+  padding: 13px 30px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background .2s ease;
+}
+
+.cta-button:hover {
+  background: #2d4f8d;
+}
+
+footer {
+  background: #0b1428;
+  color: #aab5c7;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    height: 180px;
+  }
+
+  .section {
+    padding: 55px 18px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    flex-direction: column;
+  }
+
+  .flow-item {
+    width: 100%;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .diagram-box {
+    padding: 20px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Mechanical & Integration Solutions</h1>
+    <p>
+      Mechanical structures, metal housings, cable assemblies
+      and integration solutions for industrial and commercial display systems.
+    </p>
+
+    <img
+      src="images/mechanical.jpg"
+      alt="Mechanical Display Integration"
+      class="hero-image"
+    >
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section">
+  <div class="container">
+
+    <h2 class="section-title">Mechanical Solutions</h2>
+
+    <p class="section-subtitle">
+      Mechanical components and integration solutions designed
+      to support reliable installation, protection and operation
+      of display-based systems.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="6" y="7" width="36" height="34" rx="3"/>
+          <rect x="12" y="13" width="24" height="22" rx="2"/>
+          <path d="M17 7v6M31 7v6M17 35v6M31 35v6"/>
+        </svg>
+
+        <h3>Metal Frame & Housing</h3>
+
+        <p>
+          Mechanical structures and enclosures designed
+          for display modules and complete monitor assemblies.
+        </p>
+
+        <ul class="feature-list">
+          <li>Metal frame and chassis</li>
+          <li>Custom housing and enclosure</li>
+          <li>Mounting brackets</li>
+          <li>Panel fixing structures</li>
+          <li>Custom dimensions and cut-outs</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="6" y="9" width="36" height="30" rx="3"/>
+          <path d="M13 16h22M13 23h22M13 30h14"/>
+          <circle cx="35" cy="30" r="2"/>
+        </svg>
+
+        <h3>Mechanical Design & Assembly</h3>
+
+        <p>
+          Mechanical assembly and component integration
+          according to application and installation requirements.
+        </p>
+
+        <ul class="feature-list">
+          <li>LCD module assembly</li>
+          <li>Frame and bracket integration</li>
+          <li>Mounting and fixing structures</li>
+          <li>Mechanical fit review</li>
+          <li>Assembly coordination</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 24h32M14 16v16M20 16v16M28 16v16M34 16v16"/>
+          <rect x="5" y="12" width="38" height="24" rx="4"/>
+        </svg>
+
+        <h3>Cable & Wire Harness</h3>
+
+        <p>
+          Cable assemblies for signal transmission
+          and power connection within display systems.
+        </p>
+
+        <ul class="feature-list">
+          <li>LVDS / eDP signal cables</li>
+          <li>Power wire harness</li>
+          <li>FFC / FPC cables</li>
+          <li>Custom cable length</li>
+          <li>Connector configuration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="6" y="13" width="15" height="22" rx="2"/>
+          <rect x="27" y="13" width="15" height="22" rx="2"/>
+          <path d="M21 24h6M24 20l4 4-4 4"/>
+          <path d="M11 18v12M16 18v12M32 18v12M37 18v12"/>
+        </svg>
+
+        <h3>Cable & Connector Solutions</h3>
+
+        <p>
+          Connection components selected to match
+          electrical interfaces and mechanical layouts.
+        </p>
+
+        <ul class="feature-list">
+          <li>Signal connectors</li>
+          <li>Power connectors</li>
+          <li>Board-to-board connections</li>
+          <li>Custom connector combinations</li>
+          <li>Connection compatibility review</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 13h32v23H8z"/>
+          <path d="M15 13V8h18v5M16 20h16M16 26h16M16 32h9"/>
+        </svg>
+
+        <h3>Accessory Kit & Power Adapter</h3>
+
+        <p>
+          Supporting components and accessories
+          for complete display and monitor assemblies.
+        </p>
+
+        <ul class="feature-list">
+          <li>Mounting accessories</li>
+          <li>Installation kits</li>
+          <li>Power adapters</li>
+          <li>Connection accessories</li>
+          <li>Application-specific components</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 10v14l10 6"/>
+          <path d="M12 38l5-5M36 38l-5-5"/>
+        </svg>
+
+        <h3>Custom Integration Support</h3>
+
+        <p>
+          Coordinated mechanical and electrical integration
+          based on complete system requirements.
+        </p>
+
+        <ul class="feature-list">
+          <li>Mechanical and panel matching</li>
+          <li>Board and cable arrangement</li>
+          <li>Assembly configuration review</li>
+          <li>Installation requirements</li>
+          <li>Integrated supply coordination</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICAL STRUCTURE -->
+<section class="section dark-section">
+  <div class="container">
+
+    <h2 class="section-title">Display Mechanical Structure</h2>
+
+    <p class="section-subtitle">
+      A typical display assembly combines the LCD panel,
+      mounting frame, housing and connection components.
+    </p>
+
+    <div class="diagram-box">
+
+      <div class="diagram-title">Typical Display Assembly Structure</div>
+
+      <svg class="svg-diagram" viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="180" y="15" width="340" height="48" rx="7"
+              fill="#e8eef7" stroke="#8fa8c8" stroke-width="1.5"/>
+        <text x="350" y="44" font-size="14" font-weight="bold"
+              text-anchor="middle" fill="#24436e">Front Cover / Bezel</text>
+
+        <path d="M350 63V84" stroke="#5276b1" stroke-width="2"/>
+        <path d="M344 78L350 85L356 78" fill="none" stroke="#5276b1" stroke-width="2"/>
+
+        <rect x="180" y="88" width="340" height="48" rx="7"
+              fill="#dce8f8" stroke="#8fa8c8" stroke-width="1.5"/>
+        <text x="350" y="117" font-size="14" font-weight="bold"
+              text-anchor="middle" fill="#24436e">LCD Panel Module</text>
+
+        <path d="M350 136V157" stroke="#5276b1" stroke-width="2"/>
+        <path d="M344 151L350 158L356 151" fill="none" stroke="#5276b1" stroke-width="2"/>
+
+        <rect x="180" y="161" width="340" height="48" rx="7"
+              fill="#e8eef7" stroke="#8fa8c8" stroke-width="1.5"/>
+        <text x="350" y="190" font-size="14" font-weight="bold"
+              text-anchor="middle" fill="#24436e">Mounting Frame / Bracket</text>
+
+        <path d="M350 209V230" stroke="#5276b1" stroke-width="2"/>
+        <path d="M344 224L350 231L356 224" fill="none" stroke="#5276b1" stroke-width="2"/>
+
+        <rect x="180" y="234" width="340" height="48" rx="7"
+              fill="#dce8f8" stroke="#8fa8c8" stroke-width="1.5"/>
+        <text x="350" y="263" font-size="14" font-weight="bold"
+              text-anchor="middle" fill="#24436e">Rear Housing / Chassis</text>
+
+        <path d="M180 258H105V295" stroke="#5276b1" stroke-width="1.5" fill="none"/>
+        <path d="M520 258H595V295" stroke="#5276b1" stroke-width="1.5" fill="none"/>
+
+        <rect x="25" y="295" width="160" height="35" rx="6"
+              fill="#f0f3f8" stroke="#aabbd1"/>
+        <text x="105" y="317" font-size="11" text-anchor="middle" fill="#526985">Cable & Harness</text>
+
+        <rect x="515" y="295" width="160" height="35" rx="6"
+              fill="#f0f3f8" stroke="#aabbd1"/>
+        <text x="595" y="317" font-size="11" text-anchor="middle" fill="#526985">Control Electronics</text>
+
+      </svg>
+
+      <p class="process-note">
+        Conceptual illustration only. Actual mechanical stack-up depends on product design.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICAL INTEGRATION PROCESS -->
+<section class="section">
+  <div class="container">
+
+    <h2 class="section-title">Mechanical Integration Process</h2>
+
+    <p class="section-subtitle">
+      From requirement review to assembly coordination,
+      each stage is considered to support a complete display solution.
+    </p>
+
+    <div class="diagram-box">
+
+      <div class="diagram-title">Typical Project Workflow</div>
+
+      <div class="flow">
+
+        <div class="flow-item">
+          <strong>01. Requirement Review</strong>
+          <span>Application and dimensions</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-item">
+          <strong>02. Design Review</strong>
+          <span>Structure and interfaces</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-item">
+          <strong>03. Component Selection</strong>
+          <span>Frame, cable and accessories</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-item">
+          <strong>04. Assembly Coordination</strong>
+          <span>Mechanical integration</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-item">
+          <strong>05. Final Review</strong>
+          <span>Fit and connection checks</span>
+        </div>
+
+      </div>
+
+      <p class="process-note">
+        Workflow may vary according to project scope and customer specifications.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATION CONSIDERATIONS -->
+<section class="section" style="background:#f6f8fb;">
+  <div class="container">
+
+    <h2 class="section-title">Integration Considerations</h2>
+
+    <p class="section-subtitle">
+      Mechanical integration requires coordination of dimensions,
+      mounting, cable routing and electrical connections.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Dimensions & Mounting</h3>
+        <p>
+          Overall dimensions, mounting positions,
+          fixing points and installation clearances.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Material & Structure</h3>
+        <p>
+          Housing material, frame structure,
+          mechanical strength and surface requirements.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cable Routing</h3>
+        <p>
+          Cable length, connector direction,
+          routing space and connection accessibility.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Thermal & Ventilation</h3>
+        <p>
+          Available internal space, airflow,
+          ventilation openings and heat management considerations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Service Accessibility</h3>
+        <p>
+          Access for installation, maintenance,
+          replacement and component servicing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>System Compatibility</h3>
+        <p>
+          Mechanical alignment with LCD panels,
+          control boards, power components and touch assemblies.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section dark-section">
+  <div class="container">
+
+    <h2 class="section-title">Applications</h2>
+
+    <p class="section-subtitle">
+      Mechanical and integration solutions for a wide range
+      of display-based equipment and systems.
+    </p>
+
+    <div class="grid">
+
+      <div class="dark-card">
+        <h3>Industrial Monitors</h3>
+        <p>
+          Metal frames, housings and mounting structures
+          for industrial display equipment.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Gaming Systems</h3>
+        <p>
+          Display assemblies, mechanical parts
+          and cable integration for gaming equipment.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Kiosk & POS</h3>
+        <p>
+          Mechanical enclosures, mounting structures
+          and accessories for self-service terminals.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>HMI Systems</h3>
+        <p>
+          Integrated mechanical structures
+          for human-machine interface applications.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Transportation</h3>
+        <p>
+          Mechanical integration for information
+          and specialized display systems.
+        </p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Custom Equipment</h3>
+        <p>
+          Application-specific housings,
+          mounting structures and integrated assemblies.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta">
+  <h2>Discuss Your Mechanical & Integration Requirements</h2>
+  <a href="index.html#contact" class="cta-button">Contact dERACLE →</a>
+</section>
+
+<footer>
+  dERACLE | Mechanical & Integration Solutions
+</footer>
+
+</body>
+</html>
