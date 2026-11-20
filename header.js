@@ -1,5 +1,7 @@
+
 // header.js
 // 모든 페이지에서 동일한 메뉴바를 생성합니다.
+
 document.write(`
 <style>
     /* 헤더 및 네비게이션 스타일 */
@@ -47,13 +49,14 @@ document.write(`
     <div class="logo">
         <a href="index.html"><img src="logo.png" alt="DERACLE Logo"></a>
     </div>
-   <nav>
-    <a href="index.html#company">Company</a>
-    <a href="index.html#memory">Memory</a>
-    <a href="index.html#solutions">Display</a>
-    <a href="gaming.html">Gaming</a>
-    <a href="insights.html">Insights</a>
-    <a href="index.html#contact">Contact</a>
-</nav>
+
+    <nav>
+        <a href="index.html#company">Company</a>
+        <a href="index.html#memory">Memory</a>
+        <a href="index.html#solutions">Display</a>
+        <a href="index.html#industrial-computing">Industrial Computing</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 </header>
 `);
