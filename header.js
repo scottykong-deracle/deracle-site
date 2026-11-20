@@ -38,23 +38,30 @@ document.write(`
         color: #4a6cf7; 
     }
     
-    /* 모바일 대응 (필요시) */
+    /* 모바일 대응 */
     @media(max-width: 900px) { 
-        header { padding: 18px 20px; } 
-        nav a { margin-left: 15px; }
+        header { 
+            padding: 18px 20px; 
+        } 
+
+        nav a { 
+            margin-left: 15px; 
+        }
     }
 </style>
 
 <header>
     <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="DERACLE Logo"></a>
+        <a href="index.html">
+            <img src="logo.png" alt="DERACLE Logo">
+        </a>
     </div>
 
     <nav>
         <a href="index.html#company">Company</a>
         <a href="index.html#memory">Memory</a>
         <a href="index.html#solutions">Display</a>
-        <a href="index.html#industrial-computing">Industrial Computing</a>
+        <a href="industrial-computing.html">Industrial Computing</a>
         <a href="gaming.html">Gaming</a>
         <a href="index.html#contact">Contact</a>
     </nav>
