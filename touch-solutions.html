@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Touch & Advanced Optical Solutions | dERACLE</title>
+  <meta name="description" content="dERACLE touch screen, optical bonding, heated glass, AR coating and ITO glass solutions for industrial, aerospace and defense applications.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.deracle.co.kr/touch-solutions.html">
+
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Pretendard', Arial, sans-serif;
+      color: #172033;
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      background: linear-gradient(115deg, #0b1222 0%, #142846 65%, #1c3e66 100%);
+      color: #fff;
+      padding: 85px 24px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #83b8ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.15;
+      margin: 18px 0;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      color: #d4deed;
+      font-size: 16px;
+      max-width: 570px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 27px;
+      border-radius: 7px;
+      background: #4a6cf7;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .section { padding: 70px 24px; }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading h2 {
+      font-size: 31px;
+      letter-spacing: -.5px;
+      margin: 0 0 12px;
+      color: #101a2c;
+    }
+
+    .section-heading p {
+      color: #687386;
+      margin: 0;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 23px 20px;
+      background: #f5f7fb;
+      border: 1px solid #e8edf5;
+      border-radius: 12px;
+    }
+
+    .feature-mark {
+      color: #4a6cf7;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .feature h3 {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .products { background: #f5f7fb; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid #e3e9f2;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .product-card img {
+      display: block;
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+      background: #e9eef5;
+    }
+
+    .product-content { padding: 23px; }
+
+    .product-content h3 {
+      font-size: 22px;
+      margin: 5px 0 8px;
+      color: #142846;
+    }
+
+    .product-type {
+      color: #4a6cf7;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-content p {
+      color: #5e687a;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .process-section { background: #fff; }
+
+    .process-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 23px 15px;
+      background: #f5f7fb;
+      border: 1px solid #e3e9f2;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .process-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #4a6cf7;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .process-step h3 {
+      font-size: 15px;
+      line-height: 1.35;
+      margin: 0 0 8px;
+      color: #142846;
+    }
+
+    .process-step p {
+      font-size: 13px;
+      color: #687386;
+      margin: 0;
+    }
+
+    .process-note {
+      text-align: center;
+      color: #6b7485;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .advanced { background: #f5f7fb; }
+
+    .applications {
+      background: #101a2c;
+      color: #fff;
+    }
+
+    .applications .section-heading h2 { color: #fff; }
+    .applications .section-heading p { color: #c1ccdc; }
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .application-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: #1a2940;
+      border: 1px solid #2a3a53;
+    }
+
+    .application-card img {
+      display: block;
+      width: 100%;
+      height: 155px;
+      object-fit: cover;
+    }
+
+    .application-card h3 {
+      font-size: 16px;
+      margin: 0;
+      padding: 16px;
+    }
+
+    .closing {
+      background: #edf3fb;
+      padding: 45px 24px;
+      text-align: center;
+    }
+
+    .closing p {
+      color: #647086;
+      max-width: 760px;
+      margin: 8px auto;
+    }
+
+    footer {
+      background: #0b1222;
+      color: #9aa7ba;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+
+      .hero-image { height: 300px; }
+
+      .features,
+      .application-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-flow { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 55px 20px; }
+
+      .section { padding: 55px 20px; }
+
+      .product-grid,
+      .features,
+      .application-grid,
+      .process-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image { height: 230px; }
+
+      .section-heading h2 { font-size: 26px; }
+
+      .product-card img { height: 200px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="header.js"></script>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Advanced Display & Optical Integration</div>
+
+        <h1>Touch & Advanced Optical Solutions</h1>
+
+        <p>
+          Touch screen, optical bonding, heated glass and
+          advanced optical glass solutions for industrial,
+          aerospace and specialized applications.
+        </p>
+
+        <p>
+          dERACLE coordinates with specialized manufacturing
+          partners to provide application-specific sourcing
+          and integrated solutions.
+        </p>
+
+        <a class="button" href="index.html#contact">Contact Us →</a>
+      </div>
+
+      <div>
+        <img
+          class="hero-image"
+          src="images/touch.jpg"
+          alt="Industrial touch screen solution"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS OVERVIEW -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Touch & Optical Solutions Portfolio</h2>
+        <p>
+          Selected display and glass technologies coordinated
+          through specialized manufacturing partners.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-mark">01</div>
+          <h3>Touch Screen</h3>
+          <p>PCAP, Resistive, G+G, G+F and custom cover glass solutions.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-mark">02</div>
+          <h3>Optical Bonding</h3>
+          <p>OCA and OCR bonding for LCD and cover glass integration.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-mark">03</div>
+          <h3>Heated Glass</h3>
+          <p>Transparent heating glass for defogging and de-icing applications.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-mark">04</div>
+          <h3>Military Optical Glass</h3>
+          <p>AR coating and rear-side ITO conductive layer options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTICAL BONDING -->
+  <section class="section products">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Optical Bonding Solutions</h2>
+        <p>
+          Optical bonding between LCD panels and cover glass,
+          with or without touch functionality.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img
+            src="images/lcd.jpg"
+            alt="LCD panel and optical bonding integration"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Optical Integration</div>
+            <h3>LCD & Cover Glass Bonding</h3>
+            <p>
+              Optical bonding solutions for industrial and
+              specialized displays, including applications
+              without touch functionality.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img
+            src="images/touch.jpg"
+            alt="Touch screen and cover glass integration"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Bonding Methods</div>
+            <h3>OCA / OCR Bonding</h3>
+            <p>
+              OCA film and OCR liquid resin bonding options,
+              selected according to display structure,
+              optical requirements and project conditions.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTICAL BONDING PROCESS FLOW -->
+  <section class="section process-section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Optical Bonding Process Flow</h2>
+        <p>
+          From specification review to final inspection,
+          coordinated with qualified manufacturing partners.
+        </p>
+      </div>
+
+      <div class="process-flow">
+
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <h3>Specification Review</h3>
+          <p>LCD, cover glass, dimensions and optical requirements</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <h3>Material Selection</h3>
+          <p>OCA / OCR selection and bonding structure review</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <h3>Surface Preparation</h3>
+          <p>Glass and LCD cleaning, preparation and alignment</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <h3>Optical Bonding</h3>
+          <p>Lamination, resin application and curing as required</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">05</div>
+          <h3>Inspection</h3>
+          <p>Visual, optical and project-specific quality checks</p>
+        </div>
+
+      </div>
+
+      <p class="process-note">
+        Actual process steps may vary depending on the selected
+        bonding method, materials and manufacturing partner.
+      </p>
+    </div>
+  </section>
+
+  <!-- HEATED GLASS & MILITARY OPTICAL GLASS -->
+  <section class="section advanced">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Advanced Glass Solutions</h2>
+        <p>
+          Specialized glass options for aerospace, defense
+          and demanding optical applications.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product-card">
+          <img
+            src="images/heater-glass.jpg"
+            alt="Illustrative transparent heated glass"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Transparent Heating</div>
+            <h3>Heated Glass</h3>
+            <p>
+              Transparent conductive heating glass options
+              for defogging and de-icing applications.
+              Heating layer, electrical configuration,
+              optical transmission and temperature uniformity
+              can be reviewed according to project requirements.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img
+            src="images/military-ar-glass.jpg"
+            alt="Illustrative AR coated optical glass"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Military & Defense Optics</div>
+            <h3>AR Coated Optical Glass</h3>
+            <p>
+              Anti-reflective coating options for specialized
+              optical windows and display applications.
+              Wavelength range, reflectance, viewing angle
+              and environmental durability are subject to
+              project specification review.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img
+            src="images/rear-ito-glass.jpg"
+            alt="Illustrative rear-side ITO coated glass"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Transparent Conductive Layer</div>
+            <h3>Rear-side ITO Glass</h3>
+            <p>
+              Rear-side ITO transparent conductive layer
+              options for specialized glass applications.
+              Electrical performance, optical transmission
+              and coating structure require project-specific
+              technical confirmation.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img
+            src="images/touch.jpg"
+            alt="Custom optical glass and touch integration"
+            loading="lazy"
+          >
+          <div class="product-content">
+            <div class="product-type">Custom Glass Integration</div>
+            <h3>Custom Glass Solutions</h3>
+            <p>
+              Custom glass processing, cover glass design,
+              surface treatment and integration options
+              coordinated with specialized suppliers.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section class="section applications">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Target Applications</h2>
+        <p>
+          Solutions for industrial displays and specialized
+          electronic and optical equipment.
+        </p>
+      </div>
+
+      <div class="application-grid">
+
+        <article class="application-card">
+          <img
+            src="images/application-industrial.jpg"
+            alt="Industrial display equipment"
+            loading="lazy"
+          >
+          <h3>Industrial Displays</h3>
+        </article>
+
+        <article class="application-card">
+          <img
+            src="images/application-defense.jpg"
+            alt="Defense electronic equipment"
+            loading="lazy"
+          >
+          <h3>Military & Defense</h3>
+        </article>
+
+        <article class="application-card">
+          <img
+            src="images/application-optical.jpg"
+            alt="Optical viewing window"
+            loading="lazy"
+          >
+          <h3>Aerospace & Optical Systems</h3>
+        </article>
+
+        <article class="application-card">
+          <img
+            src="images/application-medical.jpg"
+            alt="Specialized electronic equipment"
+            loading="lazy"
+          >
+          <h3>Specialized Equipment</h3>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="closing">
+    <div class="section-inner">
+      <h2>Discuss Your Display & Glass Requirements</h2>
+      <p>
+        Contact dERACLE for touch screen, optical bonding,
+        heated glass and specialized optical glass sourcing
+        and integration support.
+      </p>
+      <a class="button" href="index.html#contact">Contact dERACLE →</a>
+    </div>
+  </section>
+
+  <footer>
+    dERACLE | Touch & Advanced Optical Solutions
+  </footer>
+
+</body>
+</html>
