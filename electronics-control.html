@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronics & Control Solutions | dERACLE</title>
+<meta name="description" content="Industrial display electronics and control solutions including LCD AD boards, LED drivers, power conversion, display interfaces and custom cable harnesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', Arial, sans-serif;
+  color: #202938;
+  line-height: 1.65;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0b1428, #172b4d);
+  color: #fff;
+  padding: 75px 20px 70px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 780px;
+  margin: 0 auto 30px;
+  color: #d0d8e6;
+  font-size: 17px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 520px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.section {
+  padding: 75px 20px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #152238;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #687386;
+  max-width: 780px;
+  margin: 0 auto 45px;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid #e7ebf1;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(20, 35, 60, 0.045);
+  transition: all .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(20, 35, 60, 0.09);
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+  color: #172b4d;
+}
+
+.card p {
+  font-size: 14px;
+  color: #687386;
+  line-height: 1.8;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  color: #4268ad;
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-list li {
+  font-size: 14px;
+  color: #596579;
+  padding: 6px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.dark-section {
+  background: linear-gradient(180deg, #0b1428, #111e34);
+  color: #fff;
+}
+
+.dark-section .section-title {
+  color: #fff;
+}
+
+.dark-section .section-subtitle {
+  color: #bdc8d9;
+}
+
+.dark-card {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 13px;
+  padding: 26px;
+}
+
+.dark-card h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dark-card p {
+  color: #c1cada;
+  font-size: 14px;
+}
+
+.diagram-box {
+  background: #f6f8fb;
+  border: 1px solid #e4e9f0;
+  border-radius: 14px;
+  padding: 30px;
+  margin-top: 35px;
+}
+
+.diagram-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1d2d47;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flow-item {
+  background: #fff;
+  border: 1px solid #dce4ef;
+  border-radius: 10px;
+  padding: 18px 16px;
+  min-width: 145px;
+  text-align: center;
+  flex: 1;
+}
+
+.flow-item strong {
+  display: block;
+  font-size: 14px;
+  color: #1c355d;
+  margin-bottom: 5px;
+}
+
+.flow-item span {
+  display: block;
+  font-size: 12px;
+  color: #748094;
+}
+
+.flow-arrow {
+  color: #5276b1;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.interface-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.interface-item {
+  padding: 22px 12px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+}
+
+.interface-item strong {
+  display: block;
+  font-size: 18px;
+  color: #244b83;
+  margin-bottom: 6px;
+}
+
+.interface-item span {
+  color: #778296;
+  font-size: 12px;
+}
+
+.svg-diagram {
+  width: 100%;
+  max-width: 650px;
+  display: block;
+  margin: 15px auto 0;
+}
+
+.cta {
+  padding: 65px 20px;
+  text-align: center;
+  background: #f5f7fa;
+}
+
+.cta h2 {
+  font-size: 27px;
+  color: #172b4d;
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #4268ad;
+  color: #fff;
+  padding: 13px 30px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background .2s ease;
+}
+
+.cta-button:hover {
+  background: #2d4f8d;
+}
+
+footer {
+  background: #0b1428;
+  color: #aab5c7;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .interface-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    height: 180px;
+  }
+
+  .section {
+    padding: 55px 18px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    flex-direction: column;
+  }
+
+  .flow-item {
+    width: 100%;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .diagram-box {
+    padding: 20px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Electronics & Control Solutions</h1>
+    <p>
+      Display control boards, LED driving electronics, power conversion
+      and interface solutions for industrial and commercial display systems.
+    </p>
+    <img
+      src="images/board.jpg"
+      alt="LCD Display Control Board"
+      class="hero-image"
+    >
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Display Electronics Solutions</h2>
+    <p class="section-subtitle">
+      Electronic components and control solutions designed to connect,
+      drive and integrate LCD display systems across a wide range of applications.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="8" width="38" height="28" rx="3"/>
+          <path d="M13 16h22M13 22h12M13 28h18M18 36v5M30 36v5"/>
+        </svg>
+        <h3>LCD Control Board</h3>
+        <p>
+          Display controller solutions for LCD panel operation,
+          image processing and signal conversion.
+        </p>
+        <ul class="feature-list">
+          <li>AD Board / LCD Controller</li>
+          <li>Resolution and timing configuration</li>
+          <li>Panel-specific control solutions</li>
+          <li>Custom AD Board development</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M24 5v38M12 12l24 24M36 12L12 36"/>
+          <circle cx="24" cy="24" r="17"/>
+          <path d="M24 14v10l7 5"/>
+        </svg>
+        <h3>LED Driver Board</h3>
+        <p>
+          Backlight driving electronics supporting stable
+          illumination and brightness control.
+        </p>
+        <ul class="feature-list">
+          <li>LED backlight driver</li>
+          <li>Brightness control / Dimming</li>
+          <li>Backlight power management</li>
+          <li>Panel-compatible driver selection</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M24 5l17 9v20l-17 9-17-9V14z"/>
+          <path d="M24 5v38M7 14l17 10 17-10M24 24v19"/>
+        </svg>
+        <h3>Power Solutions</h3>
+        <p>
+          Power supply and voltage conversion components
+          for display and embedded electronics.
+        </p>
+        <ul class="feature-list">
+          <li>AC / DC Power Supply</li>
+          <li>DC-DC Converter</li>
+          <li>Voltage regulation</li>
+          <li>Power adapter solutions</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="10" width="38" height="28" rx="3"/>
+          <path d="M12 18h8v12h-8zM28 18h8M28 24h8M28 30h8"/>
+        </svg>
+        <h3>Signal Interface</h3>
+        <p>
+          Signal interface and conversion solutions
+          for different display systems and host platforms.
+        </p>
+        <ul class="feature-list">
+          <li>LVDS</li>
+          <li>eDP</li>
+          <li>MIPI DSI</li>
+          <li>HDMI / VGA input support</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="13" width="15" height="22" rx="2"/>
+          <rect x="28" y="13" width="15" height="22" rx="2"/>
+          <path d="M20 24h8M24 20l4 4-4 4M10 18v12M15 18v12M33 18v12M38 18v12"/>
+        </svg>
+        <h3>Cable & Harness</h3>
+        <p>
+          Connection components for signal transmission
+          and power delivery within display assemblies.
+        </p>
+        <ul class="feature-list">
+          <li>LVDS / eDP signal cables</li>
+          <li>FFC / FPC cables</li>
+          <li>Power harness</li>
+          <li>Custom cable and connector options</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 12v12l9 6M13 7l-4 5M35 7l4 5"/>
+        </svg>
+        <h3>Custom Electronics Integration</h3>
+        <p>
+          Coordinated selection and integration of electronic
+          components based on display and system requirements.
+        </p>
+        <ul class="feature-list">
+          <li>Panel and board compatibility review</li>
+          <li>Interface and power matching</li>
+          <li>Component configuration</li>
+          <li>Integrated supply coordination</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DISPLAY CONTROL STRUCTURE -->
+<section class="section dark-section">
+  <div class="container">
+    <h2 class="section-title">Display Control Architecture</h2>
+    <p class="section-subtitle">
+      A typical display system combines signal input, display control,
+      panel interface and backlight power management.
+    </p>
+
+    <div class="diagram-box">
+      <div class="diagram-title">Typical LCD Display System Structure</div>
+
+      <div class="flow">
+        <div class="flow-item">
+          <strong>Host System</strong>
+          <span>PC / Embedded Board</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">
+          <strong>AD Board</strong>
+          <span>Signal Processing</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">
+          <strong>LCD Panel</strong>
+          <span>Image Display</span>
+        </div>
+      </div>
+
+      <svg class="svg-diagram" viewBox="0 0 650 145" xmlns="http://www.w3.org/2000/svg">
+        <rect x="180" y="12" width="290" height="48" rx="8" fill="#e6edf7" stroke="#8fa8c8"/>
+        <text x="325" y="32" font-size="13" font-weight="bold" text-anchor="middle" fill="#24436e">LED Driver Board</text>
+        <text x="325" y="48" font-size="10" text-anchor="middle" fill="#526985">Backlight Power & Brightness Control</text>
+        <path d="M325 60 V88" stroke="#5276b1" stroke-width="2" stroke-dasharray="5 4"/>
+        <path d="M319 82 L325 90 L331 82" fill="none" stroke="#5276b1" stroke-width="2"/>
+        <rect x="180" y="92" width="290" height="42" rx="8" fill="#dce8f8" stroke="#8fa8c8"/>
+        <text x="325" y="117" font-size="12" font-weight="bold" text-anchor="middle" fill="#24436e">LCD Backlight Unit</text>
+      </svg>
+
+      <p style="text-align:center; color:#748094; font-size:12px; margin-top:10px;">
+        Conceptual architecture. Actual connections depend on panel and board specifications.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- INTERFACE -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Display Interface Compatibility</h2>
+    <p class="section-subtitle">
+      Interface selection depends on LCD panel specifications,
+      host system output and required display resolution.
+    </p>
+
+    <div class="interface-grid">
+      <div class="interface-item">
+        <strong>LVDS</strong>
+        <span>Common LCD panel interface</span>
+      </div>
+      <div class="interface-item">
+        <strong>eDP</strong>
+        <span>Embedded DisplayPort</span>
+      </div>
+      <div class="interface-item">
+        <strong>MIPI DSI</strong>
+        <span>Mobile / Embedded display</span>
+      </div>
+      <div class="interface-item">
+        <strong>HDMI / VGA</strong>
+        <span>Host video input</span>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">Signal Connection Concept</div>
+
+      <svg class="svg-diagram" viewBox="0 0 650 190" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="52" width="145" height="80" rx="8" fill="#e8eef7" stroke="#9eb2ce"/>
+        <text x="84" y="84" font-size="13" font-weight="bold" text-anchor="middle" fill="#24436e">Host System</text>
+        <text x="84" y="103" font-size="10" text-anchor="middle" fill="#526985">Video Output</text>
+
+        <path d="M157 92 H245" stroke="#5276b1" stroke-width="2"/>
+        <path d="M237 86 L245 92 L237 98" fill="none" stroke="#5276b1" stroke-width="2"/>
+        <text x="201" y="78" font-size="10" text-anchor="middle" fill="#526985">Input Signal</text>
+
+        <rect x="245" y="52" width="160" height="80" rx="8" fill="#dce8f8" stroke="#8fa8c8"/>
+        <text x="325" y="83" font-size="13" font-weight="bold" text-anchor="middle" fill="#24436e">AD Board</text>
+        <text x="325" y="102" font-size="10" text-anchor="middle" fill="#526985">Signal Conversion</text>
+
+        <path d="M405 92 H493" stroke="#5276b1" stroke-width="2"/>
+        <path d="M485 86 L493 92 L485 98" fill="none" stroke="#5276b1" stroke-width="2"/>
+        <text x="449" y="78" font-size="10" text-anchor="middle" fill="#526985">Panel Interface</text>
+
+        <rect x="493" y="52" width="145" height="80" rx="8" fill="#e8eef7" stroke="#9eb2ce"/>
+        <text x="565" y="84" font-size="13" font-weight="bold" text-anchor="middle" fill="#24436e">LCD Panel</text>
+        <text x="565" y="103" font-size="10" text-anchor="middle" fill="#526985">Display Output</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- POWER AND BACKLIGHT -->
+<section class="section" style="background:#f6f8fb;">
+  <div class="container">
+    <h2 class="section-title">Power & Backlight Control</h2>
+    <p class="section-subtitle">
+      Power and backlight components must be matched to the electrical
+      requirements of the selected display panel and system.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Power Input</h3>
+        <p>
+          AC/DC power supply or DC input according to the system
+          power architecture.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Voltage Conversion</h3>
+        <p>
+          DC-DC conversion and voltage regulation
+          for individual electronic components.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Backlight Driving</h3>
+        <p>
+          LED current driving and brightness control
+          according to backlight specifications.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">Typical Power Distribution</div>
+      <div class="flow">
+        <div class="flow-item">
+          <strong>Power Input</strong>
+          <span>AC / DC</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">
+          <strong>Power Conversion</strong>
+          <span>DC-DC / Regulation</span>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">
+          <strong>Electronic Loads</strong>
+          <span>AD Board / LED Driver</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATION -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">System Integration & Technical Review</h2>
+    <p class="section-subtitle">
+      Successful display integration requires electrical and mechanical
+      compatibility across the panel, controller, power and connection components.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Panel Compatibility</h3>
+        <p>
+          Review of panel model, resolution, interface,
+          timing and electrical specifications.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Electrical Matching</h3>
+        <p>
+          Review of input voltage, power consumption,
+          backlight requirements and signal configuration.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Connection Integration</h3>
+        <p>
+          Coordination of cables, connectors,
+          power harnesses and board interfaces.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section dark-section">
+  <div class="container">
+    <h2 class="section-title">Applications</h2>
+    <p class="section-subtitle">
+      Electronics and control solutions for a wide range of display-based systems.
+    </p>
+
+    <div class="grid">
+      <div class="dark-card">
+        <h3>Industrial Displays</h3>
+        <p>Industrial monitors, control panels and machine interfaces.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Gaming Systems</h3>
+        <p>Gaming monitors, display assemblies and replacement electronics.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Kiosk & POS</h3>
+        <p>Self-service terminals, payment systems and commercial displays.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>HMI Systems</h3>
+        <p>Human-machine interfaces and embedded display applications.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Transportation</h3>
+        <p>Information displays and specialized electronic display systems.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>Custom Equipment</h3>
+        <p>Display-based equipment requiring customized electronics integration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta">
+  <h2>Discuss Your Electronics & Control Requirements</h2>
+  <a href="index.html#contact" class="cta-button">Contact dERACLE →</a>
+</section>
+
+<footer>
+  dERACLE | Electronics & Control Solutions
+</footer>
+
+</body>
+</html>
