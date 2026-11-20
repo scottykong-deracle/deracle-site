@@ -341,6 +341,37 @@
       font-size: 12px;
     }
 
+    /* AVAILABLE PANELS */
+    .available-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .available-panel-card {
+      padding: 16px 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .available-panel-card h3 {
+      margin: 0 0 5px;
+      font-size: 15px;
+    }
+
+    .available-panel-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .available-panel-card .panel-status {
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
     @media (max-width: 800px) {
       .hero { padding: 58px 0; }
       .hero-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -349,6 +380,7 @@
       .option-grid,
       .application-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .available-panel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .contact-panel { grid-template-columns: 1fr; padding: 28px; }
       .contact-visual { max-height: 170px; }
     }
@@ -357,6 +389,7 @@
       .container { width: min(100% - 28px, 1160px); }
       .section { padding: 52px 0; }
       .feature-grid { grid-template-columns: 1fr; }
+      .available-panel-grid { grid-template-columns: 1fr; }
       .process-card { padding: 11px; }
       .process-card img { height: 110px; }
       .process-card h3 { font-size: 13px; }
@@ -609,6 +642,56 @@
           <img class="contact-visual"
                src="images/lcd-hero.jpg"
                alt="LCD module assembly visual">
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABLE PANELS -->
+    <section class="section section-white" id="available-panels" style="padding:42px 0;">
+      <div class="container">
+        <div style="margin-bottom:20px;">
+          <h2 style="font-size:25px;">Available Panels</h2>
+          <p class="section-intro">
+            Selected LCD panels currently available for supply.
+          </p>
+        </div>
+
+        <div class="available-panel-grid">
+          <article class="available-panel-card">
+            <h3>23.8&quot; FHD</h3>
+            <p>M238HVN01.0</p>
+            <p class="panel-status" style="color:#2563eb;">In Stock</p>
+          </article>
+
+          <article class="available-panel-card">
+            <h3>27&quot; UHD</h3>
+            <p>LM270WR3-SSC2</p>
+            <p class="panel-status" style="color:#d97706;">Limited</p>
+          </article>
+
+          <article class="available-panel-card">
+            <h3>27&quot; FHD</h3>
+            <p>M270HVN02.0</p>
+            <p class="panel-status" style="color:#64748b;">Available</p>
+          </article>
+
+          <article class="available-panel-card">
+            <h3>32&quot; FHD</h3>
+            <p>DV320FHM-N00</p>
+            <p class="panel-status" style="color:#2563eb;">In Stock</p>
+          </article>
+
+          <article class="available-panel-card">
+            <h3>10.1&quot; WXGA</h3>
+            <p>G101EAN02.1</p>
+            <p class="panel-status" style="color:#64748b;">Available</p>
+          </article>
+
+          <article class="available-panel-card">
+            <h3>43&quot; FHD</h3>
+            <p>DV430FHM-NN1</p>
+            <p class="panel-status" style="color:#64748b;">Available</p>
+          </article>
         </div>
       </div>
     </section>
